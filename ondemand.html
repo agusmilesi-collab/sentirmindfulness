@@ -3,39 +3,436 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Sentir Mindfulness | Cursos Grabados de 30 Minutos</title>
-<meta name="description" content="Cursos grabados de mindfulness y bienestar. 30 minutos, acceso inmediato y de por vida. Sin horarios. Diseñados por psicólogas con respaldo clínico.">
+<title>Sentir Mindfulness | Cursos Grabados</title>
+<meta name="description" content="Cursos de 30 minutos para profesionales que saben que algo tiene que cambiar pero no tienen tiempo para retiros ni apps de meditación que nunca abren.">
 <meta name="theme-color" content="#1b3a4b">
 <link rel="icon" type="image/svg+xml" href="img/logosentiramarillo.svg">
 
-<!-- Open Graph -->
 <meta property="og:title" content="Sentir Mindfulness | Cursos Grabados">
-<meta property="og:description" content="Cursos grabados de 30 minutos. Acceso inmediato, de por vida, sin horarios. Diseñados por psicólogas con respaldo clínico.">
+<meta property="og:description" content="30 minutos. Rápido, concreto, sin misticismo. Para profesionales que no pueden seguir como están.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
-
-<!-- Twitter -->
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Sentir Mindfulness | Cursos Grabados">
-<meta name="twitter:description" content="30 minutos. Acceso inmediato. Sin horarios.">
+<meta name="twitter:description" content="30 minutos. Rápido, concreto, sin misticismo.">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <style>
-.od-grid-full {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.2rem;
+
+/* ── OPENING HOOK ── */
+.hook {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: 7rem 2rem 4rem;
+  position: relative;
+  background: var(--white);
 }
 
+.hook::before {
+  content: '';
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 500px;
+  background: radial-gradient(ellipse, var(--gold-light) 0%, transparent 70%);
+  pointer-events: none;
+}
+
+.hook::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent 10%, var(--gold-border) 50%, transparent 90%);
+}
+
+.hook-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.hook-left {
+  opacity: 0;
+  animation: up 0.7s var(--ease) 0.1s forwards;
+}
+
+.hook-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--gold);
+  margin-bottom: 1.5rem;
+}
+
+.hook-eyebrow::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.hook-left h1 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+.hook-left h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+
+.hook-left p {
+  font-size: 0.95rem;
+  line-height: 1.8;
+  color: var(--text-sec);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+
+.hook-cta-wrap {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.hook-scroll {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.hook-scroll:hover {
+  color: var(--navy);
+}
+
+/* Recognition list */
+.hook-right {
+  opacity: 0;
+  animation: up 0.7s var(--ease) 0.3s forwards;
+}
+
+.recognition-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.recognition-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.1rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.recognition-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.rec-check {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: var(--gold-mid);
+  border: 1.5px solid var(--gold-border);
+  flex-shrink: 0;
+  margin-top: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.rec-check::after {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+
+.recognition-item p {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+  font-weight: 300;
+}
+
+.recognition-item p strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.hook-note {
+  margin-top: 1.5rem;
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+/* ── COURSES SECTION ── */
+.cursos {
+  background: var(--off-white);
+}
+
+.cursos-header {
+  text-align: center;
+  max-width: 640px;
+  margin: 0 auto 3.5rem;
+}
+
+.cursos-header .s-sub {
+  margin: 0 auto;
+}
+
+/* Course cards — problem/solution layout */
+.curso-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.curso-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 260px 1fr;
+  transition: all 0.3s var(--ease);
+}
+
+.curso-card:hover {
+  border-color: var(--gold-border);
+  box-shadow: 0 12px 40px rgba(27, 58, 75, 0.05);
+  transform: translateY(-2px);
+}
+
+.curso-card.soon {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+.curso-visual {
+  background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  text-align: center;
+  position: relative;
+}
+
+.curso-card.soon .curso-visual {
+  background: linear-gradient(135deg, #8a9bae 0%, #b0bec5 100%);
+}
+
+.curso-visual-title {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--white);
+  line-height: 1.25;
+  margin-bottom: 0.8rem;
+}
+
+.curso-visual-meta {
+  font-size: 0.65rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.soon-badge {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 0.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--white);
+  background: rgba(0, 0, 0, 0.25);
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+}
+
+.curso-content {
+  padding: 2rem 2.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.curso-problem {
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--gold);
+  margin-bottom: 0.5rem;
+}
+
+.curso-content h3 {
+  font-family: var(--heading);
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
+}
+
+.curso-content p {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.75;
+  font-weight: 300;
+  margin-bottom: 1.5rem;
+}
+
+.curso-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.curso-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.curso-tag {
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--off-white);
+  padding: 0.3rem 0.7rem;
+  border-radius: 100px;
+  border: 1px solid var(--border);
+}
+
+.curso-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--navy);
+  transition: color 0.2s;
+  white-space: nowrap;
+}
+
+.curso-cta:hover {
+  color: var(--gold);
+}
+
+.curso-cta svg {
+  width: 14px;
+  height: 14px;
+}
+
+/* ── BRIDGE SECTION ── */
+.bridge {
+  background: var(--white);
+  text-align: center;
+}
+
+.bridge-inner {
+  max-width: 580px;
+  margin: 0 auto;
+}
+
+.bridge p {
+  font-size: 0.92rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 0.5rem;
+}
+
+.bridge strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* ── RESPONSIVE ── */
 @media (max-width: 968px) {
-  .od-grid-full { grid-template-columns: 1fr 1fr; }
+  .hook-inner {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .hook {
+    min-height: auto;
+    padding: 6.5rem 2rem 3rem;
+  }
+
+  .curso-card {
+    grid-template-columns: 1fr;
+  }
+
+  .curso-visual {
+    min-height: 140px;
+    padding: 1.5rem;
+  }
 }
 
 @media (max-width: 600px) {
-  .od-grid-full { grid-template-columns: 1fr; }
+  .hook-inner {
+    gap: 2rem;
+  }
+
+  .hook-left h1 {
+    font-size: 1.8rem;
+  }
+
+  .hook-cta-wrap {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .curso-content {
+    padding: 1.5rem;
+  }
+
+  .curso-footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 </style>
 </head>
@@ -50,8 +447,7 @@
       <img src="img/logosentiramarillo.svg" alt="Sentir Mindfulness" height="48" width="auto" loading="eager">
     </a>
     <div class="nav-links" id="nav-menu" role="navigation">
-      <a href="#cursos">Cursos</a>
-      <a href="#quien">Nosotras</a>
+      <a href="#cursos" class="active">Cursos grabados</a>
       <a href="individuos.html">Talleres en vivo</a>
       <a href="index.html">Corporativo</a>
     </div>
@@ -63,97 +459,191 @@
 
 <main id="main">
 
-<!-- ========== HERO ========== -->
-<section class="hero">
-  <div class="hero-inner">
-    <div class="hero-badge">Cursos grabados</div>
-    <h1>Herramientas concretas que podés usar <em>esta misma noche.</em></h1>
-    <p class="hero-sub">Sin horarios, sin esperas. 30 minutos de contenido diseñado por psicólogas con respaldo clínico. Acceso inmediato y de por vida.</p>
-    <div class="hero-cta-wrap">
-      <a href="#cursos" class="btn-primary">Ver todos los cursos
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
+<!-- ========== HOOK ========== -->
+<section class="hook">
+  <div class="hook-inner">
+
+    <div class="hook-left">
+      <div class="hook-eyebrow">Cursos grabados · 30 minutos</div>
+      <h1>Cada curso resuelve <em>un problema concreto.</em></h1>
+      <p>No son cursos de meditación genéricos. No vas a necesitar velas, una hora libre ni un retiro de fin de semana. Son protocolos de 30 minutos diseñados para profesionales que saben que algo tiene que cambiar — pero no tienen margen para perder el tiempo.</p>
+      <div class="hook-cta-wrap">
+        <a href="#cursos" class="btn-primary">Ver los cursos
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <a href="individuos.html" class="hook-scroll">Prefiero un taller en vivo →</a>
+      </div>
     </div>
-    <a href="individuos.html" class="hero-scroll">Prefiero un taller en vivo
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
+
+    <div class="hook-right">
+      <ul class="recognition-list" aria-label="¿Te identificás con alguna de estas situaciones?">
+        <li class="recognition-item">
+          <div class="rec-check" aria-hidden="true"></div>
+          <p>Llegás al final del día destruido pero <strong>no podés soltar el celular.</strong></p>
+        </li>
+        <li class="recognition-item">
+          <div class="rec-check" aria-hidden="true"></div>
+          <p>Te despertás a las 3am pensando en <strong>el mail que no respondiste.</strong></p>
+        </li>
+        <li class="recognition-item">
+          <div class="rec-check" aria-hidden="true"></div>
+          <p>Reaccionás con tus hijos o tu pareja de formas que <strong>después lamentás.</strong></p>
+        </li>
+        <li class="recognition-item">
+          <div class="rec-check" aria-hidden="true"></div>
+          <p>Descargaste Calm, lo abriste dos veces y <strong>lo olvidaste para siempre.</strong></p>
+        </li>
+        <li class="recognition-item">
+          <div class="rec-check" aria-hidden="true"></div>
+          <p>Cuando alguien te dice "deberías meditar" pensás: <strong>"no tengo tiempo para eso."</strong></p>
+        </li>
+      </ul>
+      <p class="hook-note">Estos cursos están diseñados exactamente para vos. Rápidos, concretos, sin misticismo — y sin necesitar más tiempo del que ya no tenés.</p>
+    </div>
+
   </div>
 </section>
 
 <!-- ========== CURSOS ========== -->
-<section class="ondemand" id="cursos">
+<section class="cursos" id="cursos">
   <div class="container">
-    <div class="ondemand-header">
-      <div class="tag reveal">30 minutos · Acceso inmediato · De por vida</div>
-      <h2 class="s-title reveal d1">Cada curso resuelve <em>un problema concreto.</em></h2>
-      <p class="s-sub reveal d2">No son cursos genéricos. Cada uno está diseñado para una situación específica que probablemente ya estás viviendo.</p>
+    <div class="cursos-header">
+      <div class="tag reveal">Elegí el problema que querés resolver primero</div>
+      <h2 class="s-title reveal d1">Un curso para <em>cada situación.</em></h2>
+      <p class="s-sub reveal d2">No importa por dónde empezás. Lo que importa es que empezás.</p>
     </div>
-    <div class="od-grid-full">
+
+    <div class="curso-grid">
 
       <!-- Descanso — disponible -->
-      <div class="od-card reveal d1">
-        <div class="od-img">
-          <span class="od-img-label">Terminó el día.<br>Tu cabeza, no.</span>
+      <div class="curso-card reveal">
+        <div class="curso-visual">
+          <div class="curso-visual-title">Terminó el día.<br>Tu cabeza, no.</div>
+          <div class="curso-visual-meta">Disponible ahora</div>
         </div>
-        <div class="od-body">
-          <h3>Descanso</h3>
-          <p>Un protocolo con 3 ejercicios concretos para cuando te acostás y la cabeza no para. Para esa noche en que te despertás a las 3am y no volvés a dormir.</p>
-          <div class="od-meta">30 min · 3 ejercicios · Audios para cada noche</div>
-          <a href="descanso.html" class="od-cta">Ver más
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-          </a>
+        <div class="curso-content">
+          <div>
+            <div class="curso-problem">El problema: no podés desconectar al final del día</div>
+            <h3>Descanso</h3>
+            <p>Te acostás y la cabeza sigue en la reunión de mañana. O te dormís y te despertás a las 3am con los pendientes del día dando vueltas. Este curso te da 3 ejercicios concretos para cortar ese ciclo — para hacer en la cama, con auriculares, en menos de 10 minutos.</p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-tags">
+              <span class="curso-tag">30 min</span>
+              <span class="curso-tag">3 ejercicios</span>
+              <span class="curso-tag">Audios incluidos</span>
+              <span class="curso-tag">Acceso de por vida</span>
+            </div>
+            <a href="descanso.html" class="curso-cta">Ver más
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+          </div>
         </div>
       </div>
 
-      <!-- Próximamente -->
-      <div class="od-card soon reveal d2">
-        <div class="od-img"><span class="od-img-label">Estrés &amp;<br>Burnout</span><span class="od-soon-badge">Próximamente</span></div>
-        <div class="od-body"><h3>Estrés y Burnout</h3><p>Herramientas para prevenir y gestionar el agotamiento emocional antes de que sea tarde.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      <!-- Estrés y Burnout -->
+      <div class="curso-card soon reveal">
+        <div class="curso-visual">
+          <div class="curso-visual-title">El tanque vacío.</div>
+          <div class="curso-visual-meta">Próximamente</div>
+          <span class="soon-badge">Próximamente</span>
+        </div>
+        <div class="curso-content">
+          <div>
+            <div class="curso-problem">El problema: estás al límite y ya no sabés cómo recargarte</div>
+            <h3>Estrés y Burnout</h3>
+            <p>Cuando ya no es cansancio normal — es ese agotamiento de fondo que el finde no alcanza para reponer. Herramientas para detectar la señal de alerta temprana y actuar antes de llegar al colapso.</p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-tags">
+              <span class="curso-tag">30 min</span>
+              <span class="curso-tag">Acceso inmediato</span>
+              <span class="curso-tag">De por vida</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="od-card soon reveal d3">
-        <div class="od-img"><span class="od-img-label">Alimentación<br>Consciente</span><span class="od-soon-badge">Próximamente</span></div>
-        <div class="od-body"><h3>Alimentación Consciente</h3><p>Desarrollá una relación más saludable con la comida y reducí la alimentación emocional.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      <!-- Ansiedad -->
+      <div class="curso-card soon reveal">
+        <div class="curso-visual">
+          <div class="curso-visual-title">La cabeza que no frena.</div>
+          <div class="curso-visual-meta">Próximamente</div>
+          <span class="soon-badge">Próximamente</span>
+        </div>
+        <div class="curso-content">
+          <div>
+            <div class="curso-problem">El problema: la ansiedad toma decisiones por vos</div>
+            <h3>Ansiedad</h3>
+            <p>Esa sensación de que algo está por salir mal aunque no sabés qué. O que tomás decisiones desde el apuro, no desde la claridad. Técnicas concretas para bajar el nivel de alerta cuando el sistema nervioso ya está en modo emergencia.</p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-tags">
+              <span class="curso-tag">30 min</span>
+              <span class="curso-tag">Acceso inmediato</span>
+              <span class="curso-tag">De por vida</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="od-card soon reveal d4">
-        <div class="od-img"><span class="od-img-label">Ansiedad</span><span class="od-soon-badge">Próximamente</span></div>
-        <div class="od-body"><h3>Ansiedad</h3><p>Técnicas concretas para cuando la cabeza no para y la ansiedad se apodera de tu día.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      <!-- Foco -->
+      <div class="curso-card soon reveal">
+        <div class="curso-visual">
+          <div class="curso-visual-title">La distracción como modo de vida.</div>
+          <div class="curso-visual-meta">Próximamente</div>
+          <span class="soon-badge">Próximamente</span>
+        </div>
+        <div class="curso-content">
+          <div>
+            <div class="curso-problem">El problema: arrancás cosas y no terminás ninguna</div>
+            <h3>Foco y Concentración</h3>
+            <p>Abrís 14 pestañas, contestás el chat mientras estás en una reunión, empezás la presentación y terminás respondiendo mails. El costo cognitivo de vivir así es enorme. Este curso te entrena para recuperar la capacidad de hacer una sola cosa a la vez — y terminarla.</p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-tags">
+              <span class="curso-tag">30 min</span>
+              <span class="curso-tag">Acceso inmediato</span>
+              <span class="curso-tag">De por vida</span>
+            </div>
+          </div>
+        </div>
       </div>
 
-      <div class="od-card soon reveal d5">
-        <div class="od-img"><span class="od-img-label">Foco y<br>Concentración</span><span class="od-soon-badge">Próximamente</span></div>
-        <div class="od-body"><h3>Foco y Concentración</h3><p>Entrenamiento para dejar de saltar entre tareas y recuperar la capacidad de hacer una cosa a la vez.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      <!-- Alimentación -->
+      <div class="curso-card soon reveal">
+        <div class="curso-visual">
+          <div class="curso-visual-title">Comer por ansiedad, no por hambre.</div>
+          <div class="curso-visual-meta">Próximamente</div>
+          <span class="soon-badge">Próximamente</span>
+        </div>
+        <div class="curso-content">
+          <div>
+            <div class="curso-problem">El problema: la comida se convirtió en tu válvula de escape</div>
+            <h3>Alimentación Consciente</h3>
+            <p>El chocolate a las 4pm no es antojo — es estrés acumulado buscando una salida rápida. Herramientas para diferenciar hambre real de hambre emocional y desarrollar una relación más consciente con lo que comés.</p>
+          </div>
+          <div class="curso-footer">
+            <div class="curso-tags">
+              <span class="curso-tag">30 min</span>
+              <span class="curso-tag">Acceso inmediato</span>
+              <span class="curso-tag">De por vida</span>
+            </div>
+          </div>
+        </div>
       </div>
 
     </div>
   </div>
 </section>
 
-<!-- ========== QUIEN DICTA ========== -->
-<section class="quien" id="quien">
-  <div class="quien-inner">
-    <div class="tag reveal">Quiénes somos</div>
-    <h2 class="s-title reveal d1">Las hermanas <em>Campos.</em></h2>
-    <p class="reveal d2"><strong>Lorena y Lucila.</strong> Psicólogas, speakers, Master en Mindfulness por la Universidad de Zaragoza. Más de 15 años de experiencia.</p>
-    <p class="reveal d3">Su enfoque es práctico, sin misticismo y basado en evidencia. Exactamente lo que necesitás cuando ya probaste todo y nada te alcanzó.</p>
-    <div class="quien-creds reveal d4">
-      <span class="quien-cred">Psicólogas</span>
-      <span class="quien-cred">Master en Mindfulness</span>
-      <span class="quien-cred">U. de Zaragoza</span>
-      <span class="quien-cred">+15 años</span>
-      <span class="quien-cred">Enfoque cognitivo-conductual</span>
-    </div>
-  </div>
-</section>
-
-<!-- ========== TALLER TEASER ========== -->
-<section class="taller" id="taller-teaser">
-  <div class="taller-inner">
+<!-- ========== BRIDGE A TALLER ========== -->
+<section class="bridge taller">
+  <div class="bridge-inner">
     <div class="tag reveal">¿Preferís el formato en vivo?</div>
     <h2 class="s-title reveal d1">También tenemos talleres <em>con grupo y en tiempo real.</em></h2>
-    <p class="taller-body reveal d2">Si preferís aprender acompañada/o, con feedback y en grupo, nuestro taller de 4 semanas es para vos. Presencial en Rosario u online por Zoom.</p>
-    <a href="individuos.html#taller" class="taller-cta reveal d3">Ver talleres en vivo
+    <p class="reveal d2">Si preferís aprender acompañado, con espacio para preguntas y feedback, nuestro taller de 4 semanas es para vos. Presencial en Rosario u online por Zoom.</p>
+    <a href="individuos.html#taller" class="taller-cta reveal d3" style="display:inline-flex;margin-top:1.5rem;">Ver talleres en vivo
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
     </a>
   </div>
