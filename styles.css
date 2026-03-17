@@ -248,10 +248,10 @@ section {
 
 /* ===== HERO (shared) ===== */
 .hero {
-  min-height: 100vh;
+  min-height: auto;
   display: flex;
   align-items: center;
-  padding: 6.5rem 2rem 3rem;
+  padding: 5rem 2rem 2rem;
   position: relative;
   background: var(--white);
 }
