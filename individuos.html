@@ -28,6 +28,69 @@
 .hero-inner .hero-cta-wrap { display: none; }
 .hero-inner .hero-scroll { display: none; }
 
+/* ── QUÉ ES MINDFULNESS ── */
+.que-es {
+  background: var(--white);
+  padding: 3.5rem 2rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.que-es-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.6fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.que-es-left .tag {
+  margin-bottom: 1rem;
+}
+
+.que-es-left .s-title {
+  font-size: clamp(1.6rem, 2.5vw, 2rem);
+  margin-bottom: 0;
+}
+
+.que-es-right p {
+  font-size: 0.92rem;
+  color: var(--text-sec);
+  line-height: 1.8;
+  font-weight: 300;
+  margin-bottom: 1rem;
+}
+
+.que-es-lead {
+  font-size: 1rem !important;
+  color: var(--navy) !important;
+  font-weight: 400 !important;
+}
+
+.que-es-pills {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin-top: 1.5rem;
+}
+
+.que-es-pills span {
+  font-size: 0.72rem;
+  font-weight: 600;
+  color: var(--navy);
+  background: var(--gold-mid);
+  border: 1px solid var(--gold-border);
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+}
+
+@media (max-width: 768px) {
+  .que-es-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
 /* ── MODALIDADES ── */
 .modalidades {
   background: var(--off-white);
@@ -235,6 +298,27 @@
     <div class="hero-stars">
       <span class="stars" aria-label="5 estrellas">★★★★★</span> 4.9 <span>· 332 opiniones en Google</span>
       <a href="https://maps.app.goo.gl/qJJhfeeEmwjCupB26" target="_blank" rel="noopener noreferrer">Ver reseñas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUÉ ES MINDFULNESS ========== -->
+<section class="que-es">
+  <div class="container">
+    <div class="que-es-inner">
+      <div class="que-es-left reveal">
+        <div class="tag">¿Qué es el mindfulness?</div>
+        <h2 class="s-title">Un estado mental que <em>ya conocés.</em></h2>
+      </div>
+      <div class="que-es-right reveal d1">
+        <p class="que-es-lead">El mindfulness es estar solo en el momento presente. Es esa quietud mental que a veces lográs con una copa de vino, una pastilla o una hora de masajes — pero que podés aprender a acceder sin nada de eso.</p>
+        <p>La forma más efectiva de llegar a ese estado es a través de la meditación. No la meditación de inciensos y mantras — sino la meditación como entrenamiento de la atención. Con respaldo científico, sin misticismo, sin que tengas que creer en nada.</p>
+        <div class="que-es-pills">
+          <span>Respaldo científico</span>
+          <span>No es espiritual</span>
+          <span>Se aprende. Se entrena.</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
