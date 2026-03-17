@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sentirmindfulness.com.ar/sitemap.xml

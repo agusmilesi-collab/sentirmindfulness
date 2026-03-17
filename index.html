@@ -5,185 +5,41 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Sentir Mindfulness | Bienestar Corporativo</title>
 <meta name="description" content="Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas. Capacitación, consultoría y acompañamiento a áreas de RRHH.">
+<meta name="theme-color" content="#1b3a4b">
+<link rel="icon" type="image/svg+xml" href="img/logosentiramarillo.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Sentir Mindfulness | Bienestar Corporativo">
+<meta property="og:description" content="Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sentirmindfulness.com.ar/">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Sentir Mindfulness | Bienestar Corporativo">
+<meta name="twitter:description" content="Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://sentirmindfulness.com.ar/">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root {
-  --navy: #1b3a4b;
-  --navy-deep: #0f2530;
-  --navy-soft: #2e5a6e;
-  --gold: #b89a4e;
-  --gold-light: rgba(184,154,78,0.07);
-  --gold-mid: rgba(184,154,78,0.15);
-  --gold-border: rgba(184,154,78,0.2);
-  --white: #ffffff;
-  --off-white: #f9f8f6;
-  --warm: #f5f3ef;
-  --text: #1b3a4b;
-  --text-sec: #607d8b;
-  --text-muted: #94aab5;
-  --border: rgba(27,58,75,0.06);
-  --border-med: rgba(27,58,75,0.1);
-  --heading: 'EB Garamond', Georgia, serif;
-  --body: 'Raleway', sans-serif;
-  --ease: cubic-bezier(0.22, 1, 0.36, 1);
-}
-*{margin:0;padding:0;box-sizing:border-box;}
-body{font-family:var(--body);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
-
-/* ===== NAV ===== */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
-.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 2rem;}
-.nav-logo{display:flex;align-items:center;text-decoration:none;}
-.nav-logo svg{height:48px;width:auto;}
-.nav-links{display:flex;align-items:center;gap:2.2rem;}
-.nav-links a{text-decoration:none;color:var(--text-muted);font-size:0.78rem;font-weight:500;letter-spacing:0.01em;transition:color 0.2s;}
-.nav-links a:hover{color:var(--navy);}
-.hamburger{display:none;background:none;border:none;cursor:pointer;}
-.hamburger span{display:block;width:18px;height:1.5px;background:var(--navy);margin:4px 0;}
-
-/* ===== SECTIONS ===== */
-section{padding:5.5rem 2rem;}
-.container{max-width:1100px;margin:0 auto;}
-.tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold);margin-bottom:1.5rem;}
-.tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
-.s-title{font-family:var(--heading);font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.25;color:var(--navy);margin-bottom:0.8rem;}
-.s-title em{font-style:italic;font-weight:500;color:var(--navy-soft);}
-.s-sub{font-size:0.92rem;line-height:1.75;color:var(--text-sec);max-width:540px;font-weight:300;}
-
-/* ===== HERO ===== */
-.hero{min-height:100vh;display:flex;align-items:center;padding:6.5rem 2rem 3rem;position:relative;background:var(--white);}
-.hero::before{content:'';position:absolute;top:15%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,var(--gold-light) 0%,transparent 70%);pointer-events:none;}
-.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,var(--gold-border) 50%,transparent 90%);}
-.hero-inner{max-width:1100px;margin:0 auto;width:100%;text-align:center;position:relative;z-index:2;}
-.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold);margin-bottom:2rem;opacity:0;animation:up .7s var(--ease) .1s forwards;}
-.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
-.hero h1{font-family:var(--heading);font-weight:700;font-size:clamp(2.1rem,4vw,3rem);line-height:1.22;color:var(--navy);max-width:760px;margin:0 auto 1.3rem;letter-spacing:-0.01em;opacity:0;animation:up .7s var(--ease) .2s forwards;}
-.hero h1 em{font-style:italic;font-weight:500;color:var(--navy-soft);}
-.hero-sub{font-size:0.95rem;line-height:1.75;color:var(--text-sec);max-width:480px;margin:0 auto 2.5rem;font-weight:300;opacity:0;animation:up .7s var(--ease) .35s forwards;}
-.hero-cta-wrap{margin-bottom:1rem;opacity:0;animation:up .7s var(--ease) .5s forwards;}
-.btn-hero{display:inline-flex;align-items:center;gap:0.6rem;background:var(--navy);color:var(--white);padding:1rem 2.4rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.92rem;font-family:var(--body);border:none;cursor:pointer;transition:all .3s var(--ease);box-shadow:0 4px 20px rgba(27,58,75,0.12);}
-.btn-hero:hover{background:var(--navy-deep);box-shadow:0 8px 32px rgba(27,58,75,0.18);transform:translateY(-2px);}
-.btn-hero svg{width:16px;height:16px;}
-.hero-scroll{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.78rem;color:var(--text-muted);text-decoration:none;font-weight:500;transition:color .2s;margin-bottom:3.5rem;opacity:0;animation:up .7s var(--ease) .6s forwards;}
-.hero-scroll:hover{color:var(--navy);}
-.hero-scroll svg{width:12px;height:12px;}
-.hero-logos{opacity:0;animation:up .7s var(--ease) .7s forwards;padding-top:2.5rem;border-top:1px solid var(--border);}
-.hero-logos-label{font-size:0.62rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--text-muted);margin-bottom:1.2rem;}
-.logos-row{display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;}
-.logo-item{font-size:0.7rem;font-weight:700;color:var(--navy);letter-spacing:0.05em;opacity:0.15;transition:opacity .3s;}
-.logo-item:hover{opacity:0.35;}
-
-/* ===== DRIVERS ===== */
-.drivers{background:var(--off-white);}
-.drivers-header{text-align:center;max-width:620px;margin:0 auto 3rem;}
-.drivers-header .s-sub{margin:0 auto;}
-.drivers-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;}
-.driver-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:2rem 1.8rem;transition:all .3s var(--ease);position:relative;overflow:hidden;}
-.driver-card:hover{border-color:var(--gold-border);transform:translateY(-3px);box-shadow:0 12px 40px rgba(27,58,75,0.04);}
-.driver-num{font-family:var(--heading);font-size:2.5rem;font-weight:700;color:var(--navy);opacity:0.06;position:absolute;top:1rem;right:1.5rem;line-height:1;}
-.driver-card h3{font-family:var(--heading);font-size:1.15rem;font-weight:700;color:var(--navy);margin-bottom:0.6rem;}
-.driver-card p{font-size:0.85rem;color:var(--text-sec);line-height:1.7;font-weight:300;}
-.driver-detail{margin-top:0.8rem;font-size:0.72rem;color:var(--gold);font-weight:600;}
-
-/* ===== DIFERENCIAL ===== */
-.diferencial{background:var(--white);}
-.dif-header{text-align:center;max-width:600px;margin:0 auto 3rem;}
-.dif-header .s-sub{margin:0 auto;}
-.dif-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
-.dif-grid .dif-card:nth-child(4),.dif-grid .dif-card:nth-child(5){grid-column:span 1;}
-.dif-row-2{display:grid;grid-template-columns:repeat(2,1fr);gap:1.2rem;margin-top:1.2rem;}
-.dif-card{padding:2rem 1.8rem;border-radius:14px;border:1px solid var(--border);background:var(--white);transition:all .3s var(--ease);}
-.dif-card:hover{border-color:var(--gold-border);transform:translateY(-2px);}
-.dif-card h4{font-family:var(--heading);font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:0.5rem;}
-.dif-card p{font-size:0.84rem;color:var(--text-sec);line-height:1.7;font-weight:300;}
-
-/* ===== CLIENTES ===== */
-.clientes{background:var(--off-white);text-align:center;}
-.clientes .s-title{margin-bottom:0.4rem;}
-.clientes-sub{font-size:0.88rem;color:var(--text-sec);margin-bottom:2.5rem;font-weight:300;}
-.clientes-logos{display:flex;align-items:center;justify-content:center;gap:2.5rem;flex-wrap:wrap;margin-bottom:2.5rem;}
-.cl-logo{width:150px;height:100px;opacity:1;transition:opacity .3s;}
-.cl-logo:hover{opacity:0.5;}
-
-/* ===== NOSOTROS + CONTACTO ===== */
-.cierre{background:var(--white);}
-.cierre-grid{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:start;}
-.nos .s-title{margin-bottom:1rem;}
-.nos p{font-size:0.9rem;color:var(--text-sec);line-height:1.8;margin-bottom:0.6rem;font-weight:300;}
-.nos strong{color:var(--navy);font-weight:600;}
-.team{margin-top:1.5rem;}
-.member{margin-bottom:1.2rem;display:flex;align-items:flex-start;gap:1rem;}
-.member h4{font-family:var(--heading);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.15rem;}
-.member .role{font-size:0.7rem;color:var(--gold);font-weight:600;letter-spacing:0.02em;margin-bottom:0.3rem;}
-.member p{font-size:0.82rem;color:var(--text-sec);line-height:1.65;font-weight:300;}
-.member-photo{width:100px;height:100px;border-radius:50%;object-fit:cover;margin-bottom:0;}
-.linkedin-link{font-size:0.8rem;color:var(--gold);text-decoration:none;font-weight:600;margin-bottom:0.5rem;display:inline-block;}
-.proposito{margin-top:1.5rem;padding:1.4rem;background:var(--off-white);border-radius:10px;border-left:3px solid var(--gold);}
-.proposito p{font-family:var(--heading);font-size:0.95rem;color:var(--navy);line-height:1.45;font-weight:500;margin-bottom:0;}
-.proposito .attr{font-family:var(--body);font-size:0.65rem;color:var(--text-muted);font-weight:600;text-transform:uppercase;letter-spacing:0.1em;margin-top:0.5rem;}
-
-/* Form */
-.form-card{background:var(--off-white);border:1px solid var(--border);border-radius:16px;padding:2.2rem;}
-.form-card h3{font-family:var(--heading);font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:0.3rem;}
-.form-card .form-sub{font-size:0.8rem;color:var(--text-muted);margin-bottom:1.8rem;font-weight:400;}
-.form-group{margin-bottom:0.9rem;}
-.form-group label{display:block;font-size:0.72rem;font-weight:600;color:var(--navy);margin-bottom:0.35rem;}
-.form-group input,.form-group textarea,.form-group select{width:100%;padding:0.75rem 0.9rem;border-radius:8px;border:1.5px solid var(--border-med);background:var(--white);color:var(--text);font-family:var(--body);font-size:0.85rem;font-weight:400;transition:border-color .25s;outline:none;}
-.form-group input:focus,.form-group textarea:focus,.form-group select:focus{border-color:var(--navy);}
-.form-group input::placeholder,.form-group textarea::placeholder{color:#b0bec5;}
-.form-group textarea{resize:vertical;min-height:70px;}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:0.7rem;}
-.btn-submit{width:100%;padding:0.9rem;margin-top:0.3rem;background:var(--navy);color:var(--white);border:none;border-radius:9px;font-family:var(--body);font-size:0.88rem;font-weight:700;cursor:pointer;transition:all .3s var(--ease);}
-.btn-submit:hover{background:var(--navy-deep);transform:translateY(-1px);box-shadow:0 4px 16px rgba(27,58,75,0.12);}
-
-/* ===== FOOTER ===== */
-footer{background:var(--navy);padding:2.5rem 2rem;}
-.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
-.footer-brand{font-family:var(--heading);font-size:0.95rem;font-weight:500;color:var(--gold);}
-.footer-brand span{display:block;font-family:var(--body);font-size:0.68rem;color:rgba(255,255,255,0.3);font-weight:300;margin-top:0.3rem;}
-.footer-links{display:flex;gap:1.8rem;flex-wrap:wrap;}
-.footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.74rem;transition:color .2s;font-weight:400;}
-.footer-links a:hover{color:var(--gold);}
-.footer-copy{font-size:0.65rem;color:rgba(255,255,255,0.15);}
-
-/* ===== WHATSAPP ===== */
-.wa{position:fixed;bottom:1.8rem;right:1.8rem;z-index:90;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.25);transition:all .3s var(--ease);text-decoration:none;}
-.wa:hover{transform:scale(1.08);}
-.wa svg{width:26px;height:26px;fill:white;}
-
-/* ===== ANIMATIONS ===== */
-@keyframes up{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
-.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
-.reveal.visible{opacity:1;transform:translateY(0);}
-.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}.d5{transition-delay:.4s;}
-
-/* ===== RESPONSIVE ===== */
-@media(max-width:968px){
-  .drivers-grid,.dif-grid,.dif-row-2,.cierre-grid{grid-template-columns:1fr;}
-  .form-row{grid-template-columns:1fr;}
-  .nav-links{display:none;}.hamburger{display:block;}
-  nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:1.2rem 2rem;gap:.8rem;border-bottom:1px solid var(--border);}
-}
-@media(max-width:600px){
-  .hero{padding:6rem 1.2rem 2.5rem;min-height:auto;}
-  .hero h1{font-size:1.7rem;}
-  .btn-hero{padding:.9rem 2rem;font-size:.88rem;width:100%;justify-content:center;}
-  section{padding:4rem 1.2rem;}
-  .logos-row,.clientes-logos{gap:1.2rem;}
-  .form-card{padding:1.5rem;}
-}
-</style>
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
+<!-- Skip link -->
+<a href="#main" class="skip-link">Ir al contenido principal</a>
+
 <!-- NAV -->
-<nav id="nav">
+<nav id="nav" aria-label="Navegación principal">
   <div class="nav-inner">
-    <a href="#" class="nav-logo">
-      <img src="img/logosentiramarillo.svg" alt="Sentir Logo" height="48">
+    <a href="/" class="nav-logo" aria-label="Sentir Mindfulness - Inicio">
+      <img src="img/logosentiramarillo.svg" alt="Sentir Mindfulness" height="48" width="auto" loading="eager">
     </a>
-    <div class="nav-links">
+    <div class="nav-links" id="nav-menu" role="navigation">
       <a href="#que-hacemos">Qué hacemos</a>
       <a href="#diferencial">Por qué elegirnos</a>
       <a href="#clientes">Clientes</a>
@@ -191,22 +47,38 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
       <a href="#contacto">Contacto</a>
       <a href="individuos.html">Individuos</a>
     </div>
-    <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+    <button class="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');document.getElementById('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
 <!-- ========== HERO ========== -->
+<main id="main">
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge">Bienestar corporativo</div>
     <h1>Si RRHH se está desgastando, es porque necesitamos desarrollar líderes que sepan gestionar <em>las emociones de sus equipos.</em></h1>
     <p class="hero-sub">Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas.</p>
-    <div class="hero-cta-wrap"><a href="#contacto" class="btn-hero">Solicitar propuesta <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
-    <a href="#que-hacemos" class="hero-scroll">Conocé cómo trabajamos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5"/></svg></a>
+    <div class="hero-cta-wrap">
+      <a href="#contacto" class="btn-primary">Solicitar propuesta
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+    <a href="#que-hacemos" class="hero-scroll">Conocé cómo trabajamos
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13l5 5 5-5"/></svg>
+    </a>
     <div class="hero-logos">
       <p class="hero-logos-label">Empresas que ya confían en nosotros</p>
       <div class="logos-row">
-        <span class="logo-item">CARGILL</span><span class="logo-item">ELECTROLUX</span><span class="logo-item">JOHN DEERE</span><span class="logo-item">DAZZLER</span><span class="logo-item">ENDAVA</span><span class="logo-item">MACROAGRO</span><span class="logo-item">ITSYNCH</span><span class="logo-item">TAPI</span>
+        <span class="logo-item">CARGILL</span>
+        <span class="logo-item">ELECTROLUX</span>
+        <span class="logo-item">JOHN DEERE</span>
+        <span class="logo-item">DAZZLER</span>
+        <span class="logo-item">ENDAVA</span>
+        <span class="logo-item">MACROAGRO</span>
+        <span class="logo-item">ITSYNCH</span>
+        <span class="logo-item">TAPI</span>
       </div>
     </div>
   </div>
@@ -221,26 +93,26 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
       <p class="s-sub reveal d2">No se puede transformar la cultura si primero no se abre la conversación. No se puede sostener el bienestar si los líderes no están preparados.</p>
     </div>
     <div class="drivers-grid">
-      <div class="driver-card reveal d1">
-        <div class="driver-num">01</div>
+      <div class="card driver-card reveal d1">
+        <div class="driver-num" aria-hidden="true">01</div>
         <h3>Desestigmatizar la salud mental</h3>
         <p>Charlas de awareness que abren la conversación con historias, vulnerabilidad y datos. Porque mientras hablar de salud mental siga siendo un tabú en tu empresa, ningún programa va a funcionar.</p>
         <div class="driver-detail">→ Formato keynote o taller · Presencial y online</div>
       </div>
-      <div class="driver-card reveal d2">
-        <div class="driver-num">02</div>
+      <div class="card driver-card reveal d2">
+        <div class="driver-num" aria-hidden="true">02</div>
         <h3>Formar líderes con método</h3>
         <p>Cuando cada líder gestiona lo humano "a su manera", la empresa paga el precio. Nuestro Método Kind trabaja sobre 3 niveles — el individuo, su equipo y la organización — con herramientas propias como el Mapa Humano, cuadrantes de liderazgo y perfiles generacionales.</p>
         <div class="driver-detail">→ Método Kind · Programa Transformación Liderazgos Humanos</div>
       </div>
-      <div class="driver-card reveal d3">
-        <div class="driver-num">03</div>
+      <div class="card driver-card reveal d3">
+        <div class="driver-num" aria-hidden="true">03</div>
         <h3>Acompañar a RRHH</h3>
         <p>El área de Recursos Humanos vive una paradoja: es responsable de acompañar a toda la organización pero pocas veces recibe herramientas para protegerse. Nuestro HR Help Kit capacita en autoprotección emocional, scripts para conversaciones difíciles y protocolos para acompañar sin absorber.</p>
         <div class="driver-detail">→ HR Help Kit · 3 encuentros + toolbox + indicadores</div>
       </div>
-      <div class="driver-card reveal d4">
-        <div class="driver-num">04</div>
+      <div class="card driver-card reveal d4">
+        <div class="driver-num" aria-hidden="true">04</div>
         <h3>Transformar la cultura de trabajo</h3>
         <p>Programas integrales que combinan sesiones temáticas, prácticas regulares y capacitación sostenida durante meses. Armamos una agenda personalizada. El objetivo: cambiar el clima, reducir conflictos y crear un lugar donde todos quieran ir a trabajar.</p>
         <div class="driver-detail">→ Experiencia en Bienestar · Sesiones semanales · Agenda a medida</div>
@@ -257,25 +129,25 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
       <h2 class="s-title reveal d1">Lo humano como <em>ventaja competitiva.</em></h2>
     </div>
     <div class="dif-grid">
-      <div class="dif-card reveal d1">
+      <div class="card reveal d1">
         <h4>Respaldo clínico real</h4>
         <p>Psicólogas con matrícula, enfoque cognitivo-conductual y master en mindfulness. No damos charlas motivacionales. Intervenimos con profundidad y abordamos la salud mental con la seriedad que el tema requiere.</p>
       </div>
-      <div class="dif-card reveal d2">
+      <div class="card reveal d2">
         <h4>Contenido basado en evidencia</h4>
         <p>Cruzamos psicología organizacional, neurociencias y gestión del cambio con bibliografía de McKinsey, HBR, Gartner y Gallup. Hablamos el idioma del negocio. Tu equipo puede justificar la inversión ante cualquier comité directivo.</p>
       </div>
-      <div class="dif-card reveal d3">
+      <div class="card reveal d3">
         <h4>Presentaciones que la gente recuerda</h4>
         <p>Storytelling que integra vulnerabilidad y sentido del humor. Timing ensayado para conectar emocionalmente. Nuestras charlas no aburren: enganchan. Y cuando la gente se engancha, pide más.</p>
       </div>
     </div>
     <div class="dif-row-2">
-      <div class="dif-card reveal d4">
+      <div class="card reveal d4">
         <h4>Nos adaptamos a vos, no al revés</h4>
         <p>Cultura interna, formatos, tiempos, estándares globales, reportes para casa matriz. Armamos una agenda personalizada y diseñamos cada intervención a medida. No te damos más trabajo, te lo sacamos.</p>
       </div>
-      <div class="dif-card reveal d5">
+      <div class="card reveal d5">
         <h4>Método propio con herramientas concretas</h4>
         <p>El Método Kind incluye Mapa Humano, cuadrantes de liderazgo, perfiles generacionales y liderazgo 1 a 1. Lo humano, gestionado con método, se convierte en ventaja competitiva.</p>
       </div>
@@ -290,7 +162,15 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
     <h2 class="s-title reveal d1">Empresas Kind</h2>
     <p class="clientes-sub reveal d2">Ya promueven prácticas de bienestar en sus equipos de trabajo.</p>
     <div class="clientes-logos reveal d3">
-      <img src="img/clientes/1.png" alt="Logo" class="cl-logo"><img src="img/clientes/2.png" alt="Logo" class="cl-logo"><img src="img/clientes/3.png" alt="Logo" class="cl-logo"><img src="img/clientes/4.png" alt="Logo" class="cl-logo"><img src="img/clientes/5.png" alt="Logo" class="cl-logo"><img src="img/clientes/6.png" alt="Logo" class="cl-logo"><img src="img/clientes/7.png" alt="Logo" class="cl-logo"><img src="img/clientes/8.png" alt="Logo" class="cl-logo"><img src="img/clientes/9.png" alt="Logo" class="cl-logo">
+      <img src="img/clientes/1.png" alt="Logo cliente Cargill" class="cl-logo" loading="lazy">
+      <img src="img/clientes/2.png" alt="Logo cliente Electrolux" class="cl-logo" loading="lazy">
+      <img src="img/clientes/3.png" alt="Logo cliente John Deere" class="cl-logo" loading="lazy">
+      <img src="img/clientes/4.png" alt="Logo cliente Dazzler" class="cl-logo" loading="lazy">
+      <img src="img/clientes/5.png" alt="Logo cliente Endava" class="cl-logo" loading="lazy">
+      <img src="img/clientes/6.png" alt="Logo cliente Macroagro" class="cl-logo" loading="lazy">
+      <img src="img/clientes/7.png" alt="Logo cliente ITSynch" class="cl-logo" loading="lazy">
+      <img src="img/clientes/8.png" alt="Logo cliente Tapi" class="cl-logo" loading="lazy">
+      <img src="img/clientes/9.png" alt="Logo cliente corporativo" class="cl-logo" loading="lazy">
     </div>
   </div>
 </section>
@@ -304,31 +184,30 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
         <h2 class="s-title reveal d1">El equipo detrás de <em>Sentir Mindfulness.</em></h2>
         <div class="team">
           <div class="member reveal d2">
-            <img src="img/socios/1.png" alt="Lorena Campos" class="member-photo">
+            <img src="img/socios/1.png" alt="Foto de Lorena Campos" class="member-photo" loading="lazy" width="100" height="100">
             <div class="member-text">
               <h4>Lorena Campos</h4>
               <div class="role">Speaker · Facilitadora corporativa</div>
-              <p>Lic. en Psicología · Esp. en corriente Cognitiva · Master en Mindfulness (U. de Zaragoza). Su mayor experiencia la desarrolló en RRHH, acompañando a multinacionales en gestión de procesos soft. Combina profundidad clínica con la mirada del negocio  para diseñar intervenciones que conectan emocionalmente y generan cambios concretos.</p>
-              <a href="https://www.linkedin.com/in/lorecamposhr" target="_blank" class="linkedin-link">LinkedIn</a>
+              <p>Lic. en Psicología · Esp. en corriente Cognitiva · Master en Mindfulness (U. de Zaragoza). Su mayor experiencia la desarrolló en RRHH, acompañando a multinacionales en gestión de procesos soft. Combina profundidad clínica con la mirada del negocio para diseñar intervenciones que conectan emocionalmente y generan cambios concretos.</p>
+              <a href="https://www.linkedin.com/in/lorecamposhr" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn ↗</a>
             </div>
           </div>
           <div class="member reveal d3">
-            <img src="img/socios/2.png" alt="Lucila Campos" class="member-photo">
+            <img src="img/socios/2.png" alt="Foto de Lucila Campos" class="member-photo" loading="lazy" width="100" height="100">
             <div class="member-text">
               <h4>Lucila Campos</h4>
               <div class="role">Speaker · Facilitadora corporativa</div>
-              <p>Lic. en Psicología · Esp. en corriente Cognitiva · Master en Mindfulness (U. de Zaragoza). Empezó en el ámbito clínico y expandió su camino hacia el mundo organizacional. Integra mindfulness como herramienta concreta para el día a día laboral, , promoviendo entornos más conscientes y equilibrados.
-</p>
-              <a href="https://www.linkedin.com/in/lulicamposhr" target="_blank" class="linkedin-link">LinkedIn</a>
+              <p>Lic. en Psicología · Esp. en corriente Cognitiva · Master en Mindfulness (U. de Zaragoza). Empezó en el ámbito clínico y expandió su camino hacia el mundo organizacional. Integra mindfulness como herramienta concreta para el día a día laboral, promoviendo entornos más conscientes y equilibrados.</p>
+              <a href="https://www.linkedin.com/in/lulicamposhr" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn ↗</a>
             </div>
           </div>
           <div class="member reveal d4">
-            <img src="img/socios/3.png" alt="Agustín Milesi" class="member-photo">
+            <img src="img/socios/3.png" alt="Foto de Agustín Milesi" class="member-photo" loading="lazy" width="100" height="100">
             <div class="member-text">
               <h4>Agustín Milesi</h4>
               <div class="role">UX Strategist</div>
-              <p>Master en Business & Technology (U. de San Andrés) Se especializó en UX Strategy. Fundó y lidera empresas en hospitality y hoy forma parte de Sentir Mindfulness aportando visión estratégica, innovación y diseño de experiencias.</p>
-              <a href="https://www.linkedin.com/in/agusmilesi" target="_blank" class="linkedin-link">LinkedIn</a>
+              <p>Master en Business & Technology (U. de San Andrés). Se especializó en UX Strategy. Fundó y lidera empresas en hospitality y hoy forma parte de Sentir Mindfulness aportando visión estratégica, innovación y diseño de experiencias.</p>
+              <a href="https://www.linkedin.com/in/agusmilesi" target="_blank" rel="noopener noreferrer" class="linkedin-link">LinkedIn ↗</a>
             </div>
           </div>
         </div>
@@ -344,11 +223,23 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
           <p class="form-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
           <form action="https://formspree.io/f/mjgappdy" method="POST">
             <div class="form-row">
-              <div class="form-group"><label>Nombre</label><input type="text" name="nombre" placeholder="Tu nombre" required></div>
-              <div class="form-group"><label>Empresa</label><input type="text" name="empresa" placeholder="Nombre de la empresa" required></div>
+              <div class="form-group">
+                <label for="nombre">Nombre</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+              </div>
+              <div class="form-group">
+                <label for="empresa">Empresa</label>
+                <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required autocomplete="organization">
+              </div>
             </div>
-            <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@empresa.com" required></div>
-            <div class="form-group"><label>Comentarios (opcional)</label><textarea name="comentarios" placeholder="Contexto del equipo, cantidad de personas, desafíos..."></textarea></div>
+            <div class="form-group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
+            </div>
+            <div class="form-group">
+              <label for="comentarios">Comentarios (opcional)</label>
+              <textarea id="comentarios" name="comentarios" placeholder="Contexto del equipo, cantidad de personas, desafíos..."></textarea>
+            </div>
             <button type="submit" class="btn-submit">Solicitar propuesta sin compromiso</button>
           </form>
         </div>
@@ -356,12 +247,13 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
     </div>
   </div>
 </section>
+</main>
 
 <!-- FOOTER -->
 <footer>
   <div class="footer-inner">
     <div class="footer-brand">Sentir Mindfulness<span>Educación emocional y psicología preventiva para organizaciones.</span></div>
-    <div class="footer-links">
+    <div class="footer-links" role="navigation" aria-label="Links del footer">
       <a href="#que-hacemos">Qué hacemos</a>
       <a href="#diferencial">Por qué elegirnos</a>
       <a href="#clientes">Clientes</a>
@@ -373,14 +265,18 @@ footer{background:var(--navy);padding:2.5rem 2rem;}
 </footer>
 
 <!-- WHATSAPP -->
-<a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20información%20sobre%20programas%20corporativos" class="wa" target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+<a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20información%20sobre%20programas%20corporativos" class="wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
 
 <!-- JS -->
 <script>
-const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
-document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(el => {
+    if (el.isIntersecting) el.target.classList.add('visible');
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 </script>
 </body>
 </html>
