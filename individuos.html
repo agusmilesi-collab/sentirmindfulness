@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sentir Mindfulness | Talleres y Cursos de Mindfulness y Bienestar</title>
+<meta name="description" content="Talleres y cursos de mindfulness y bienestar para personas que quieren vivir con más calma, más presencia y menos piloto automático. Presencial en Rosario y online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#1b3a4b;--navy-deep:#0f2530;--navy-soft:#2e5a6e;
+  --gold:#b89a4e;--gold-light:rgba(184,154,78,0.07);--gold-mid:rgba(184,154,78,0.15);--gold-border:rgba(184,154,78,0.2);
+  --white:#ffffff;--off-white:#f9f8f6;--warm:#f5f3ef;
+  --text:#1b3a4b;--text-sec:#607d8b;--text-muted:#94aab5;
+  --border:rgba(27,58,75,0.06);--border-med:rgba(27,58,75,0.1);
+  --star:#e2a817;
+  --heading:'EB Garamond',Georgia,serif;--body:'Raleway',sans-serif;
+  --ease:cubic-bezier(0.22,1,0.36,1);
+}
+*{margin:0;padding:0;box-sizing:border-box;}
+body{font-family:var(--body);color:var(--text);background:var(--white);-webkit-font-smoothing:antialiased;overflow-x:hidden;}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(255,255,255,0.98);backdrop-filter:blur(12px);border-bottom:1px solid var(--border);}
+.nav-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;padding:0.8rem 2rem;}
+.nav-logo{display:flex;align-items:center;text-decoration:none;}
+.nav-logo svg{height:32px;width:auto;}
+.nav-links{display:flex;align-items:center;gap:2.2rem;}
+.nav-links a{text-decoration:none;color:var(--text-muted);font-size:0.78rem;font-weight:500;letter-spacing:0.01em;transition:color 0.2s;}
+.nav-links a:hover{color:var(--navy);}
+.nav-links a.active{color:var(--navy);font-weight:700;}
+.hamburger{display:none;background:none;border:none;cursor:pointer;}
+.hamburger span{display:block;width:18px;height:1.5px;background:var(--navy);margin:4px 0;}
+
+/* SECTIONS */
+section{padding:5.5rem 2rem;}
+.container{max-width:1100px;margin:0 auto;}
+.tag{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold);margin-bottom:1.5rem;}
+.tag::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.s-title{font-family:var(--heading);font-weight:700;font-size:clamp(1.7rem,3vw,2.3rem);line-height:1.25;color:var(--navy);margin-bottom:0.8rem;}
+.s-title em{font-style:italic;font-weight:500;color:var(--navy-soft);}
+.s-sub{font-size:0.92rem;line-height:1.75;color:var(--text-sec);max-width:540px;font-weight:300;}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:6.5rem 2rem 3rem;position:relative;background:var(--white);}
+.hero::before{content:'';position:absolute;top:15%;left:50%;transform:translateX(-50%);width:600px;height:400px;background:radial-gradient(ellipse,var(--gold-light) 0%,transparent 70%);pointer-events:none;}
+.hero::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent 10%,var(--gold-border) 50%,transparent 90%);}
+.hero-inner{max-width:1100px;margin:0 auto;width:100%;text-align:center;position:relative;z-index:2;}
+.hero-badge{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.65rem;font-weight:600;text-transform:uppercase;letter-spacing:0.16em;color:var(--gold);margin-bottom:2rem;opacity:0;animation:up .7s var(--ease) .1s forwards;}
+.hero-badge::before{content:'';width:6px;height:6px;border-radius:50%;background:var(--gold);}
+.hero h1{font-family:var(--heading);font-weight:700;font-size:clamp(2.1rem,4vw,3rem);line-height:1.22;color:var(--navy);max-width:740px;margin:0 auto 1.3rem;opacity:0;animation:up .7s var(--ease) .2s forwards;}
+.hero h1 em{font-style:italic;font-weight:500;color:var(--navy-soft);}
+.hero-sub{font-size:0.95rem;line-height:1.75;color:var(--text-sec);max-width:500px;margin:0 auto 2.5rem;font-weight:300;opacity:0;animation:up .7s var(--ease) .35s forwards;}
+.hero-cta-wrap{margin-bottom:0.8rem;opacity:0;animation:up .7s var(--ease) .5s forwards;}
+.btn-hero{display:inline-flex;align-items:center;gap:0.6rem;background:var(--navy);color:var(--white);padding:1rem 2.4rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.92rem;font-family:var(--body);border:none;cursor:pointer;transition:all .3s var(--ease);box-shadow:0 4px 20px rgba(27,58,75,0.12);}
+.btn-hero:hover{background:var(--navy-deep);box-shadow:0 8px 32px rgba(27,58,75,0.18);transform:translateY(-2px);}
+.btn-hero svg{width:16px;height:16px;}
+.hero-scroll{display:inline-flex;align-items:center;gap:0.3rem;font-size:0.78rem;color:var(--text-muted);text-decoration:none;font-weight:500;transition:color .2s;margin-bottom:2.5rem;opacity:0;animation:up .7s var(--ease) .6s forwards;}
+.hero-scroll:hover{color:var(--navy);}
+.hero-scroll svg{width:12px;height:12px;}
+.hero-stars{opacity:0;animation:up .7s var(--ease) .7s forwards;display:flex;align-items:center;justify-content:center;gap:0.5rem;font-size:0.82rem;color:var(--text-sec);}
+.stars{color:var(--star);font-size:0.9rem;letter-spacing:2px;}
+.hero-stars a{color:var(--text-muted);font-size:0.72rem;text-decoration:none;margin-left:0.3rem;transition:color .2s;}
+.hero-stars a:hover{color:var(--navy);}
+
+/* TALLER */
+.taller{background:var(--off-white);}
+.taller-inner{max-width:700px;margin:0 auto;text-align:center;}
+.taller-inner .s-sub{margin:0 auto 2rem;}
+.taller-body{font-size:0.9rem;color:var(--text-sec);line-height:1.8;font-weight:300;margin-bottom:2rem;text-align:left;max-width:580px;margin-left:auto;margin-right:auto;}
+.taller-features{display:flex;flex-wrap:wrap;justify-content:center;gap:0.5rem;margin-bottom:2.5rem;}
+.t-feat{font-size:0.7rem;font-weight:600;color:var(--navy);background:var(--white);padding:0.4rem 0.9rem;border-radius:100px;border:1px solid var(--border);}
+.taller-cta{display:inline-flex;align-items:center;gap:0.5rem;background:var(--navy);color:var(--white);padding:0.95rem 2.2rem;border-radius:10px;text-decoration:none;font-weight:600;font-size:0.9rem;font-family:var(--body);transition:all .3s var(--ease);box-shadow:0 4px 20px rgba(27,58,75,0.1);}
+.taller-cta:hover{background:var(--navy-deep);transform:translateY(-2px);box-shadow:0 8px 28px rgba(27,58,75,0.16);}
+.taller-cta svg{width:15px;height:15px;}
+.taller-note{font-size:0.72rem;color:var(--text-muted);margin-top:1rem;}
+
+/* REVIEWS */
+.reviews{background:var(--white);overflow:hidden;}
+.reviews-header{text-align:center;margin-bottom:2.5rem;}
+.reviews-badge{display:inline-flex;align-items:center;gap:0.5rem;font-size:0.85rem;color:var(--text);margin-bottom:1.5rem;}
+.reviews-badge .stars{font-size:1rem;}
+.reviews-badge span{font-weight:300;color:var(--text-sec);}
+.reviews-track{display:flex;gap:1.2rem;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding:0.5rem 0 1.5rem;scrollbar-width:none;}
+.reviews-track::-webkit-scrollbar{display:none;}
+.review-card{min-width:320px;max-width:360px;flex-shrink:0;scroll-snap-align:start;background:var(--off-white);border:1px solid var(--border);border-radius:14px;padding:1.8rem;transition:all .3s var(--ease);}
+.review-card:hover{border-color:var(--gold-border);transform:translateY(-2px);}
+.review-stars{color:var(--star);font-size:0.75rem;letter-spacing:1px;margin-bottom:0.8rem;}
+.review-card p{font-size:0.84rem;color:var(--text-sec);line-height:1.7;font-weight:300;font-style:italic;}
+.review-author{font-size:0.7rem;color:var(--text-muted);font-weight:600;margin-top:0.8rem;font-style:normal;}
+.reviews-link{text-align:center;margin-top:1.5rem;}
+.reviews-link a{font-size:0.78rem;color:var(--text-muted);text-decoration:none;font-weight:500;transition:color .2s;}
+.reviews-link a:hover{color:var(--navy);}
+
+/* ON DEMAND */
+.ondemand{background:var(--off-white);}
+.ondemand-header{text-align:center;max-width:560px;margin:0 auto 3rem;}
+.ondemand-header .s-sub{margin:0 auto;}
+.od-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;}
+.od-card{background:var(--white);border:1px solid var(--border);border-radius:14px;overflow:hidden;transition:all .3s var(--ease);position:relative;}
+.od-card:hover{border-color:var(--gold-border);transform:translateY(-3px);box-shadow:0 12px 40px rgba(27,58,75,0.04);}
+.od-img{width:100%;height:180px;background:linear-gradient(135deg,var(--navy) 0%,var(--navy-soft) 100%);display:flex;align-items:center;justify-content:center;position:relative;}
+.od-img-label{font-family:var(--heading);font-size:1.4rem;font-weight:700;color:var(--white);text-align:center;padding:0 1rem;line-height:1.3;}
+.od-body{padding:1.5rem;}
+.od-body h3{font-family:var(--heading);font-size:1rem;font-weight:700;color:var(--navy);margin-bottom:0.4rem;}
+.od-body p{font-size:0.82rem;color:var(--text-sec);line-height:1.65;font-weight:300;margin-bottom:0.8rem;}
+.od-meta{font-size:0.68rem;color:var(--text-muted);font-weight:500;margin-bottom:1rem;}
+.od-cta{display:inline-flex;align-items:center;gap:0.4rem;font-size:0.8rem;font-weight:600;color:var(--navy);text-decoration:none;transition:color .2s;}
+.od-cta:hover{color:var(--gold);}
+.od-cta svg{width:14px;height:14px;}
+/* Próximamente */
+.od-card.soon{opacity:0.45;pointer-events:none;}
+.od-card.soon .od-img{background:linear-gradient(135deg,#8a9bae 0%,#b0bec5 100%);}
+.od-soon-badge{position:absolute;top:1rem;right:1rem;font-size:0.6rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;color:var(--white);background:rgba(0,0,0,0.3);padding:0.25rem 0.6rem;border-radius:4px;}
+
+/* QUIEN DICTA */
+.quien{background:var(--white);text-align:center;}
+.quien-inner{max-width:600px;margin:0 auto;}
+.quien .s-title{margin-bottom:1rem;}
+.quien p{font-size:0.92rem;color:var(--text-sec);line-height:1.8;font-weight:300;margin-bottom:0.5rem;}
+.quien strong{color:var(--navy);font-weight:600;}
+.quien-creds{display:flex;flex-wrap:wrap;justify-content:center;gap:0.45rem;margin-top:1.5rem;}
+.quien-cred{font-size:0.68rem;font-weight:600;color:var(--navy);background:var(--off-white);padding:0.38rem 0.85rem;border-radius:100px;border:1px solid var(--border);}
+
+/* FOOTER */
+footer{background:var(--navy);padding:2.5rem 2rem;}
+.footer-inner{max-width:1100px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;}
+.footer-brand{font-family:var(--heading);font-size:0.95rem;font-weight:500;color:var(--gold);}
+.footer-brand span{display:block;font-family:var(--body);font-size:0.68rem;color:rgba(255,255,255,0.3);font-weight:300;margin-top:0.3rem;}
+.footer-links{display:flex;gap:1.8rem;flex-wrap:wrap;}
+.footer-links a{color:rgba(255,255,255,0.35);text-decoration:none;font-size:0.74rem;transition:color .2s;font-weight:400;}
+.footer-links a:hover{color:var(--gold);}
+.footer-copy{font-size:0.65rem;color:rgba(255,255,255,0.15);}
+
+/* WHATSAPP */
+.wa{position:fixed;bottom:1.8rem;right:1.8rem;z-index:90;width:52px;height:52px;border-radius:50%;background:#25d366;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 16px rgba(37,211,102,0.25);transition:all .3s var(--ease);text-decoration:none;}
+.wa:hover{transform:scale(1.08);}
+.wa svg{width:26px;height:26px;fill:white;}
+
+/* ANIMATIONS */
+@keyframes up{from{opacity:0;transform:translateY(16px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(18px);transition:opacity .6s var(--ease),transform .6s var(--ease);}
+.reveal.visible{opacity:1;transform:translateY(0);}
+.d1{transition-delay:.08s;}.d2{transition-delay:.16s;}.d3{transition-delay:.24s;}.d4{transition-delay:.32s;}.d5{transition-delay:.4s;}
+
+/* RESPONSIVE */
+@media(max-width:968px){
+  .od-grid{grid-template-columns:1fr 1fr;}
+  .nav-links{display:none;}.hamburger{display:block;}
+  nav.open .nav-links{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:var(--white);padding:1.2rem 2rem;gap:.8rem;border-bottom:1px solid var(--border);}
+}
+@media(max-width:600px){
+  .hero{padding:6rem 1.2rem 2.5rem;min-height:auto;}
+  .hero h1{font-size:1.7rem;}
+  .btn-hero,.taller-cta{padding:.9rem 2rem;font-size:.88rem;width:100%;justify-content:center;}
+  section{padding:4rem 1.2rem;}
+  .od-grid{grid-template-columns:1fr;}
+  .review-card{min-width:280px;}
+}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 450 225" height="32"><path fill="#b89a4e" d="M 397.082031 132.410156 C 391.953125 129.578125 387.785156 125.628906 385.878906 119.332031 C 384.894531 116.082031 385.671875 112.585938 387.84375 110.757812 C 389.890625 109.039062 392.886719 109.667969 395.03125 112.144531 C 396.828125 114.222656 397.277344 117.046875 397.480469 119.832031 C 397.679688 121.28125 397.890625 122.535156 398.015625 123.828125 C 398.175781 125.628906 398.703125 126.957031 400.714844 126.644531 C 402.8125 126.324219 404.507812 125.300781 405.359375 122.84375 C 405.824219 121.496094 406.039062 120.183594 405.925781 118.839844 C 405.628906 115.261719 404.613281 112.085938 403 109.292969 C 399.929688 103.980469 394.453125 102.667969 388.890625 105.78125 C 381.644531 109.824219 378.640625 114.820312 379.105469 122.355469 C 379.269531 124.941406 380.023438 127.308594 380.859375 129.601562 C 383.070312 135.667969 387.34375 139.707031 391.59375 143.808594 C 395.523438 147.609375 399.945312 150.917969 402.445312 156.230469 C 404.253906 160.097656 402.199219 163.820312 397.816406 164.679688 C 396.597656 164.917969 395.359375 164.953125 394.199219 164.84375 C 389.121094 164.402344 387.34375 160.300781 386.199219 155.691406 C 385.328125 152.1875 385.371094 148.230469 383.96875 144.972656 C 383.453125 143.777344 382.609375 142.605469 381.351562 142.128906 C 377.027344 140.5 373.808594 146.234375 373.167969 149.597656 C 372.398438 153.652344 372.800781 157.886719 374.160156 161.773438 C 376.871094 169.496094 383.480469 175.800781 391.726562 176.988281 C 397.621094 177.839844 403.507812 176.417969 408.527344 170.398438 C 412.957031 165.082031 413.628906 159.097656 412.359375 153.839844 C 410.042969 144.242188 405.097656 136.839844 397.082031 132.410156"/><path fill="#b89a4e" d="M 172.882812 123.269531 C 164.855469 119.800781 158.953125 123.605469 158.902344 132.171875 C 158.839844 143.34375 159.066406 154.535156 158.902344 165.695312 C 158.878906 167.269531 158.855469 168.832031 158.8125 170.40625 C 158.796875 171.050781 158.78125 171.699219 158.765625 172.347656 C 158.746094 173.148438 158.746094 174.03125 159.273438 174.648438 C 160.679688 176.300781 164.339844 175.671875 166.140625 175.269531 C 168.605469 174.730469 170.898438 173.589844 172.957031 172.132812 C 183.96875 164.28125 188.367188 153.503906 185.933594 140.253906 C 184.527344 132.539062 180.300781 126.480469 172.882812 123.269531 M 167.246094 165.484375 C 168.328125 153.371094 168.15625 142.074219 167.101562 130.28125 C 172.652344 132.5 175.238281 136.398438 176.273438 141.394531 C 178.210938 150.851562 175.492188 158.71875 167.246094 165.484375"/><path fill="#b89a4e" d="M 248.347656 116.910156 C 248.046875 116.65625 247.695312 116.464844 247.292969 116.375 C 245.71875 116.007812 243.492188 116.203125 242.765625 117.925781 C 241.855469 120.070312 242.492188 122.558594 242.535156 124.8125 C 242.59375 128.117188 242.476562 141.8125 242.230469 145.109375 C 241.804688 150.792969 241.28125 157.222656 238.75 162.398438 C 237.367188 165.222656 234.035156 165 232.371094 162.035156 C 230.769531 159.179688 230.332031 155.917969 229.792969 152.726562 C 229.015625 148.828125 229.03125 144.660156 228.917969 140.707031 C 228.851562 138.320312 228.8125 135.929688 228.835938 133.539062 C 228.859375 130.46875 229.382812 127.242188 225.429688 127.4375 C 222.71875 127.578125 220.574219 128.601562 220.375 131.699219 C 220.300781 132.910156 220.246094 134.121094 220.203125 135.332031 C 220.113281 138.140625 220.089844 140.949219 220.105469 143.757812 C 220.148438 148.6875 220.15625 153.742188 220.890625 158.628906 C 220.957031 160.382812 221.933594 162.871094 223.046875 165.230469 C 225.355469 170.144531 228.925781 173.746094 234.445312 174.03125 C 240.25 174.335938 244.359375 171.175781 247.105469 166.023438 C 248.75 162.929688 249.445312 159.507812 250.035156 156.074219 C 250.796875 151.644531 250.773438 136.617188 250.804688 132.132812 C 250.828125 128.191406 251.386719 124.042969 250.175781 120.226562 C 249.804688 119.054688 249.273438 117.679688 248.347656 116.910156"/><path fill="#b89a4e" d="M 94.292969 168.351562 C 90.863281 158.046875 92.394531 147.46875 92.945312 136.890625 C 92.992188 135.882812 93.074219 134.890625 93.125 133.875 C 93.441406 127.277344 93.738281 119.40625 91.78125 113.371094 C 90.28125 108.761719 88.808594 106.335938 84.222656 105.519531 C 80.457031 104.847656 78.472656 107.058594 76.425781 110.765625 C 74.222656 114.753906 72.25 118.867188 70.367188 123.007812 C 69.410156 125.121094 68.476562 127.25 67.542969 129.378906 C 66.765625 131.171875 66.09375 133.457031 64.585938 134.785156 C 64.308594 135.03125 63.972656 135.242188 63.613281 135.226562 C 63.105469 135.203125 62.734375 134.742188 62.441406 134.335938 C 57.371094 127.113281 54.980469 118.660156 50.429688 111.144531 C 48.757812 108.390625 46.785156 106.207031 43.671875 106.664062 C 39.25 107.328125 37.507812 109.285156 35.84375 113.757812 C 33.65625 119.621094 33.511719 127.265625 33.632812 133.792969 C 33.648438 134.800781 33.714844 135.734375 33.738281 136.726562 C 34.019531 147.238281 35.375 157.96875 31.816406 168.023438 C 30.496094 171.730469 30.332031 173.707031 33.394531 175.792969 C 36.464844 177.890625 39.070312 176.761719 41.773438 174.359375 C 44.140625 172.257812 45.300781 168.53125 45.660156 165.453125 C 46.457031 158.6875 46.25 152.242188 45.941406 145.601562 C 45.621094 138.96875 46.078125 132.550781 46.644531 125.957031 C 46.660156 125.761719 46.816406 125.472656 47.085938 125.507812 C 47.355469 125.546875 47.519531 125.652344 47.636719 126.007812 C 49.140625 130.476562 51.132812 136.234375 52.539062 140.433594 C 53.785156 144.152344 54.851562 147.945312 56.300781 151.597656 C 57.378906 154.324219 58.847656 159.121094 62.253906 159.605469 C 66.109375 160.152344 67.960938 155.527344 68.96875 152.710938 C 71.824219 144.734375 76.402344 132.851562 79.988281 124.105469 C 80.011719 124.042969 80.023438 124 80.09375 123.886719 C 80.167969 123.769531 80.585938 123.296875 80.792969 123.296875 C 80.996094 123.296875 80.832031 123.207031 81.039062 123.269531 C 81.242188 123.335938 81.472656 123.34375 81.453125 123.84375 C 81.4375 124.34375 81.40625 125.777344 81.390625 126.316406 C 81.324219 129.683594 81.183594 132.769531 81.109375 136.078125 C 81.070312 138.027344 81.003906 139.699219 80.890625 141.761719 C 80.464844 149.253906 79.839844 156.707031 80.488281 164.355469 C 80.757812 167.582031 81.832031 171.488281 84.132812 173.761719 C 86.753906 176.359375 89.078125 178.027344 92.542969 176.039062 C 95.582031 174.320312 95.582031 172.214844 94.292969 168.351562"/><path fill="#b89a4e" d="M 153.917969 129.125 C 153.113281 126.546875 152.066406 124.328125 149.117188 124.539062 C 146.078125 124.761719 145.320312 127.347656 145.238281 129.894531 C 145.113281 133.964844 145.105469 138.042969 145.300781 142.113281 C 145.523438 146.707031 146.03125 151.285156 146.414062 155.878906 C 144.246094 151.152344 142.550781 146.347656 140.5625 141.671875 C 138.554688 136.960938 136.375 132.304688 132.617188 128.660156 C 128.679688 124.84375 123.914062 124.949219 120.808594 128.929688 C 119.5 130.609375 119.097656 132.695312 118.820312 134.777344 C 117.207031 146.894531 117.566406 159.203125 115.324219 171.265625 C 114.863281 173.738281 115.625 175.753906 118.328125 176.324219 C 121.078125 176.90625 123.101562 175.828125 124.132812 173.140625 C 124.847656 171.28125 125.15625 169.339844 125.363281 167.359375 C 126.246094 158.808594 125.4375 150.171875 127 140.738281 C 127.835938 142.285156 128.300781 143.0625 128.695312 143.882812 C 131.535156 149.746094 133.535156 155.929688 135.558594 162.101562 C 136.6875 165.542969 138.226562 168.808594 140.898438 171.355469 C 144.15625 174.457031 147.957031 174.335938 150.75 170.730469 C 152.703125 168.210938 153.792969 164.75 154.203125 161.585938 C 155.222656 153.714844 154.996094 145.871094 155.300781 137.957031 C 155.421875 134.640625 155.046875 132.707031 153.917969 129.125"/><path fill="#b89a4e" d="M 215.160156 122.074219 C 210.050781 118.53125 207.542969 118.832031 204.507812 123.515625 C 199.292969 131.546875 197.066406 140.605469 197.4375 150.835938 C 197.746094 159.515625 200.515625 166.890625 206.796875 172.230469 C 212.273438 176.890625 219.457031 177.160156 224.726562 172.28125 C 230.300781 167.121094 233.46875 157.160156 233.21875 149.550781 C 232.847656 137.261719 226.238281 128.035156 215.160156 122.074219 M 223.460938 151.878906 C 222.542969 160.398438 219.421875 167.339844 213.578125 168.089844 C 208.40625 168.75 205.710938 163.328125 205.21875 157.082031 C 204.390625 146.628906 208.34375 132.457031 216.546875 130.242188 C 222.332031 128.6875 224.601562 141.296875 223.460938 151.878906"/></svg>
+    </a>
+    <div class="nav-links">
+      <a href="/">Empresas</a>
+      <a href="/personas" class="active">Individuos</a>
+      <a href="#taller">Taller</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#quien">Nosotras</a>
+    </div>
+    <button class="hamburger" onclick="document.getElementById('nav').classList.toggle('open')"><span></span><span></span><span></span></button>
+  </div>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">Talleres y cursos para vos</div>
+    <h1>Aprendé a frenar, a estar presente y a sentirte bien <em>con herramientas que funcionan desde la primera semana.</em></h1>
+    <p class="hero-sub">Talleres y cursos de mindfulness y bienestar para personas que quieren vivir con más calma, más presencia y menos piloto automático.</p>
+    <div class="hero-cta-wrap"><a href="#taller" class="btn-hero">Ver talleres disponibles <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a></div>
+    <a href="#cursos" class="hero-scroll">Cursos de 30 minutos <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 13l5 5 5-5"/></svg></a>
+    <div class="hero-stars">
+      <span class="stars">★★★★★</span> 4.9 <span>· 332 opiniones en Google</span>
+      <a href="https://maps.app.goo.gl/qJJhfeeEmwjCupB26" target="_blank">Ver reseñas →</a>
+    </div>
+  </div>
+</section>
+
+<!-- ========== TALLER ========== -->
+<section class="taller" id="taller">
+  <div class="taller-inner">
+    <div class="tag reveal">Taller en vivo</div>
+    <h2 class="s-title reveal d1">En 4 semanas vas a tener herramientas concretas para frenar la ansiedad, entrenar la mente y <em>empezar a vivir con más calma.</em></h2>
+    <p class="taller-body reveal d2">4 encuentros de 1 hora y media, uno por semana. Aprendés prácticas de meditación guiada, técnicas de regulación emocional y hábitos de bienestar mental. No necesitás experiencia previa. Presencial en Rosario u online por Zoom.</p>
+    <div class="taller-features reveal d3">
+      <span class="t-feat">4 encuentros semanales</span>
+      <span class="t-feat">1h 30min cada uno</span>
+      <span class="t-feat">Grupos de máx. 12 personas</span>
+      <span class="t-feat">Sin experiencia previa</span>
+      <span class="t-feat">Presencial y Online</span>
+    </div>
+    <a href="https://sentirmindfulness.com.ar/" class="taller-cta reveal d4">Quiero inscribirme <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+    <p class="taller-note reveal d5">Cupos limitados · Presencial en Rosario · Online por Zoom</p>
+  </div>
+</section>
+
+<!-- ========== REVIEWS ========== -->
+<section class="reviews" id="reviews">
+  <div class="container">
+    <div class="reviews-header">
+      <div class="tag reveal">Lo que dicen quienes ya empezaron</div>
+      <div class="reviews-badge reveal d1">
+        <span class="stars">★★★★★</span> 4.9 <span>· 332 opiniones en Google</span>
+      </div>
+    </div>
+    <div class="reviews-track">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Llegué buscando herramientas para frenar la ansiedad y el stress diario y eso me llevé. Lore es una genia, te responde todas las dudas y te guía en ejercicios que todos podemos hacer."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Verdaderamente encontré lo que buscaba. Paz interior y técnicas para meditar. Aprender a estar aquí y ahora, aprender a quererme. Entrenar la mente es cuestión de práctica y constancia."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Hermosa experiencia. Me ayudaron a ver y sentir las cosas desde otra perspectiva, me dieron herramientas para salir del modo automático en el que vivimos. Algo que muchos no registramos."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Es un antes y después de muchas cosas que uno está acostumbrado a hacer y te hace pensar y cambiar hábitos. Vale la pena el tiempo invertido en uno."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Te dan herramientas que sirven para todo tipo de situaciones y lograr estar más tranquilo. Te ayuda mucho con la concentración y con el estrés."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p>"Sirve mucho, es muy práctico, con muchos ejercicios y meditaciones. Se nota la pasión en el guiado de las clases. Abre una puerta para que el mindfulness sea parte de tu vida."</p>
+        <div class="review-author">— Reseña en Google</div>
+      </div>
+    </div>
+    <div class="reviews-link reveal"><a href="https://maps.app.goo.gl/qJJhfeeEmwjCupB26" target="_blank">Ver todas las opiniones en Google →</a></div>
+  </div>
+</section>
+
+<!-- ========== ON DEMAND ========== -->
+<section class="ondemand" id="cursos">
+  <div class="container">
+    <div class="ondemand-header">
+      <div class="tag reveal">Cursos de 30 minutos</div>
+      <h2 class="s-title reveal d1">Herramientas concretas que podés usar <em>esta misma noche.</em></h2>
+      <p class="s-sub reveal d2">Cursos pregrabados de 30 minutos. Acceso inmediato, de por vida, sin horarios. Diseñados por psicólogas con respaldo clínico.</p>
+    </div>
+    <div class="od-grid">
+      <!-- Descanso — disponible -->
+      <div class="od-card reveal d1">
+        <div class="od-img">
+          <span class="od-img-label">Terminó el día.<br>Tu cabeza, no.</span>
+        </div>
+        <div class="od-body">
+          <h3>Descanso</h3>
+          <p>Un protocolo con 3 ejercicios concretos para cuando te acostás y la cabeza no para. Para esa noche en que te despertás a las 3am y no volvés a dormir.</p>
+          <div class="od-meta">30 min · 3 ejercicios · Audios para cada noche</div>
+          <a href="#" class="od-cta">Quiero descansar de verdad <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        </div>
+      </div>
+      <!-- Próximamente -->
+      <div class="od-card soon reveal d2">
+        <div class="od-img"><span class="od-img-label">Estrés &<br>Burnout</span><span class="od-soon-badge">Próximamente</span></div>
+        <div class="od-body"><h3>Estrés y Burnout</h3><p>Herramientas para prevenir y gestionar el agotamiento emocional antes de que sea tarde.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      </div>
+      <div class="od-card soon reveal d3">
+        <div class="od-img"><span class="od-img-label">Alimentación<br>Consciente</span><span class="od-soon-badge">Próximamente</span></div>
+        <div class="od-body"><h3>Alimentación Consciente</h3><p>Desarrollá una relación más saludable con la comida y reducí la alimentación emocional.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      </div>
+      <div class="od-card soon reveal d4">
+        <div class="od-img"><span class="od-img-label">Ansiedad</span><span class="od-soon-badge">Próximamente</span></div>
+        <div class="od-body"><h3>Ansiedad</h3><p>Técnicas concretas para cuando la cabeza no para y la ansiedad se apodera de tu día.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      </div>
+      <div class="od-card soon reveal d5">
+        <div class="od-img"><span class="od-img-label">Foco y<br>Concentración</span><span class="od-soon-badge">Próximamente</span></div>
+        <div class="od-body"><h3>Foco y Concentración</h3><p>Entrenamiento para dejar de saltar entre tareas y recuperar la capacidad de hacer una cosa a la vez.</p><div class="od-meta">30 min · Acceso inmediato · De por vida</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== QUIEN DICTA ========== -->
+<section class="quien" id="quien">
+  <div class="quien-inner">
+    <div class="tag reveal">Quiénes somos</div>
+    <h2 class="s-title reveal d1">Las hermanas <em>Campos.</em></h2>
+    <p class="reveal d2"><strong>Lorena y Lucila.</strong> Psicólogas, speakers, Master en Mindfulness por la Universidad de Zaragoza. Más de 15 años de experiencia.</p>
+    <p class="reveal d3">Su enfoque es práctico, sin misticismo y basado en evidencia. Exactamente lo que necesitás cuando ya probaste todo y nada te alcanzó.</p>
+    <div class="quien-creds reveal d4">
+      <span class="quien-cred">Psicólogas</span>
+      <span class="quien-cred">Master en Mindfulness</span>
+      <span class="quien-cred">U. de Zaragoza</span>
+      <span class="quien-cred">+15 años</span>
+      <span class="quien-cred">Enfoque cognitivo-conductual</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Sentir Mindfulness<span>Talleres y cursos de mindfulness y bienestar.</span></div>
+    <div class="footer-links">
+      <a href="/">Empresas</a>
+      <a href="/personas">Individuos</a>
+      <a href="#taller">Taller</a>
+      <a href="#cursos">Cursos</a>
+      <a href="#quien">Nosotras</a>
+    </div>
+    <div class="footer-copy">© 2026 Sentir Mindfulness · Rosario, Argentina · +54 3416 279 854</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20información%20sobre%20los%20talleres" class="wa" target="_blank" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- JS -->
+<script>
+const obs=new IntersectionObserver(e=>{e.forEach(el=>{if(el.isIntersecting)el.target.classList.add('visible')})},{threshold:0.08,rootMargin:'0px 0px -30px 0px'});
+document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
+</script>
+</body>
+</html>
