@@ -259,19 +259,6 @@
   background: linear-gradient(135deg, #8a9bae 0%, #b0bec5 100%);
 }
 
-.curso-visual::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: rgba(15, 37, 48, 0.55);
-  z-index: 0;
-}
-
-.curso-visual > * {
-  position: relative;
-  z-index: 1;
-}
-
 .curso-visual-title {
   font-family: var(--heading);
   font-size: 1.25rem;
@@ -543,10 +530,7 @@
 
       <!-- Descanso — disponible -->
       <div class="curso-card reveal">
-        <div class="curso-visual" style="background-image: url('img/cursos/descanso.jpg'); background-size: cover; background-position: center;">
-          <div class="curso-visual-title">Terminó el día.<br>Tu cabeza, no.</div>
-          <div class="curso-visual-meta">Disponible ahora</div>
-        </div>
+        <div class="curso-visual" style="background-image: url('img/cursos/descanso.jpg'); background-size: cover; background-position: center;"></div>
         <div class="curso-content">
           <div class="curso-problem">No podés desconectar al final del día</div>
           <h3>Descanso</h3>
