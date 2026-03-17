@@ -245,6 +245,7 @@
 .curso-visual {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-soft) 100%);
   height: 190px;
+  isolation: isolate;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -256,6 +257,19 @@
 
 .curso-card.soon .curso-visual {
   background: linear-gradient(135deg, #8a9bae 0%, #b0bec5 100%);
+}
+
+.curso-visual::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 37, 48, 0.55);
+  z-index: 0;
+}
+
+.curso-visual > * {
+  position: relative;
+  z-index: 1;
 }
 
 .curso-visual-title {
@@ -529,7 +543,7 @@
 
       <!-- Descanso — disponible -->
       <div class="curso-card reveal">
-        <div class="curso-visual">
+        <div class="curso-visual" style="background-image: url('img/cursos/descanso.jpg'); background-size: cover; background-position: center;">
           <div class="curso-visual-title">Terminó el día.<br>Tu cabeza, no.</div>
           <div class="curso-visual-meta">Disponible ahora</div>
         </div>
