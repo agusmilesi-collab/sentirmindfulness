@@ -23,6 +23,184 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* ── HERO sin CTA wrap ── */
+.hero-inner .hero-cta-wrap { display: none; }
+.hero-inner .hero-scroll { display: none; }
+
+/* ── MODALIDADES ── */
+.modalidades {
+  background: var(--off-white);
+  padding: var(--section-pad);
+}
+
+.modalidades-header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.modalidades-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.modalidad-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s var(--ease);
+}
+
+.modalidad-card:hover {
+  border-color: var(--gold-border);
+  box-shadow: 0 16px 48px rgba(27, 58, 75, 0.07);
+  transform: translateY(-3px);
+}
+
+/* Image area */
+.modalidad-img {
+  height: 200px;
+  display: flex;
+  align-items: flex-end;
+  padding: 1.5rem;
+  position: relative;
+}
+
+.modalidad-img--presencial {
+  background:
+    linear-gradient(to top, rgba(15, 37, 48, 0.75) 0%, rgba(15, 37, 48, 0.2) 60%, transparent 100%),
+    linear-gradient(135deg, #1b3a4b 0%, #2e5a6e 50%, #b89a4e 100%);
+}
+
+.modalidad-img--online {
+  background:
+    linear-gradient(to top, rgba(15, 37, 48, 0.75) 0%, rgba(15, 37, 48, 0.2) 60%, transparent 100%),
+    linear-gradient(135deg, #2e5a6e 0%, #1b3a4b 50%, #0f2530 100%);
+}
+
+.modalidad-img-label {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
+  letter-spacing: 0.04em;
+}
+
+/* Body */
+.modalidad-body {
+  padding: 1.8rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.modalidad-body h3 {
+  font-family: var(--heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 0.4rem;
+}
+
+.modalidad-sub {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.7;
+  font-weight: 300;
+  margin-bottom: 1.2rem;
+}
+
+.modalidad-features {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  margin-bottom: 1.5rem;
+}
+
+.modalidad-features li {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  font-weight: 400;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.modalidad-features li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+/* Precio */
+.modalidad-precio {
+  background: var(--off-white);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.2rem;
+  margin-bottom: 1.2rem;
+  border: 1px solid var(--border);
+}
+
+.precio-principal {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  margin-bottom: 0.3rem;
+}
+
+.precio-monto {
+  font-family: var(--heading);
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--navy);
+  line-height: 1;
+}
+
+.precio-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 400;
+}
+
+.precio-cuotas {
+  font-size: 0.78rem;
+  color: var(--text-sec);
+  font-weight: 300;
+}
+
+.precio-cuotas strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+.modalidad-cta {
+  width: 100%;
+  justify-content: center;
+  margin-bottom: 0.7rem;
+}
+
+.modalidad-nota {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  text-align: center;
+  font-weight: 400;
+}
+
+@media (max-width: 768px) {
+  .modalidades-grid {
+    grid-template-columns: 1fr;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -51,17 +229,9 @@
 <main id="main">
 <section class="hero">
   <div class="hero-inner">
-    <div class="hero-badge">Talleres y cursos para vos</div>
+    <div class="hero-badge">Talleres en vivo</div>
     <h1>Aprendé a frenar, a estar presente y a sentirte bien <em>con herramientas que funcionan desde la primera semana.</em></h1>
-    <p class="hero-sub">Talleres y cursos de mindfulness y bienestar para personas que quieren vivir con más calma, más presencia y menos piloto automático.</p>
-    <div class="hero-cta-wrap">
-      <a href="#taller" class="btn-primary">Ver talleres disponibles
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-      </a>
-    </div>
-    <a href="#cursos" class="hero-scroll">Cursos de 30 minutos
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13l5 5 5-5"/></svg>
-    </a>
+    <p class="hero-sub">4 encuentros de 1h 30min, uno por semana. Meditación guiada, regulación emocional y hábitos de bienestar. Sin experiencia previa.</p>
     <div class="hero-stars">
       <span class="stars" aria-label="5 estrellas">★★★★★</span> 4.9 <span>· 332 opiniones en Google</span>
       <a href="https://maps.app.goo.gl/qJJhfeeEmwjCupB26" target="_blank" rel="noopener noreferrer">Ver reseñas →</a>
@@ -69,23 +239,78 @@
   </div>
 </section>
 
-<!-- ========== TALLER ========== -->
-<section class="taller" id="taller">
-  <div class="taller-inner">
-    <div class="tag reveal">Taller en vivo</div>
-    <h2 class="s-title reveal d1">En 4 semanas vas a tener herramientas concretas para frenar la ansiedad, entrenar la mente y <em>empezar a vivir con más calma.</em></h2>
-    <p class="taller-body reveal d2">4 encuentros de 1 hora y media, uno por semana. Aprendés prácticas de meditación guiada, técnicas de regulación emocional y hábitos de bienestar mental. No necesitás experiencia previa. Presencial en Rosario u online por Zoom.</p>
-    <div class="taller-features reveal d3">
-      <span class="t-feat">4 encuentros semanales</span>
-      <span class="t-feat">1h 30min cada uno</span>
-      <span class="t-feat">Grupos de máx. 12 personas</span>
-      <span class="t-feat">Sin experiencia previa</span>
-      <span class="t-feat">Presencial y Online</span>
+<!-- ========== MODALIDADES ========== -->
+<section class="modalidades" id="taller">
+  <div class="container">
+    <div class="modalidades-header">
+      <div class="tag reveal">Elegí tu modalidad</div>
+      <h2 class="s-title reveal d1">El mismo taller, <em>donde te quede mejor.</em></h2>
     </div>
-    <a href="https://sentirmindfulness.com.ar/" class="taller-cta reveal d4">Quiero inscribirme
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-    </a>
-    <p class="taller-note reveal d5">Cupos limitados · Presencial en Rosario · Online por Zoom</p>
+    <div class="modalidades-grid">
+
+      <!-- Presencial -->
+      <div class="modalidad-card reveal d1">
+        <div class="modalidad-img modalidad-img--presencial">
+          <div class="modalidad-img-label">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+            Rosario, Argentina
+          </div>
+        </div>
+        <div class="modalidad-body">
+          <h3>Taller Presencial</h3>
+          <p class="modalidad-sub">Encontrarte en persona con el grupo hace la diferencia. Más conexión, más práctica, más presencia.</p>
+          <ul class="modalidad-features">
+            <li>4 encuentros · 1h 30min cada uno</li>
+            <li>Grupos de máx. 12 personas</li>
+            <li>Sin experiencia previa</li>
+            <li>Rosario, Argentina</li>
+          </ul>
+          <div class="modalidad-precio">
+            <div class="precio-principal">
+              <span class="precio-monto">$84.000</span>
+              <span class="precio-label">por transferencia</span>
+            </div>
+            <div class="precio-cuotas">o 3 cuotas sin interés de <strong>$37.333</strong></div>
+          </div>
+          <a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20inscribirme%20al%20taller%20presencial" target="_blank" rel="noopener noreferrer" class="btn-primary modalidad-cta">Inscribirme al presencial
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <p class="modalidad-nota">Cupos limitados · Te contactamos para coordinar fecha</p>
+        </div>
+      </div>
+
+      <!-- Online -->
+      <div class="modalidad-card reveal d2">
+        <div class="modalidad-img modalidad-img--online">
+          <div class="modalidad-img-label">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2"/><path d="M8 21h8M12 17v4"/></svg>
+            Online por Zoom
+          </div>
+        </div>
+        <div class="modalidad-body">
+          <h3>Taller Online</h3>
+          <p class="modalidad-sub">Desde donde estés, con la misma profundidad. Zoom en vivo, con cámara y participación activa.</p>
+          <ul class="modalidad-features">
+            <li>4 encuentros · 1h 30min cada uno</li>
+            <li>Grupos de máx. 12 personas</li>
+            <li>Sin experiencia previa</li>
+            <li>Zoom · En vivo</li>
+          </ul>
+          <div class="modalidad-precio">
+            <div class="precio-principal">
+              <span class="precio-monto">$84.000</span>
+              <span class="precio-label">por transferencia</span>
+            </div>
+            <div class="precio-cuotas">o 3 cuotas sin interés de <strong>$37.333</strong></div>
+          </div>
+          <a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20inscribirme%20al%20taller%20online" target="_blank" rel="noopener noreferrer" class="btn-primary modalidad-cta">Inscribirme al online
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+          </a>
+          <p class="modalidad-nota">Cupos limitados · Te contactamos para coordinar fecha</p>
+        </div>
+      </div>
+
+    </div>
   </div>
 </section>
 
