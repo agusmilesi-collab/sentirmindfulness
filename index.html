@@ -27,6 +27,132 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<style>
+/* ========== FAQ SECTION ========== */
+.faq {
+  background: var(--white);
+  padding: var(--section-pad);
+}
+
+.faq .container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.faq-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.faq-header .tag {
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.faq-header .s-title {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faq-item {
+  border-bottom: 1px solid var(--border);
+}
+
+.faq-item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.faq-trigger {
+  all: unset;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 1.35rem 0;
+  cursor: pointer;
+  gap: 1.25rem;
+  font-family: var(--body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  line-height: 1.4;
+  transition: color 0.2s var(--ease);
+  box-sizing: border-box;
+}
+
+.faq-trigger:hover {
+  color: var(--gold);
+}
+
+.faq-trigger:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 3px;
+}
+
+.faq-icon {
+  flex-shrink: 0;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  border: 1.5px solid var(--gold-border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.25s var(--ease), border-color 0.25s var(--ease), transform 0.3s var(--ease);
+  color: var(--gold);
+}
+
+.faq-icon svg {
+  width: 12px;
+  height: 12px;
+  transition: transform 0.3s var(--ease);
+  display: block;
+}
+
+.faq-item[data-open="true"] .faq-icon {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--white);
+}
+
+.faq-item[data-open="true"] .faq-icon svg {
+  transform: rotate(45deg);
+}
+
+.faq-body {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.35s var(--ease);
+}
+
+.faq-body-inner {
+  padding: 0 0 1.4rem 0;
+  font-family: var(--body);
+  font-size: 0.9375rem;
+  color: var(--text-sec);
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .faq-trigger {
+    font-size: 0.9375rem;
+    padding: 1.15rem 0;
+  }
+
+  .faq-body-inner {
+    font-size: 0.9rem;
+  }
+}
+</style>
 </head>
 <body>
 
@@ -257,6 +383,175 @@
     </form>
   </div>
 </section>
+
+<!-- ========== FAQ ========== -->
+<section class="faq" id="faq" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-header">
+      <div class="tag reveal">Preguntas frecuentes</div>
+      <h2 class="s-title reveal d1" id="faq-heading">Todo lo que querés saber <em>antes de llamarnos.</em></h2>
+    </div>
+    <ul class="faq-list reveal d2" role="list">
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-1" id="faq-btn-1">
+          ¿Qué hace Sentir Mindfulness?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-1" role="region" aria-labelledby="faq-btn-1">
+          <div class="faq-body-inner">Somos una firma de bienestar corporativo que ayuda a las organizaciones y áreas de RRHH a gestionar las emociones, desarrollar el liderazgo y promover la salud mental de sus colaboradores. Combinamos psicología organizacional, mindfulness y neurociencias para diseñar intervenciones que generan cambios concretos.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-2" id="faq-btn-2">
+          ¿Para qué tipo de empresas trabajan?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-2" role="region" aria-labelledby="faq-btn-2">
+          <div class="faq-body-inner">Trabajamos principalmente con multinacionales y grandes empresas con operación en Argentina que ya tienen cultura de wellness y buscan un proveedor especializado para ejecutar sus programas de bienestar, liderazgo y salud mental.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-3" id="faq-btn-3">
+          ¿Qué es el Método Kind?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-3" role="region" aria-labelledby="faq-btn-3">
+          <div class="faq-body-inner">Es nuestro método propio de liderazgo que trabaja sobre 3 niveles: el individuo, su equipo y la organización. Incluye herramientas concretas como el Mapa Humano, cuadrantes de liderazgo, perfiles generacionales y un sistema de liderazgo 1 a 1. El objetivo es que liderar deje de depender del estilo personal de cada jefe y empiece a operar con un método compartido.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-4" id="faq-btn-4">
+          ¿Qué es el HR Help Kit?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-4" role="region" aria-labelledby="faq-btn-4">
+          <div class="faq-body-inner">Es una capacitación de 3 encuentros creada especialmente para equipos de RRHH que absorben el desgaste emocional de toda la empresa. Incluye herramientas de autoprotección emocional, scripts listos para conversaciones difíciles y protocolos para acompañar sin absorber. El resultado: que RRHH deje de ser el punching ball de la organización y recupere su rol estratégico.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-5" id="faq-btn-5">
+          ¿Cuánto dura un programa de liderazgo?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-5" role="region" aria-labelledby="faq-btn-5">
+          <div class="faq-body-inner">El programa Transformación Liderazgos Humanos tiene entre 6 y 8 encuentros, dependiendo de las necesidades de la organización. Cada intervención se diseña a medida: adaptamos la cantidad de sesiones, los contenidos y los formatos a tu realidad.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-6" id="faq-btn-6">
+          ¿Trabajan presencial y online?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-6" role="region" aria-labelledby="faq-btn-6">
+          <div class="faq-body-inner">Sí. Todos nuestros programas pueden ser presenciales, online o híbridos. Trabajamos en Rosario, en todo el país y de manera remota.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-7" id="faq-btn-7">
+          ¿Tienen respaldo clínico?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-7" role="region" aria-labelledby="faq-btn-7">
+          <div class="faq-body-inner">Sí. Lorena y Lucila Campos son Licenciadas en Psicología con matrícula, especialistas en corriente cognitiva y Master en Mindfulness por la Universidad de Zaragoza. No damos charlas motivacionales: intervenimos con profundidad profesional.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-8" id="faq-btn-8">
+          ¿Cómo es el proceso para contratar un programa?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-8" role="region" aria-labelledby="faq-btn-8">
+          <div class="faq-body-inner">Simple: nos contactás por el formulario o WhatsApp, nos contás qué necesita tu equipo, y en menos de 24 horas te respondemos con una propuesta a medida. No hay programas enlatados: cada intervención se diseña para tu organización.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-9" id="faq-btn-9">
+          ¿Pueden armar una agenda anual personalizada para nuestra empresa?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-9" role="region" aria-labelledby="faq-btn-9">
+          <div class="faq-body-inner">Sí. Diseñamos agendas a medida que combinan charlas de awareness, sesiones temáticas, programas de liderazgo y prácticas regulares de mindfulness, distribuidas a lo largo del año según tus necesidades y tiempos.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-10" id="faq-btn-10">
+          ¿Qué resultados se pueden esperar?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-10" role="region" aria-labelledby="faq-btn-10">
+          <div class="faq-body-inner">Los programas impactan en reducción de estrés y ausentismo, mejora en clima laboral, comunicación más efectiva entre equipos, mejor retención de talento, y líderes con mayor capacidad para gestionar personas. Entregamos métricas de impacto y encuestas de satisfacción para que puedas reportar resultados.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-11" id="faq-btn-11">
+          ¿Quién dicta los programas?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-11" role="region" aria-labelledby="faq-btn-11">
+          <div class="faq-body-inner">Lorena y Lucila Campos, psicólogas y speakers corporativas, lideran las intervenciones. No delegamos en facilitadores externos: quienes diseñan el programa son quienes lo dictan.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-12" id="faq-btn-12">
+          ¿El mindfulness es lo único que hacen?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-12" role="region" aria-labelledby="faq-btn-12">
+          <div class="faq-body-inner">No. Mindfulness es una de nuestras herramientas, pero nuestro expertise es más amplio: psicología organizacional, gestión emocional, desarrollo de liderazgo, comunicación, gestión del cambio y consultoría para RRHH. Sentir Mindfulness es el nombre de nuestra firma, pero lo que hacemos es bienestar corporativo con profundidad clínica.</div>
+        </div>
+      </li>
+
+      <li class="faq-item">
+        <button class="faq-trigger" aria-expanded="false" aria-controls="faq-body-13" id="faq-btn-13">
+          ¿Cómo puedo contactarlos?
+          <span class="faq-icon" aria-hidden="true">
+            <svg viewBox="0 0 12 12" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="6" y1="1" x2="6" y2="11"/><line x1="1" y1="6" x2="11" y2="6"/></svg>
+          </span>
+        </button>
+        <div class="faq-body" id="faq-body-13" role="region" aria-labelledby="faq-btn-13">
+          <div class="faq-body-inner">Podés completar el formulario en nuestra web, escribirnos por WhatsApp al +54 3416 279 854, o seguirnos en Instagram (<a href="https://www.instagram.com/sentirmindfulnessok" target="_blank" rel="noopener noreferrer" style="color:var(--gold);text-decoration:none;font-weight:600;">@sentirmindfulnessok</a>) y LinkedIn. Respondemos en menos de 24 horas con una propuesta a medida.</div>
+        </div>
+      </li>
+
+    </ul>
+  </div>
+</section>
 </main>
 
 <!-- FOOTER -->
@@ -278,6 +573,31 @@
 <a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20información%20sobre%20programas%20corporativos" class="wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
   <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
 </a>
+
+<!-- FAQ accordion -->
+<script>
+(function() {
+  var triggers = document.querySelectorAll('.faq-trigger');
+  triggers.forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var expanded = this.getAttribute('aria-expanded') === 'true';
+      var bodyId = this.getAttribute('aria-controls');
+      var body = document.getElementById(bodyId);
+      var item = this.closest('.faq-item');
+
+      if (expanded) {
+        this.setAttribute('aria-expanded', 'false');
+        item.setAttribute('data-open', 'false');
+        body.style.maxHeight = '0';
+      } else {
+        this.setAttribute('aria-expanded', 'true');
+        item.setAttribute('data-open', 'true');
+        body.style.maxHeight = body.scrollHeight + 'px';
+      }
+    });
+  });
+})();
+</script>
 
 <!-- JS -->
 <script>
