@@ -100,45 +100,118 @@
 }
 
 .programa-clases {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
   gap: 0;
   max-width: var(--container);
   margin: 0 auto 3.5rem;
-  border-top: 1px solid var(--border);
 }
 
 .programa-clase {
-  display: grid;
-  grid-template-columns: 56px 1fr;
-  gap: 1.5rem;
-  align-items: start;
-  padding: 1.5rem 0;
-  border-bottom: 1px solid var(--border);
+  position: relative;
+  padding: 2rem 2rem 2rem 0;
+  border-left: 1px solid var(--border);
+  padding-left: 2rem;
+}
+
+.programa-clase:first-child {
+  border-left: none;
+  padding-left: 0;
+}
+
+.programa-clase::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--border);
+}
+
+.programa-clase:first-child::before {
+  left: 0;
 }
 
 .clase-num {
   font-family: var(--heading);
-  font-size: 1.4rem;
+  font-size: 2.8rem;
   font-weight: 700;
   color: var(--gold);
   line-height: 1;
-  padding-top: 0.2rem;
+  margin-bottom: 1.4rem;
+  letter-spacing: -0.02em;
+  opacity: 0.9;
 }
 
 .clase-body h3 {
   font-family: var(--heading);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.6rem;
+  line-height: 1.3;
 }
 
 .clase-body p {
-  font-size: 0.88rem;
+  font-size: 0.855rem;
   color: var(--text-sec);
-  line-height: 1.75;
+  line-height: 1.8;
   font-weight: 300;
+}
+
+@media (max-width: 900px) {
+  .programa-clases {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .programa-clase:nth-child(2) {
+    border-left: 1px solid var(--border);
+  }
+
+  .programa-clase:nth-child(3) {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .programa-clase:nth-child(3)::before,
+  .programa-clase:nth-child(4)::before {
+    display: none;
+  }
+
+  .programa-clase:nth-child(3),
+  .programa-clase:nth-child(4) {
+    border-top: 1px solid var(--border);
+    padding-top: 2rem;
+    margin-top: 0.5rem;
+  }
+}
+
+@media (max-width: 540px) {
+  .programa-clases {
+    grid-template-columns: 1fr;
+  }
+
+  .programa-clase {
+    border-left: none;
+    padding-left: 0;
+    border-top: 1px solid var(--border);
+    padding-top: 1.75rem;
+    padding-bottom: 1.75rem;
+  }
+
+  .programa-clase:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .programa-clase::before {
+    display: none;
+  }
+
+  .programa-clase:nth-child(3) {
+    border-top: 1px solid var(--border);
+  }
 }
 
 .programa-principios {
@@ -179,6 +252,189 @@
 
 @media (max-width: 768px) {
   .programa-principios {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ── SALON ── */
+.salon {
+  background: var(--white);
+  padding: var(--section-pad);
+}
+
+.salon-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.salon-header {
+  text-align: center;
+  max-width: 560px;
+  margin: 0 auto 3rem;
+}
+
+.salon-layout {
+  display: grid;
+  grid-template-columns: 1fr 380px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.salon-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 220px 180px;
+  gap: 0.625rem;
+}
+
+.salon-photo {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  position: relative;
+}
+
+.salon-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.salon-photo--placeholder {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.salon-photo:nth-child(1) { grid-column: 1 / 3; }
+.salon-photo:nth-child(3) { grid-column: 3 / 4; }
+.salon-photo:nth-child(4) { grid-column: 1 / 2; }
+.salon-photo:nth-child(5) { grid-column: 2 / 3; }
+.salon-photo:nth-child(6) { grid-column: 3 / 4; }
+
+.ph-1 { background: linear-gradient(135deg, #1b3a4b 0%, #2e5a6e 60%, #b89a4e 100%); }
+.ph-2 { background: linear-gradient(135deg, #2e5a6e 0%, #3d7a8a 100%); }
+.ph-3 { background: linear-gradient(160deg, #b89a4e 0%, #d4b87a 50%, #1b3a4b 100%); }
+.ph-4 { background: linear-gradient(135deg, #e8e2d9 0%, #c8bfb2 100%); }
+.ph-5 { background: linear-gradient(135deg, #1b3a4b 0%, #4a6375 100%); }
+.ph-6 { background: linear-gradient(160deg, #b89a4e 0%, #8a7040 50%, #2e5a6e 100%); }
+
+.salon-photo-label {
+  position: absolute;
+  bottom: 0.75rem;
+  left: 0.75rem;
+  font-size: 0.65rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.salon-sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.salon-map {
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  border: 1px solid var(--border);
+  height: 260px;
+  flex-shrink: 0;
+}
+
+.salon-map iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+  display: block;
+}
+
+.salon-info {
+  background: var(--off-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+}
+
+.salon-info-title {
+  font-family: var(--heading);
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+
+.salon-facts {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.salon-fact {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.salon-fact-icon {
+  width: 28px;
+  height: 28px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--gold-mid);
+  border: 1px solid var(--gold-border);
+  border-radius: 50%;
+  color: var(--gold);
+}
+
+.salon-fact-icon svg {
+  width: 13px;
+  height: 13px;
+  stroke: var(--gold);
+  fill: none;
+  stroke-width: 2;
+}
+
+.salon-fact-text {
+  font-size: 0.82rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+  font-weight: 300;
+  padding-top: 0.3rem;
+}
+
+@media (max-width: 860px) {
+  .salon-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .salon-sidebar {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .salon-map {
+    height: 240px;
+  }
+}
+
+@media (max-width: 560px) {
+  .salon-gallery {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 160px 160px 160px;
+  }
+
+  .salon-photo:nth-child(1) { grid-column: 1 / 3; }
+  .salon-photo:nth-child(3) { grid-column: 1 / 2; }
+  .salon-photo:nth-child(4) { grid-column: 2 / 3; }
+  .salon-photo:nth-child(5) { grid-column: 1 / 2; }
+  .salon-photo:nth-child(6) { grid-column: 2 / 3; }
+
+  .salon-sidebar {
     grid-template-columns: 1fr;
   }
 }
@@ -580,7 +836,7 @@
     <div class="programa-header">
       <div class="tag reveal">El programa</div>
       <h2 class="s-title reveal d1">4 encuentros. <em>Cada uno con un propósito.</em></h2>
-      <p class="s-sub reveal d2" style="margin: 0.8rem auto 0; text-align:center;">"No lo contamos — lo hacés sentir." La mayor parte del tiempo la dedicamos a práctica: meditaciones, ejercicios de respiración y ejercicios sensoriales.</p>
+      <p class="s-sub reveal d2" style="margin: 0.8rem auto 0; text-align:center;">"No lo contamos, lo hacemos sentir." La mayor parte del tiempo la dedicamos a práctica: meditaciones, ejercicios de respiración y ejercicios sensoriales.</p>
     </div>
 
     <div class="programa-clases">
@@ -629,6 +885,88 @@
         <div class="principio-icon">✦</div>
         <h4>Hábito</h4>
         <p>El bienestar no es un destino — es una práctica. A medida que experimentás los beneficios, el compromiso con vos mismo crece solo.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ========== SALON ========== -->
+<section class="salon" id="salon">
+  <div class="salon-inner">
+
+    <div class="salon-header">
+      <div class="tag reveal">Dónde nos encontramos</div>
+      <h2 class="s-title reveal d1">Nuestro <em>salón.</em></h2>
+    </div>
+
+    <div class="salon-layout">
+
+      <div class="salon-gallery reveal d1">
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-1"></div>
+          <span class="salon-photo-label">El espacio</span>
+        </div>
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-2"></div>
+        </div>
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-3"></div>
+        </div>
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-4"></div>
+        </div>
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-5"></div>
+        </div>
+        <div class="salon-photo">
+          <div class="salon-photo--placeholder ph-6"></div>
+        </div>
+      </div>
+
+      <div class="salon-sidebar reveal d2">
+
+        <div class="salon-map">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.116!2d-60.65167!3d-32.94574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab3c92b2d99b%3A0x7265f8f1c09516e5!2sSentir+Mindfulness!5e0!3m2!1ses-419!2sar!4v1710000000000!5m2!1ses-419!2sar"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Ubicación de Sentir Mindfulness en Rosario, Argentina"
+            aria-label="Mapa de ubicación"
+          ></iframe>
+        </div>
+
+        <div class="salon-info">
+          <div class="salon-info-title">Información del espacio</div>
+          <div class="salon-facts">
+            <div class="salon-fact">
+              <div class="salon-fact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor" stroke="none"/></svg>
+              </div>
+              <span class="salon-fact-text">Rosario, Argentina</span>
+            </div>
+            <div class="salon-fact">
+              <div class="salon-fact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><polyline points="17 3 17 11"/><line x1="3" y1="8" x2="21" y2="8"/><polyline points="7 3 7 8"/><path d="M3 8v10a2 2 0 002 2h14a2 2 0 002-2V8"/></svg>
+              </div>
+              <span class="salon-fact-text">Segundo piso — acceso por escalera</span>
+            </div>
+            <div class="salon-fact">
+              <div class="salon-fact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="14" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/></svg>
+              </div>
+              <span class="salon-fact-text">Colchonetas incluidas · También disponemos de sillas</span>
+            </div>
+            <div class="salon-fact">
+              <div class="salon-fact-icon">
+                <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+              </div>
+              <span class="salon-fact-text">Ropa cómoda recomendada</span>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
 
