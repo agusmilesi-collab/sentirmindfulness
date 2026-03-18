@@ -45,6 +45,87 @@
   display: block;
 }
 
+/* ── PARA QUIÉN / BENEFICIOS ── */
+.para-quien {
+  padding: var(--section-pad) 2rem;
+  background: var(--off-white);
+}
+.para-quien-grid {
+  max-width: var(--container);
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+}
+.pq-title {
+  font-family: var(--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0.8rem 0 1.5rem;
+  line-height: 1.25;
+}
+.pq-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.pq-list li {
+  font-size: 0.9rem;
+  color: var(--text-sec);
+  line-height: 1.65;
+  padding-left: 1.1rem;
+  position: relative;
+}
+.pq-list li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--gold);
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 1.3;
+}
+.beneficios-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+.beneficios-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.85rem;
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.6;
+}
+.beneficio-icon {
+  flex-shrink: 0;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background: var(--white);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  margin-top: 0.05rem;
+}
+.beneficio-icon svg {
+  width: 15px;
+  height: 15px;
+}
+.beneficios-list strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+@media (max-width: 720px) {
+  .para-quien-grid { grid-template-columns: 1fr; gap: 2.5rem; }
+}
+
 /* ── QUÉ ES MINDFULNESS ── */
 .que-es {
   background: var(--white);
@@ -664,6 +745,64 @@
   </div>
   <div class="hero-photo">
     <img src="img/taller/main_individuos.jpg" alt="Taller de mindfulness Sentir">
+  </div>
+</section>
+
+<!-- ========== PARA QUIÉN / BENEFICIOS ========== -->
+<section class="para-quien">
+  <div class="container">
+    <div class="para-quien-grid">
+
+      <div class="para-quien-col reveal">
+        <div class="tag">¿Para quién es?</div>
+        <h2 class="pq-title">Este taller es para vos si…</h2>
+        <ul class="pq-list">
+          <li>Sentís que el ritmo de vida te superó y no encontrás cómo bajar el ruido mental.</li>
+          <li>Querés herramientas concretas para el estrés, sin misticismo ni espiritualidad.</li>
+          <li>Nunca meditaste y no sabés por dónde empezar.</li>
+          <li>Ya intentaste meditar, pero sin estructura ni continuidad.</li>
+          <li>Manejás mucha exigencia — laboral o personal — y necesitás estar mejor.</li>
+        </ul>
+      </div>
+
+      <div class="para-quien-col reveal d1">
+        <div class="tag">¿Qué vas a lograr?</div>
+        <h2 class="pq-title">Lo que te llevás del taller</h2>
+        <ul class="beneficios-list">
+          <li>
+            <span class="beneficio-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 22c5.523 0 10-4.477 10-10S17.523 2 12 2 2 6.477 2 12s4.477 10 10 10z"/><path d="M8 12l3 3 5-5"/></svg>
+            </span>
+            <span><strong>Menos estrés y ansiedad</strong> — aprendés a interrumpir el piloto automático.</span>
+          </li>
+          <li>
+            <span class="beneficio-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+            </span>
+            <span><strong>Mejor concentración</strong> — entrenás la atención como si fuera un músculo.</span>
+          </li>
+          <li>
+            <span class="beneficio-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+            </span>
+            <span><strong>Regulación emocional</strong> — respondés en lugar de reaccionar.</span>
+          </li>
+          <li>
+            <span class="beneficio-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87"/><path d="M16 3.13a4 4 0 010 7.75"/></svg>
+            </span>
+            <span><strong>Un hábito real</strong> — no una app más, sino una práctica que funciona.</span>
+          </li>
+          <li>
+            <span class="beneficio-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M21 15a2 2 0 01-2 2H7l-4 4V5a2 2 0 012-2h14a2 2 0 012 2z"/></svg>
+            </span>
+            <span><strong>Grupo pequeño</strong> — aprendés con personas que están en el mismo proceso.</span>
+          </li>
+        </ul>
+      </div>
+
+    </div>
   </div>
 </section>
 
