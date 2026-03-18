@@ -356,18 +356,25 @@
   padding: 1.8rem;
 }
 
+.principio-header {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.8rem;
+}
+
 .principio-icon {
   color: var(--gold);
   font-size: 1rem;
-  margin-bottom: 0.8rem;
+  flex-shrink: 0;
 }
 
 .principio h4 {
   font-family: var(--heading);
-  font-size: 1rem;
+  font-size: 1.75rem;
   font-weight: 700;
   color: var(--navy);
-  margin-bottom: 0.5rem;
+  margin: 0;
 }
 
 .principio p {
@@ -1167,18 +1174,24 @@
 
     <div class="programa-principios">
       <div class="principio reveal">
-        <div class="principio-icon">✦</div>
-        <h4>Amabilidad</h4>
+        <div class="principio-header">
+          <div class="principio-icon">✦</div>
+          <h4>Amabilidad</h4>
+        </div>
         <p>Un espacio seguro, sin juicio. Tus instructoras te guían paso a paso hasta que empezás a tratarte con la misma amabilidad con la que tratás a los demás.</p>
       </div>
       <div class="principio reveal d1">
-        <div class="principio-icon">✦</div>
-        <h4>Registro</h4>
+        <div class="principio-header">
+          <div class="principio-icon">✦</div>
+          <h4>Registro</h4>
+        </div>
         <p>Aprendés a detectar las señales que tu cuerpo te envía y a leer en el momento presente lo que te está pasando — para poder decidir qué querés hacer con eso.</p>
       </div>
       <div class="principio reveal d2">
-        <div class="principio-icon">✦</div>
-        <h4>Hábito</h4>
+        <div class="principio-header">
+          <div class="principio-icon">✦</div>
+          <h4>Hábito</h4>
+        </div>
         <p>El bienestar no es un destino — es una práctica. A medida que experimentás los beneficios, el compromiso con vos mismo crece solo.</p>
       </div>
     </div>
