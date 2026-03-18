@@ -332,7 +332,6 @@ section {
   font-size: 0.95rem;
   line-height: 1.75;
   color: var(--text-sec);
-  max-width: 500px;
   margin: 0 auto 2.5rem;
   font-weight: 300;
   opacity: 0;
