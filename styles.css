@@ -269,13 +269,7 @@ section {
 }
 
 .hero::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background: linear-gradient(90deg, transparent 10%, var(--gold-border) 50%, transparent 90%);
+  display: none;
 }
 
 .hero-inner {
