@@ -523,6 +523,12 @@ section {
   color: var(--navy);
 }
 
+.hero-stars-logo {
+  height: 28px;
+  width: auto;
+  margin-right: 0.4rem;
+}
+
 /* ===== DRIVERS / QUE HACEMOS ===== */
 .drivers {
   background: var(--off-white);
