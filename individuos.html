@@ -283,7 +283,7 @@
 .salon-gallery {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 220px 180px;
+  grid-template-rows: 220px 180px 180px;
   gap: 0.625rem;
 }
 
@@ -307,10 +307,6 @@
 }
 
 .salon-photo:nth-child(1) { grid-column: 1 / 3; }
-.salon-photo:nth-child(3) { grid-column: 3 / 4; }
-.salon-photo:nth-child(4) { grid-column: 1 / 2; }
-.salon-photo:nth-child(5) { grid-column: 2 / 3; }
-.salon-photo:nth-child(6) { grid-column: 3 / 4; }
 
 .ph-1 { background: linear-gradient(135deg, #1b3a4b 0%, #2e5a6e 60%, #b89a4e 100%); }
 .ph-2 { background: linear-gradient(135deg, #2e5a6e 0%, #3d7a8a 100%); }
@@ -425,14 +421,10 @@
 @media (max-width: 560px) {
   .salon-gallery {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 160px 160px 160px;
+    grid-template-rows: 160px 160px 160px 160px;
   }
 
   .salon-photo:nth-child(1) { grid-column: 1 / 3; }
-  .salon-photo:nth-child(3) { grid-column: 1 / 2; }
-  .salon-photo:nth-child(4) { grid-column: 2 / 3; }
-  .salon-photo:nth-child(5) { grid-column: 1 / 2; }
-  .salon-photo:nth-child(6) { grid-column: 2 / 3; }
 
   .salon-sidebar {
     grid-template-columns: 1fr;
@@ -920,6 +912,12 @@
         </div>
         <div class="salon-photo">
           <img src="img/salon/salon-6.jpg" alt="Nuestro salón">
+        </div>
+        <div class="salon-photo">
+          <img src="img/salon/salon-7.jpg" alt="Nuestro salón">
+        </div>
+        <div class="salon-photo">
+          <img src="img/salon/salon-8.jpg" alt="Nuestro salón">
         </div>
       </div>
 
