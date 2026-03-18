@@ -133,10 +133,74 @@
   color: var(--navy);
 }
 
-/* Recognition list */
+/* Video placeholder */
 .hook-right {
   opacity: 0;
   animation: up 0.7s var(--ease) 0.3s forwards;
+}
+
+.hook-video {
+  width: 100%;
+}
+
+.hook-video-inner {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: linear-gradient(135deg, #0f2530 0%, #1b3a4b 60%, #2e5a6e 100%);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border);
+}
+
+.hook-video-inner::after {
+  content: 'Video próximamente';
+  position: absolute;
+  bottom: 1rem;
+  left: 1.2rem;
+  font-size: 0.62rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(255,255,255,0.4);
+}
+
+.hook-video-play {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.12);
+  border: 2px solid rgba(255,255,255,0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.7);
+  backdrop-filter: blur(4px);
+  transition: background 0.2s, transform 0.2s;
+}
+
+.hook-video-play svg {
+  width: 28px;
+  height: 28px;
+  margin-left: 4px;
+}
+
+.hook-video-inner:hover .hook-video-play {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.08);
+}
+
+.hook-video-caption {
+  font-size: 0.78rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: italic;
+  text-align: center;
+  margin-top: 0.75rem;
 }
 
 .recognition-list {
@@ -489,29 +553,14 @@
     </div>
 
     <div class="hook-right">
-      <ul class="recognition-list" aria-label="¿Te identificás con alguna de estas situaciones?">
-        <li class="recognition-item">
-          <div class="rec-check" aria-hidden="true"></div>
-          <p>Manejás un equipo, una agenda imposible y las expectativas de todos. <strong>Tu cabeza, nadie la maneja.</strong></p>
-        </li>
-        <li class="recognition-item">
-          <div class="rec-check" aria-hidden="true"></div>
-          <p>Salís de una reunión de dos horas <strong>sin haber procesado nada de lo que se dijo.</strong></p>
-        </li>
-        <li class="recognition-item">
-          <div class="rec-check" aria-hidden="true"></div>
-          <p>El finde no te alcanza para recuperarte de la semana. <strong>El lunes ya arrancás al límite.</strong></p>
-        </li>
-        <li class="recognition-item">
-          <div class="rec-check" aria-hidden="true"></div>
-          <p>Tomás decisiones todo el día. Llegás a casa y <strong>no podés decidir qué cenar.</strong></p>
-        </li>
-        <li class="recognition-item">
-          <div class="rec-check" aria-hidden="true"></div>
-          <p>Seguís funcionando. Pero ya no recordás <strong>la última vez que te sentiste bien de verdad.</strong></p>
-        </li>
-      </ul>
-      <p class="hook-note">Estos cursos están diseñados para personas que no pueden parar — pero saben que si no hacen algo ahora, el cuerpo va a decidir por ellas.</p>
+      <div class="hook-video">
+        <div class="hook-video-inner">
+          <div class="hook-video-play" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+          </div>
+        </div>
+        <p class="hook-video-caption">Lorena te cuenta de qué se tratan estos cursos</p>
+      </div>
     </div>
 
   </div>
