@@ -642,7 +642,7 @@ section {
 .cierre-grid {
   display: flex;
   flex-direction: column;
-  gap: 5rem;
+  gap: 2.5rem;
   align-items: start;
 }
 
@@ -743,6 +743,43 @@ section {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-top: 0.5rem;
+}
+
+/* ===== CONTACTO FULL WIDTH ===== */
+.contacto-full {
+  background: var(--off-white);
+  border-top: 1px solid var(--border);
+  padding: var(--section-pad);
+}
+
+.contacto-full-inner {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.contacto-full-header {
+  margin-bottom: 2.5rem;
+}
+
+.contacto-full-sub {
+  font-size: 0.88rem;
+  color: var(--text-muted);
+  margin-top: 0.4rem;
+  font-weight: 300;
+}
+
+.contacto-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.contacto-hint {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  font-weight: 400;
+  font-style: italic;
+  margin-bottom: -0.4rem;
 }
 
 /* ===== FORM ===== */

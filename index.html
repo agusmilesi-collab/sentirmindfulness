@@ -217,34 +217,44 @@
         </div>
       </div>
 
-      <div id="contacto" style="margin-top:3rem;">
-        <div class="form-card reveal d2">
-          <h3>Contanos qué necesita tu equipo.</h3>
-          <p class="form-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
-          <form action="https://formspree.io/lorecamposhr@gmail.com" method="POST">
-            <div class="form-row">
-              <div class="form-group">
-                <label for="nombre">Nombre</label>
-                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
-              </div>
-              <div class="form-group">
-                <label for="empresa">Empresa</label>
-                <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required autocomplete="organization">
-              </div>
-            </div>
-            <div class="form-group">
-              <label for="email">Email</label>
-              <input type="email" id="email" name="email" placeholder="tu@empresa.com" required autocomplete="email">
-            </div>
-            <div class="form-group">
-              <label for="comentarios">Comentarios (opcional)</label>
-              <textarea id="comentarios" name="comentarios" placeholder="Contexto del equipo, cantidad de personas, desafíos..."></textarea>
-            </div>
-            <button type="submit" class="btn-submit">Solicitar propuesta sin compromiso</button>
-          </form>
+    </div>
+  </div>
+</section>
+
+<section class="contacto-full" id="contacto">
+  <div class="contacto-full-inner">
+    <div class="contacto-full-header reveal">
+      <h2 class="s-title">Contanos qué necesita <em>tu equipo.</em></h2>
+      <p class="contacto-full-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
+    </div>
+    <form class="contacto-form reveal d1" action="https://formspree.io/lorecamposhr@gmail.com" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required autocomplete="organization">
         </div>
       </div>
-    </div>
+      <div class="contacto-hint">¿Cómo preferís que te contactemos? Completá el que uses más.</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@empresa.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 9 341 000 0000" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comentarios">Comentarios (opcional)</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Contexto del equipo, cantidad de personas, desafíos..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Solicitar propuesta sin compromiso</button>
+    </form>
   </div>
 </section>
 </main>
