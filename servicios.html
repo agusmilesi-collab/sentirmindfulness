@@ -1,0 +1,854 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Servicios | Sentir Mindfulness - Portfolio de Programas Corporativos</title>
+<meta name="description" content="Portfolio completo de servicios de bienestar corporativo: charlas, sesiones temáticas, programa de liderazgos, HR Help Kit, meditación y programas de cambio cultural. Organizados por las 4 etapas del camino.">
+<meta name="theme-color" content="#1b3a4b">
+<link rel="icon" type="image/svg+xml" href="img/logosentiramarillo.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Servicios | Sentir Mindfulness">
+<meta property="og:description" content="Portfolio completo de programas de bienestar corporativo agrupados por las 4 etapas del camino.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sentirmindfulness.com.ar/servicios.html">
+<meta property="og:locale" content="es_AR">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Servicios | Sentir Mindfulness">
+<meta name="twitter:description" content="Portfolio completo de programas de bienestar corporativo.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://sentirmindfulness.com.ar/servicios.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<style>
+/* ========== HERO (SIN CTA) ========== */
+.hero-servicios {
+  padding: 6.5rem 1.5rem 0.25rem;
+  text-align: center;
+  background: var(--white);
+}
+.hero-servicios .hero-inner {
+  max-width: 900px;
+  margin: 0 auto;
+}
+.hero-servicios .hero-badge {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+}
+.hero-servicios h1 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.85rem);
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 1.25rem;
+}
+.hero-servicios h1 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--navy-soft);
+}
+.hero-servicios .hero-sub {
+  font-size: 1rem;
+  line-height: 1.75;
+  color: var(--text-sec);
+  max-width: 680px;
+  margin: 0 auto;
+  font-weight: 300;
+}
+
+/* ========== ETAPAS ========== */
+.etapa {
+  padding: 5rem 1.5rem;
+}
+.etapa:first-of-type {
+  padding-top: 1rem;
+}
+.etapa:nth-of-type(odd) {
+  background: var(--off-white);
+}
+.etapa:nth-of-type(even) {
+  background: var(--white);
+}
+.etapa .container {
+  max-width: var(--container);
+  margin: 0 auto;
+}
+
+.etapa-header {
+  max-width: 760px;
+  margin: 0 auto 3rem;
+  text-align: center;
+}
+.etapa-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-family: var(--body);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1rem;
+}
+.etapa-tag::before {
+  content: '';
+  width: 1.75rem;
+  height: 1px;
+  background: var(--gold);
+}
+.etapa-header h2 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: clamp(1.7rem, 3vw, 2.3rem);
+  line-height: 1.2;
+  color: var(--navy);
+  margin-bottom: 1rem;
+}
+.etapa-header p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: var(--text-sec);
+  font-weight: 300;
+  max-width: 620px;
+  margin: 0 auto;
+}
+
+/* ========== SERVICE CARDS ========== */
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Cuando solo hay 1 card, no la hagas full-width */
+.services-grid.single {
+  grid-template-columns: 1fr;
+  max-width: 420px;
+}
+
+/* Grid ancho: cards grandes con imagen (2 por fila) */
+.services-grid.wide {
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 1.5rem;
+  max-width: 1000px;
+  align-items: start;
+}
+.services-grid.wide .service-card {
+  padding: 1.5rem 1.5rem 1.35rem;
+  gap: 0.6rem;
+  min-height: 620px;
+}
+.services-grid.wide .service-card-image {
+  margin: -1.5rem -1.5rem 0.75rem;
+  aspect-ratio: 16 / 7;
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--off-white) 100%);
+}
+.services-grid.wide .service-card h3 {
+  font-size: 1.3rem;
+  line-height: 1.22;
+}
+.services-grid.wide .service-meta {
+  font-size: 0.72rem;
+}
+.services-grid.wide .service-card p {
+  font-size: 0.88rem;
+  line-height: 1.65;
+}
+.services-grid.wide .service-ideal {
+  font-size: 0.88rem !important;
+  line-height: 1.55 !important;
+  padding-top: 0.7rem;
+}
+
+/* Acordeón "Ver programa completo" */
+.service-details {
+  border-top: 1px solid var(--border);
+  margin-top: 0.25rem;
+  padding-top: 0.85rem;
+}
+.service-details summary {
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  padding: 0.25rem 0;
+  font-family: var(--body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--gold);
+  transition: color 0.2s ease;
+}
+.service-details summary::-webkit-details-marker { display: none; }
+.service-details summary:hover { color: var(--navy); }
+.service-details summary::after {
+  content: '+';
+  font-size: 1.3rem;
+  line-height: 1;
+  font-weight: 400;
+  transition: transform 0.25s ease;
+}
+.service-details[open] summary::after {
+  content: '−';
+}
+
+.service-details-body {
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.programa-modulo h4 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 0.98rem;
+  color: var(--navy);
+  margin: 0 0 0.2rem;
+  line-height: 1.25;
+}
+.modulo-subtitle {
+  font-family: var(--heading);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.85rem;
+  color: var(--navy-soft);
+  margin: 0 0 0.5rem;
+  line-height: 1.35;
+}
+.programa-modulo ul:not(.programa-pilares) {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.programa-modulo ul:not(.programa-pilares) li {
+  font-size: 0.82rem;
+  line-height: 1.5;
+  color: var(--text-sec);
+  font-weight: 300;
+  padding-left: 1rem;
+  position: relative;
+}
+.programa-modulo ul:not(.programa-pilares) li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.programa-pilares {
+  list-style: none;
+  padding: 0.85rem 1rem;
+  margin: 0.25rem 0 0;
+  background: var(--off-white);
+  border-radius: var(--radius-sm);
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+.programa-pilares li {
+  font-size: 0.8rem;
+  line-height: 1.45;
+  color: var(--navy);
+  font-weight: 500;
+  padding-left: 1.25rem;
+  position: relative;
+}
+.programa-pilares li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--gold);
+  font-weight: 700;
+}
+
+.service-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--border-med);
+  border-radius: var(--radius-md);
+  padding: 1rem 1.1rem 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+  box-shadow: 0 10px 24px -14px rgba(27, 58, 75, 0.16), 0 1px 4px -1px rgba(27, 58, 75, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+  overflow: hidden;
+}
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--gold) 0%, rgba(184, 154, 78, 0.4) 100%);
+  z-index: 2;
+}
+
+.service-card:has(.service-card-image)::before {
+  display: none;
+}
+
+.service-card-image {
+  margin: -1rem -1.1rem 0.4rem;
+  aspect-ratio: 2 / 1;
+  overflow: hidden;
+  background: var(--off-white);
+}
+.service-card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.45s ease;
+}
+.service-card:hover .service-card-image img {
+  transform: scale(1.04);
+}
+.etapa:nth-of-type(odd) .service-card {
+  background: var(--white);
+}
+.etapa:nth-of-type(even) .service-card {
+  background: var(--white);
+}
+.service-card:hover {
+  border-color: var(--gold-border);
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px -18px rgba(27, 58, 75, 0.22), 0 4px 10px -4px rgba(27, 58, 75, 0.08);
+}
+
+.service-card h3 {
+  font-family: var(--heading);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.2;
+  color: var(--navy);
+  margin: 0;
+}
+.service-card h3 em {
+  font-style: italic;
+  font-weight: 500;
+  color: var(--navy-soft);
+  font-size: 0.9em;
+}
+
+.service-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: wrap;
+  font-family: var(--body);
+  font-size: 0.66rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  color: var(--gold);
+  text-transform: uppercase;
+}
+.service-meta span + span::before {
+  content: '·';
+  margin-right: 0.35rem;
+  color: var(--gold);
+  opacity: 0.5;
+}
+
+.service-card p {
+  font-size: 0.78rem;
+  line-height: 1.5;
+  color: var(--text-sec);
+  font-weight: 300;
+  margin: 0;
+}
+
+.service-ideal {
+  font-family: var(--heading);
+  font-style: italic;
+  font-weight: 500;
+  font-size: 0.76rem !important;
+  color: var(--navy) !important;
+  line-height: 1.4 !important;
+  padding-top: 0.4rem;
+  border-top: 1px solid var(--border);
+  margin-top: auto !important;
+}
+.service-ideal strong {
+  font-weight: 700;
+  font-style: normal;
+}
+
+/* Lista de temáticas dentro de una card */
+.service-tematicas {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.service-tematicas li {
+  font-size: 0.88rem;
+  color: var(--text-sec);
+  line-height: 1.55;
+  font-weight: 300;
+  padding-left: 1rem;
+  position: relative;
+}
+.service-tematicas li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.55rem;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--gold);
+}
+.service-tematicas strong {
+  color: var(--navy);
+  font-weight: 600;
+}
+
+/* ========== CIERRE / CTA FINAL ========== */
+.servicios-cierre {
+  padding: 5rem 1.5rem 6rem;
+  background: var(--navy);
+  color: var(--white);
+  text-align: center;
+}
+.servicios-cierre .inner {
+  max-width: 680px;
+  margin: 0 auto;
+}
+.servicios-cierre h2 {
+  font-family: var(--heading);
+  font-weight: 500;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1.3;
+  margin-bottom: 1.25rem;
+}
+.servicios-cierre h2 em {
+  font-style: italic;
+  color: var(--gold);
+}
+.servicios-cierre p {
+  font-size: 0.95rem;
+  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.75);
+  font-weight: 300;
+  margin-bottom: 2rem;
+}
+.servicios-cierre .btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--gold);
+  color: var(--navy-deep);
+  padding: 1rem 2rem;
+  border-radius: var(--radius-sm);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.servicios-cierre .btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px -8px rgba(184, 154, 78, 0.4);
+}
+.servicios-cierre .btn-primary svg {
+  width: 18px;
+  height: 18px;
+}
+
+@media (max-width: 640px) {
+  .hero-servicios { padding: 6.5rem 1rem 3rem; }
+  .etapa { padding: 4rem 1rem; }
+  .service-card { padding: 1.75rem 1.5rem; }
+}
+</style>
+</head>
+<body>
+<a href="#main" class="skip-link">Ir al contenido principal</a>
+
+<!-- NAV -->
+<nav id="nav" aria-label="Navegación principal">
+  <div class="nav-inner">
+    <a href="index.html" class="nav-logo" aria-label="Sentir Mindfulness - Inicio">
+      <img src="img/logosentiramarillo.svg" alt="Sentir Mindfulness" height="48" width="auto" loading="eager">
+    </a>
+    <div class="nav-links" id="nav-menu" role="navigation">
+      <a href="index.html#que-hacemos">Qué hacemos</a>
+      <a href="servicios.html" aria-current="page">Servicios</a>
+      <a href="individuos.html">Individuos</a>
+    </div>
+    <button class="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu" onclick="this.setAttribute('aria-expanded',this.getAttribute('aria-expanded')==='false');document.getElementById('nav').classList.toggle('open')">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
+
+<main id="main">
+
+<!-- ========== HERO ========== -->
+<section class="hero hero-servicios">
+  <div class="hero-inner">
+    <div class="hero-badge">Portfolio</div>
+  </div>
+</section>
+
+<!-- ========== BLOQUE: PROGRAMAS ========== -->
+<section class="etapa" id="programas">
+  <div class="container">
+    <div class="etapa-header">
+      <h2>Programas de Bienestar Corporativo</h2>
+      <p>Procesos que transforman líderes, equipos y áreas enteras. Cada programa trabaja un frente específico con un método propio.</p>
+    </div>
+
+    <div class="services-grid wide">
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/programas/liderazgos.png" alt="Transformación Liderazgos Humanos" loading="lazy">
+        </div>
+        <h3>Transformación Liderazgos Humanos <em>(Método Kind)</em></h3>
+        <div class="service-meta"><span>12 horas</span><span>8 encuentros de 1h30</span><span>Presencial</span></div>
+        <p>Programa en tres módulos progresivos — Individuo, Equipo y Organización — para formar líderes que gestionen desde lo humano. Incluye herramientas propias como el Mapa Humano, cuadrantes de liderazgo, perfiles generacionales y liderazgo 1 a 1.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> organizaciones con líderes técnicos que necesitan desarrollar habilidades humanas, o equipos con alta rotación y mala salud mental.</p>
+        <details class="service-details">
+          <summary>Ver programa completo</summary>
+          <div class="service-details-body">
+            <div class="programa-modulo">
+              <h4>Módulo 1 — Individuo</h4>
+              <div class="modulo-subtitle">"Conócete a ti mismo"</div>
+              <ul>
+                <li>Registro emocional y autoconocimiento profundo</li>
+                <li>Manejo del estrés y las emociones bajo presión</li>
+                <li>Habilidades humanas: empatía, escucha activa, inteligencia emocional</li>
+                <li>Rueda de emociones, identificación de sesgos y filtros</li>
+                <li>Comunicación efectiva y autoevaluación constructiva</li>
+                <li>Multitasking vs. atención plena</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Módulo 2 — Equipo</h4>
+              <div class="modulo-subtitle">"Conoce a tu equipo y aprende a gestionarlo"</div>
+              <ul>
+                <li>Identificación de fortalezas, debilidades y motivaciones de cada miembro</li>
+                <li>Gestión de diversidad generacional (Boomers, X, Millennials, GenZ)</li>
+                <li>Estilos de liderazgo por cuadrantes cerebrales</li>
+                <li>Herramienta propia: el Mapa Humano (cuadrante natural, secundario, generación, tareas, motivación, desgaste)</li>
+                <li>Comunicación efectiva y resolución de conflictos</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Módulo 3 — Organización</h4>
+              <div class="modulo-subtitle">"Crea ambientes positivos y productivos"</div>
+              <ul>
+                <li>Seguridad psicológica en el equipo</li>
+                <li>Bienestar emocional y estrategias de apoyo</li>
+                <li>Productividad en equilibrio con salud mental</li>
+                <li>Autonomía y liderazgo 1 a 1</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/programas/experiencia.png" alt="Experiencia en Bienestar &amp; Mindfulness" loading="lazy">
+        </div>
+        <h3>Experiencia en Bienestar &amp; Mindfulness</h3>
+        <div class="service-meta"><span>6 horas</span><span>4 encuentros de 1h30</span><span>Presencial u online</span></div>
+        <p>Una experiencia en cuatro módulos — Cuerpo, Sentidos, Conciencia y Mente — donde los participantes adquieren herramientas de autoestima, regulación emocional y meditación mindfulness. Aprenden a escuchar las señales del cuerpo, cultivar la atención plena y flexibilizar la mente.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> organizaciones que quieren una introducción más profunda al bienestar y la práctica del mindfulness como base cultural.</p>
+        <details class="service-details">
+          <summary>Ver programa completo</summary>
+          <div class="service-details-body">
+            <div class="programa-modulo">
+              <h4>Módulo 1 — Cuerpo</h4>
+              <div class="modulo-subtitle">Despertar el cuerpo</div>
+              <ul>
+                <li>Escuchar las señales que el cuerpo transmite</li>
+                <li>Gestionar el estrés corporal con técnicas de relajación y mindfulness</li>
+                <li>Tomar decisiones conscientes desde una mayor conciencia corporal</li>
+                <li>Cultivar una relación compasiva y cuidadosa con uno mismo</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Módulo 2 — Sentidos</h4>
+              <div class="modulo-subtitle">Despertar los sentidos</div>
+              <ul>
+                <li>Registrar sensorialmente el entorno y las emociones</li>
+                <li>Cultivar atención plena usando los sentidos como anclas al presente</li>
+                <li>Practicar conciencia a través de la alimentación consciente y la respiración</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Módulo 3 — Conciencia</h4>
+              <div class="modulo-subtitle">Despertar la conciencia</div>
+              <ul>
+                <li>Desactivar el piloto automático</li>
+                <li>Practicar meditaciones como herramienta de atención plena</li>
+                <li>Explorar los fundamentos neurocientíficos de la conciencia y la meditación</li>
+                <li>Distinguir el Modo Ser vs. el Modo Hacer</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Módulo 4 — Mente</h4>
+              <div class="modulo-subtitle">Flexibilizar la mente</div>
+              <ul>
+                <li>Reconocer la influencia cultural sobre nuestros patrones</li>
+                <li>Integrar la aceptación como herramienta de resiliencia</li>
+                <li>Cultivar hábitos de amabilidad hacia uno mismo y los demás</li>
+                <li>Ejercitar la flexibilidad mental frente a los desafíos</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/programas/hr-help-kit.png" alt="HR Help Kit" loading="lazy">
+        </div>
+        <h3>HR Help Kit</h3>
+        <div class="service-meta"><span>3 encuentros + toolbox</span><span>Presencial u online</span></div>
+        <p>Capacitación diseñada para equipos de RRHH que absorben el desgaste emocional de toda la empresa. En tres clases trabajamos sobre identificar el desgaste propio, filtrar sin absorber y diseñar un plan de autoprotección. Incluye toolbox diaria con scripts, rituales y checklists, intervenciones organizacionales y plan con indicadores de impacto.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> áreas de RRHH saturadas emocionalmente que necesitan recuperar claridad de rol, poner límites con el resto de la organización y reposicionarse estratégicamente.</p>
+        <details class="service-details">
+          <summary>Ver programa completo</summary>
+          <div class="service-details-body">
+            <div class="programa-modulo">
+              <h4>Clase 1 — De esponja a profesional</h4>
+              <div class="modulo-subtitle">Entender mi desgaste y separarlo del de los demás</div>
+              <ul>
+                <li>Identificar el desgaste propio vs. el que se absorbe de otros</li>
+                <li>Ponerle nombre: estrés, agotamiento, saturación emocional</li>
+                <li>Entender por qué es un riesgo psicosocial serio, no "ser sensible"</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Clase 2 — Filtrar, contener y no absorber</h4>
+              <div class="modulo-subtitle">Herramientas concretas para el día a día</div>
+              <ul>
+                <li>Escuchar y contener sin cargarse el problema</li>
+                <li>Transformar quejas en pedidos</li>
+                <li>Bajar la intensidad emocional en el momento</li>
+                <li>Micro-regulación del sistema nervioso</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Clase 3 — Plan de autoprotección y cambio cultural</h4>
+              <div class="modulo-subtitle">Para que RRHH deje de ser el punching ball</div>
+              <ul>
+                <li>Diseñar un sistema sostenido de cuidado</li>
+                <li>Definir límites claros con el resto de la organización</li>
+                <li>Reconvertir RRHH en rol estratégico</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Los 4 pilares del kit</h4>
+              <ul class="programa-pilares">
+                <li>Programa de 3 clases para el equipo de RRHH</li>
+                <li>Toolbox diaria: guías, scripts, rituales, checklists</li>
+                <li>Intervenciones organizacionales: cultura, managers, políticas</li>
+                <li>Plan con indicadores para medir impacto</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image" aria-hidden="true"></div>
+        <h3>Sesiones individuales de coaching</h3>
+        <div class="service-meta"><span>Espacio 1 a 1</span><span>Frecuencia a convenir</span><span>Presencial u online</span></div>
+        <p>Un espacio confidencial de acompañamiento individual para líderes. Trabajamos sobre los desafíos reales de su rol: gestión de conflictos, situaciones complejas con colaboradores, desgaste emocional y toma de decisiones. Complemento natural del Programa de Liderazgos para llevar lo aprendido a la práctica del día a día.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> líderes en transición, con equipos nuevos, o atravesando situaciones complejas que requieren un espacio de pensamiento acompañado.</p>
+        <details class="service-details">
+          <summary>Ver detalle del proceso</summary>
+          <div class="service-details-body">
+            <div class="programa-modulo">
+              <h4>Cómo trabajamos</h4>
+              <ul>
+                <li>Sesión inicial de diagnóstico: entender el contexto del líder, su equipo y los desafíos actuales</li>
+                <li>Sesiones periódicas de acompañamiento con frecuencia acordada según las necesidades (semanal, quincenal o mensual)</li>
+                <li>Espacio confidencial 1 a 1, sin reportes internos a la empresa</li>
+                <li>Cierre con plan de continuidad y herramientas personalizadas</li>
+              </ul>
+            </div>
+            <div class="programa-modulo">
+              <h4>Temas frecuentes</h4>
+              <ul>
+                <li>Gestión de conflictos internos y conversaciones difíciles</li>
+                <li>Acompañamiento de procesos de cambio: promociones, fusiones, reestructuraciones</li>
+                <li>Desgaste emocional y prevención del burnout en roles de alta exposición</li>
+                <li>Toma de decisiones complejas con componente humano</li>
+                <li>Integración de lo aprendido en el Programa de Liderazgos a la práctica cotidiana</li>
+              </ul>
+            </div>
+          </div>
+        </details>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== BLOQUE: INICIACIÓN ========== -->
+<section class="etapa" id="iniciacion">
+  <div class="container">
+    <div class="etapa-header">
+      <h2>Capacitaciones in-company</h2>
+      <p>El punto de entrada para la mayoría de las empresas. Formatos introductorios donde los equipos experimentan mindfulness y herramientas concretas de bienestar emocional desde el primer día.</p>
+    </div>
+
+    <div class="services-grid">
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/sesiones/mindfulness.webp" alt="Sesión de Mindfulness" loading="lazy">
+        </div>
+        <h3>Mindfulness</h3>
+        <div class="service-meta"><span>1 hora</span><span>Presencial u online</span></div>
+        <p>Introducción práctica a la meditación mindfulness. En una sola sesión, los participantes aprenden técnicas de respiración y postura, y experimentan una meditación guiada que pueden incorporar a su rutina desde el mismo día.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> equipos que buscan un primer contacto concreto con la práctica y experimentar sus beneficios inmediatos.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/sesiones/teambuilding.webp" alt="Sesión de Team Building" loading="lazy">
+        </div>
+        <h3>Team Building</h3>
+        <div class="service-meta"><span>1 hora</span><span>Presencial u online</span></div>
+        <p>Una sesión centrada en mejorar la comunicación, la empatía y la superación de sesgos individuales. Promueve un ambiente laboral más armonioso donde la aceptación, la comprensión y la colaboración se vuelven el eje del equipo.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> equipos que necesitan fortalecer la confianza interna, resolver fricciones silenciosas o integrar nuevos integrantes.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/sesiones/stressyburnout.webp" alt="Sesión sobre Stress y Burnout" loading="lazy">
+        </div>
+        <h3>Stress &amp; Burnout</h3>
+        <div class="service-meta"><span>1 hora</span><span>Presencial u online</span></div>
+        <p>Los participantes exploran los factores que contribuyen al estrés crónico y al burnout, aprenden a identificar señales de alerta tempranas y se llevan técnicas prácticas de gestión del estrés, relajación y autocuidado para aplicar en lo laboral y lo personal.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> equipos con alta carga emocional, contextos de mucha presión o estructuras donde la palabra "burnout" ya empezó a aparecer.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/sesiones/descanso.webp" alt="Sesión sobre Descanso" loading="lazy">
+        </div>
+        <h3>Descanso</h3>
+        <div class="service-meta"><span>1 hora</span><span>Presencial u online</span></div>
+        <p>Una sesión para mejorar la calidad del sueño y vencer el insomnio. Los participantes aprenden a crear entornos propicios para dormir, establecer rutinas nocturnas tranquilizadoras y dejar atrás la rumiación constante antes de dormir.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> equipos con esquemas laborales exigentes, trabajo nocturno, viajes frecuentes o alta carga de responsabilidad.</p>
+      </article>
+
+      <article class="service-card">
+        <div class="service-card-image">
+          <img src="img/sesiones/alimentacion.webp" alt="Sesión de Alimentación Consciente" loading="lazy">
+        </div>
+        <h3>Alimentación Consciente</h3>
+        <div class="service-meta"><span>1 hora</span><span>Presencial u online</span></div>
+        <p>Los participantes exploran las raíces de la alimentación emocional y se llevan estrategias prácticas para contenerla. Aprenden a reconocer sus necesidades emocionales y a tomar decisiones alimenticias más conscientes, usando la atención plena como herramienta.</p>
+        <p class="service-ideal"><strong>Ideal para</strong> equipos que buscan incorporar hábitos saludables de forma orgánica y trabajar la relación con la comida desde lo emocional, no desde la dieta.</p>
+      </article>
+
+    </div>
+  </div>
+</section>
+
+<!-- ========== CONTACTO ========== -->
+<section class="contacto-full" id="contacto">
+  <div class="contacto-full-inner">
+    <div class="contacto-full-header reveal">
+      <h2 class="s-title">Contanos qué necesita <em>tu equipo.</em></h2>
+      <p class="contacto-full-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
+    </div>
+    <form class="contacto-form reveal d1" action="https://formspree.io/lorecamposhr@gmail.com" method="POST">
+      <div class="form-row">
+        <div class="form-group">
+          <label for="nombre">Nombre</label>
+          <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required autocomplete="given-name">
+        </div>
+        <div class="form-group">
+          <label for="empresa">Empresa</label>
+          <input type="text" id="empresa" name="empresa" placeholder="Nombre de la empresa" required autocomplete="organization">
+        </div>
+      </div>
+      <div class="contacto-hint">¿Cómo preferís que te contactemos? Completá el que uses más.</div>
+      <div class="form-row">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="email" placeholder="tu@empresa.com" autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="whatsapp">WhatsApp</label>
+          <input type="tel" id="whatsapp" name="whatsapp" placeholder="+54 9 341 000 0000" autocomplete="tel">
+        </div>
+      </div>
+      <div class="form-group">
+        <label for="comentarios">Comentarios (opcional)</label>
+        <textarea id="comentarios" name="comentarios" placeholder="Contexto del equipo, cantidad de personas, desafíos..."></textarea>
+      </div>
+      <button type="submit" class="btn-submit">Solicitar propuesta sin compromiso</button>
+    </form>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-brand">Sentir Mindfulness<span>Educación emocional y psicología preventiva para organizaciones.</span></div>
+    <div class="footer-links" role="navigation" aria-label="Links del footer">
+      <a href="index.html#que-hacemos">Qué hacemos</a>
+      <a href="servicios.html">Servicios</a>
+      <a href="index.html#nosotros">Nosotros</a>
+      <a href="index.html#clientes">Clientes</a>
+      <a href="index.html#contacto">Contacto</a>
+    </div>
+    <div class="footer-copy">© 2026 Sentir Mindfulness · Rosario, Argentina · +54 3416 279 854</div>
+  </div>
+</footer>
+
+<!-- WHATSAPP -->
+<a href="https://wa.me/5493416279854?text=Hola!%20Quiero%20información%20sobre%20programas%20corporativos" class="wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- JS reveal animations -->
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(el => {
+    if (el.isIntersecting) el.target.classList.add('visible');
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+</script>
+
+</body>
+</html>
