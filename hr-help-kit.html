@@ -154,6 +154,157 @@
     border-top: 1px solid rgba(212, 165, 116, 0.15);
     line-height: 1.5;
   }
+
+  /* Hero compacto — termina donde termina el contenido */
+  .hero--dark {
+    min-height: auto;
+    padding: 6rem 2rem 1.5rem;
+  }
+
+  /* Compactar paddings entre secciones */
+  .dark-section { padding: 2.25rem 2rem; }
+  .divider { margin: 0 auto 1.5rem; }
+  .pain-quote { margin: 1.5rem 0 0; padding: 2rem 1rem 0; border-bottom: none; }
+
+  /* Imagen debajo del hero */
+  .hero-image-block {
+    background: var(--night);
+    padding: 0.5rem 2rem 1rem;
+    text-align: center;
+  }
+  .hero-image-wrap {
+    position: relative;
+    display: inline-block;
+    max-width: 720px;
+    width: 100%;
+  }
+  .hero-image-block img {
+    display: block;
+    margin: 0 auto;
+    max-width: 720px;
+    width: 100%;
+    height: auto;
+    border-radius: 14px;
+    border: 1px solid rgba(212, 165, 116, 0.18);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  }
+  .hero-image-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(11, 17, 32, 0.78);
+    border: 1px solid var(--accent);
+    color: var(--accent-light);
+    padding: 0.5rem 1rem;
+    border-radius: 999px;
+    font-family: var(--heading);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+  }
+  .hero-image-block + .pain {
+    padding-top: 2.5rem;
+  }
+
+  /* SALÓN — galería + mapa + info en dark */
+  .salon-section h2 {
+    font-family: var(--heading);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--off-white);
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  .salon-section-intro {
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 300;
+    font-size: 1.05rem;
+    margin: 0 auto 2.5rem;
+    max-width: 560px;
+  }
+  .salon-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.65rem;
+    margin-bottom: 2rem;
+  }
+  .salon-grid img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid rgba(212, 165, 116, 0.12);
+    display: block;
+  }
+  .salon-extras {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.25rem;
+  }
+  .salon-map-block {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+    height: 320px;
+    background: var(--slate);
+  }
+  .salon-map-block iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+    display: block;
+  }
+  .salon-info-list {
+    list-style: none;
+    padding: 1.5rem;
+    margin: 0;
+    background: rgba(30, 41, 59, 0.5);
+    border: 1px solid rgba(100, 116, 139, 0.15);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 0.85rem;
+  }
+  .salon-info-list .info-title {
+    font-family: var(--heading);
+    font-size: 1rem;
+    color: var(--accent-light);
+    margin-bottom: 0.4rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid rgba(212, 165, 116, 0.15);
+  }
+  .salon-info-list li {
+    color: var(--off-white);
+    font-weight: 300;
+    font-size: 0.92rem;
+    line-height: 1.45;
+    padding-left: 1.1rem;
+    position: relative;
+  }
+  .salon-info-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0.55rem;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: var(--accent);
+  }
+  @media (max-width: 640px) {
+    .salon-grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    .salon-extras {
+      grid-template-columns: 1fr;
+    }
+    .salon-map-block {
+      height: 240px;
+    }
+  }
   .practical-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -230,6 +381,14 @@
   </div>
 </header>
 
+<!-- ========== HERO IMAGE ========== -->
+<div class="hero-image-block">
+  <div class="hero-image-wrap">
+    <img src="img/programas/hr-help-kit.png" alt="HR Help Kit — Sentir Mindfulness" loading="lazy">
+    <div class="hero-image-badge">4ta edición</div>
+  </div>
+</div>
+
 <!-- ========== PAIN ========== -->
 <section class="pain dark-section">
   <div class="divider"></div>
@@ -247,7 +406,7 @@
   </ul>
 
   <div class="pain-quote">
-    "No estás siendo demasiado sensible.<br>Estás absorbiendo desgaste sistémico sin las herramientas para procesarlo."
+    "Lo que cargás tiene un nombre: riesgo psicosocial.<br>Y se puede gestionar — con las herramientas correctas."
   </div>
 </section>
 
@@ -255,7 +414,7 @@
 <section class="learn dark-section wide">
   <div class="divider"></div>
   <h2>Las 3 clases del HR Help Kit</h2>
-  <p class="learn-intro">No es un curso de mindfulness genérico. Es un sistema específico para el rol de Recursos Humanos, diseñado por psicólogas con experiencia en organizaciones.</p>
+  <p class="learn-intro">Un sistema específico para el rol de Recursos Humanos, diseñado por psicólogas con experiencia en organizaciones.</p>
 
   <div class="module">
     <div class="module-header">
@@ -317,12 +476,12 @@
 
   <div class="objection">
     <p class="objection-q">"¿No debería pagarlo mi empresa?"</p>
-    <p class="objection-a">Idealmente sí. En la práctica, esperar a que la empresa identifique tu desgaste como problema lleva años. Mientras tanto te quemás vos. Esta inversión es en tu carrera, no en tu empresa: las herramientas que te llevás te sirven en este trabajo y en el próximo.</p>
+    <p class="objection-a">Idealmente sí. En la práctica, esperar a que la empresa identifique tu desgaste como problema lleva años. Mientras tanto te quemás vos. Esta inversión es en tu carrera: las herramientas que te llevás te sirven en este trabajo y en el próximo.</p>
   </div>
 
   <div class="objection">
     <p class="objection-q">"Ya hice cursos de mindfulness y no me cambiaron nada."</p>
-    <p class="objection-a">Los cursos genéricos no están diseñados para tu rol. Vos no necesitás solo "aprender a respirar" — necesitás scripts para las conversaciones difíciles que tenés cada día, herramientas para no absorber el desgaste que te llega de toda la organización, y un protocolo para sostenerte. Esto es eso.</p>
+    <p class="objection-a">Los cursos genéricos están diseñados para una audiencia general. Lo que necesita tu rol es específico: scripts para las conversaciones difíciles que tenés cada día, herramientas para sostener el desgaste que te llega de toda la organización, y un protocolo aplicable. Esto es eso.</p>
   </div>
 
   <div class="objection">
@@ -380,7 +539,7 @@
 <section class="outcome dark-section">
   <div class="divider"></div>
   <h2>Después de las 3 clases,<br><em>vas a operar distinto.</em></h2>
-  <p class="outcome-intro">No mágicamente. No de un día para el otro. Pero con un sistema que antes no tenías.</p>
+  <p class="outcome-intro">Con un sistema concreto que antes no tenías. Aplicable desde el lunes siguiente al curso.</p>
 
   <ul class="outcome-list">
     <li>Vas a entrar a una conversación tensa con scripts y micro-regulación, no con improvisación.</li>
@@ -392,7 +551,40 @@
   </ul>
 
   <div class="outcome-anchor">
-    "Tu empresa no va a cambiar en 3 semanas.<br>Vas a cambiar vos. Y eso es lo único que está bajo tu control."
+    "Lo único que está bajo tu control sos vos.<br>Y eso es suficiente para empezar a cambiar todo lo demás."
+  </div>
+</section>
+
+<!-- ========== SALÓN ========== -->
+<section class="salon-section dark-section wide">
+  <div class="divider"></div>
+  <h2>Dónde nos vamos a encontrar</h2>
+  <p class="salon-section-intro">Santiago 1269, Rosario. Un espacio con luz natural, capacidad para 14 personas, colchonetas y sillas para quien las prefiera.</p>
+
+  <div class="salon-grid">
+    <img src="img/salon/salon-1.jpg" alt="Salón Sentir Mindfulness" loading="lazy">
+    <img src="img/salon/salon-2.jpg" alt="Salón Sentir Mindfulness" loading="lazy">
+    <img src="img/salon/salon-3.jpg" alt="Salón Sentir Mindfulness" loading="lazy">
+  </div>
+
+  <div class="salon-extras">
+    <div class="salon-map-block">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3347.116!2d-60.65167!3d-32.94574!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95b7ab3c92b2d99b%3A0x7265f8f1c09516e5!2sSentir+Mindfulness!5e0!3m2!1ses-419!2sar!4v1710000000000!5m2!1ses-419!2sar"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+        title="Ubicación de Sentir Mindfulness en Rosario, Argentina"
+        allowfullscreen></iframe>
+    </div>
+
+    <ul class="salon-info-list">
+      <li class="info-title">Información del espacio</li>
+      <li>Santiago 1269, Rosario, Argentina</li>
+      <li>Segundo piso — acceso por escalera</li>
+      <li>Colchonetas, zafus y sillas incluidos</li>
+      <li>Ropa cómoda recomendada</li>
+      <li>Capacidad máxima 14 personas</li>
+    </ul>
   </div>
 </section>
 
@@ -422,7 +614,7 @@
     </div>
 
     <div class="price-block">
-      <div class="price">$112.500</div>
+      <div class="price">$80.000</div>
       <div class="price-note">Pago por transferencia · Reservás tu lugar al enviar el comprobante</div>
     </div>
   </div>
@@ -430,7 +622,7 @@
 
 <!-- ========== CTA ========== -->
 <section class="cta-section">
-  <h2>Tu rol no es absorber el desgaste de toda la empresa.<br><em>Es sostenerlo.</em></h2>
+  <h2>Recuperá el rol que <em>viniste a hacer.</em></h2>
   <p class="sub">3 encuentros, herramientas concretas y un plan para los próximos 90 días.</p>
   <a href="https://wa.me/5493412547244?text=Hola!%20Quiero%20inscribirme%20al%20HR%20Help%20Kit%20edici%C3%B3n%20de%20junio." class="cta-btn" target="_blank" rel="noopener noreferrer">Quiero inscribirme</a>
   <p class="cta-note">Solo 14 lugares · Te respondemos en menos de 24 horas</p>
