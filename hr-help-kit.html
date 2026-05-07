@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HR Help Kit — Sentir Mindfulness</title>
+<meta name="description" content="Capacitación de 3 encuentros para profesionales de Recursos Humanos. Aprendé a sostener tu rol sin que el desgaste de los demás se vuelva tuyo. 11, 18 y 25 de junio en Rosario.">
+<meta name="theme-color" content="#0B1120">
+<link rel="icon" type="image/svg+xml" href="img/logosentiramarillo.svg">
+
+<!-- Open Graph -->
+<meta property="og:title" content="HR Help Kit — Sentir Mindfulness">
+<meta property="og:description" content="3 encuentros para que dejes de absorber el desgaste emocional de toda la empresa. Junio 2026 · Rosario o en vivo.">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_AR">
+<meta property="og:url" content="https://sentirmindfulness.com.ar/hr-help-kit.html">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="HR Help Kit — Sentir Mindfulness">
+<meta name="twitter:description" content="3 encuentros, scripts y un plan para sostener tu rol en RRHH sin quemarte.">
+
+<!-- Canonical -->
+<link rel="canonical" href="https://sentirmindfulness.com.ar/hr-help-kit.html">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="descanso.css">
+
+<style>
+  /* Fondo uniforme — todas las secciones con el mismo color */
+  body { background: var(--night); }
+  .hero--dark,
+  .pain,
+  .learn,
+  .results,
+  .objections,
+  .credentials,
+  .guarantee,
+  .cta-section {
+    background: var(--night);
+  }
+  .hero--dark::before { display: none; }
+
+  /* Urgencia / edición */
+  .urgency-banner {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+    background: rgba(212, 165, 116, 0.1);
+    border: 1px solid rgba(212, 165, 116, 0.4);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--accent-light);
+    margin-bottom: 1.5rem;
+  }
+  .urgency-banner .pulse {
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    background: var(--accent);
+    box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.7);
+    animation: pulse 2s infinite;
+  }
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(212, 165, 116, 0.5); }
+    70% { box-shadow: 0 0 0 8px rgba(212, 165, 116, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(212, 165, 116, 0); }
+  }
+
+  /* Ajustes mínimos específicos del HR Help Kit */
+  .credentials-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2.5rem;
+  }
+  .credentials-grid .credentials-inner {
+    display: block;
+  }
+  .credentials-grid .cred-photo {
+    width: 110px;
+    height: 110px;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    object-fit: cover;
+    background: linear-gradient(135deg, var(--accent) 0%, var(--slate) 100%);
+  }
+  .credentials-grid img.cred-photo {
+    background: none;
+    border: 1px solid rgba(212, 165, 116, 0.2);
+  }
+
+  /* OUTCOME — bloque de propuesta de valor / anclaje */
+  .outcome h2 {
+    font-family: var(--heading);
+    font-size: clamp(1.6rem, 3.5vw, 2.4rem);
+    color: var(--off-white);
+    margin-bottom: 1rem;
+    text-align: center;
+    line-height: 1.3;
+  }
+  .outcome h2 em {
+    font-style: italic;
+    color: var(--accent-light);
+  }
+  .outcome-intro {
+    text-align: center;
+    color: var(--text-muted);
+    font-weight: 300;
+    font-size: 1.05rem;
+    margin-bottom: 2.5rem;
+    max-width: 540px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .outcome-list {
+    list-style: none;
+    padding: 0;
+    margin: 2rem 0;
+  }
+  .outcome-list li {
+    padding: 1rem 0 1rem 2rem;
+    position: relative;
+    color: var(--off-white);
+    font-weight: 300;
+    font-size: 1.05rem;
+    border-bottom: 1px solid rgba(100, 116, 139, 0.15);
+    line-height: 1.5;
+  }
+  .outcome-list li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 1.5rem;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--accent);
+    opacity: 0.9;
+  }
+  .outcome-anchor {
+    font-family: var(--heading);
+    font-size: 1.3rem;
+    font-style: italic;
+    color: var(--accent-light);
+    text-align: center;
+    padding: 2.5rem 1rem 0;
+    margin: 2rem 0 0;
+    border-top: 1px solid rgba(212, 165, 116, 0.15);
+    line-height: 1.5;
+  }
+  .practical-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    max-width: 560px;
+    margin: 2rem auto 0;
+    text-align: left;
+  }
+  .practical-item {
+    background: rgba(30, 41, 59, 0.4);
+    border: 1px solid rgba(100, 116, 139, 0.12);
+    border-radius: 10px;
+    padding: 1rem 1.2rem;
+  }
+  .practical-item .label {
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--accent);
+    opacity: 0.8;
+    margin-bottom: 0.3rem;
+  }
+  .practical-item .value {
+    font-size: 0.95rem;
+    color: var(--off-white);
+    font-weight: 500;
+  }
+  .price-block {
+    text-align: center;
+    margin-top: 2.5rem;
+  }
+  .price-block .price {
+    font-family: var(--heading);
+    font-size: 2.6rem;
+    color: var(--accent-light);
+    line-height: 1;
+  }
+  .price-block .price-note {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.4rem;
+  }
+  @media (max-width: 640px) {
+    .credentials-grid {
+      grid-template-columns: 1fr;
+      gap: 2rem;
+    }
+    .practical-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+</style>
+</head>
+<body>
+
+<a href="#main" class="skip-link">Ir al contenido principal</a>
+
+<main id="main">
+
+<!-- ========== HERO ========== -->
+<header class="hero--dark">
+  <div class="urgency-banner">
+    <span class="pulse" aria-hidden="true"></span>
+    4ta edición · Solo 14 lugares
+  </div>
+  <p class="hero-pre">Sentir Mindfulness · Rosario</p>
+  <h1>Trabajás en RRHH.<br>Cargás con <em>todo lo que la empresa no sabe procesar.</em></h1>
+  <p class="hero-sub">Una capacitación de 3 encuentros para profesionales de Recursos Humanos. Aprendé a sostener tu rol sin que el desgaste de los demás se vuelva tuyo. Sin misticismo. Sin perder el tiempo.</p>
+  <div class="hero-meta">
+    <span><span class="dot"></span> 3 encuentros · 4,5 hs</span>
+    <span><span class="dot"></span> Jueves 11, 18 y 25 de junio</span>
+    <span><span class="dot"></span> Presencial Rosario o en vivo</span>
+    <span><span class="dot"></span> Cupo: 14 personas</span>
+  </div>
+</header>
+
+<!-- ========== PAIN ========== -->
+<section class="pain dark-section">
+  <div class="divider"></div>
+  <h2>Recibís broncas, angustia y frustración de todas las áreas.<br><em>Y no tenés a quién pasarle la pelota.</em></h2>
+  <p>El área de Recursos Humanos vive una paradoja: es responsable de acompañar a toda la organización en momentos de tensión, desgaste y conflicto. Pero pocas veces recibe las herramientas para protegerse de ese mismo impacto.</p>
+  <p>Resultado: agotamiento, rol desdibujado, y la sensación de estar apagando incendios que ni siquiera te corresponden.</p>
+
+  <ul class="pain-list">
+    <li>Recibís quejas que en realidad son para el líder, no para vos</li>
+    <li>Te llevás el desgaste a tu casa y no podés desconectar</li>
+    <li>Empezás la semana cansada antes de que arranque</li>
+    <li>Sentís que tu rol estratégico se diluyó: sos "atención al cliente emocional"</li>
+    <li>Probaste cursos de mindfulness genéricos y no te sirvieron para tu rol</li>
+    <li>Pensás que esto es "lo normal en RRHH" y que no podés hacer nada</li>
+  </ul>
+
+  <div class="pain-quote">
+    "No estás siendo demasiado sensible.<br>Estás absorbiendo desgaste sistémico sin las herramientas para procesarlo."
+  </div>
+</section>
+
+<!-- ========== LEARN ========== -->
+<section class="learn dark-section wide">
+  <div class="divider"></div>
+  <h2>Las 3 clases del HR Help Kit</h2>
+  <p class="learn-intro">No es un curso de mindfulness genérico. Es un sistema específico para el rol de Recursos Humanos, diseñado por psicólogas con experiencia en organizaciones.</p>
+
+  <div class="module">
+    <div class="module-header">
+      <span class="module-num" aria-hidden="true">01</span>
+      <span class="module-title">De esponja a profesional</span>
+    </div>
+    <p>Identificás tu propio desgaste y lo separás del que absorbés de otros. Le ponés nombre a lo que te pasa: estrés, agotamiento, saturación emocional. Entendés por qué esto NO es "ser sensible" — es un riesgo psicosocial serio que se puede medir y gestionar.</p>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <span class="module-num" aria-hidden="true">02</span>
+      <span class="module-title">Filtrar, contener, no absorber</span>
+    </div>
+    <p>Herramientas concretas para el día a día. Aprendés a escuchar y contener sin cargarte el problema. Transformás quejas en pedidos accionables. Bajás la intensidad emocional en el momento. Prácticas de micro-regulación para usar en la próxima conversación difícil.</p>
+  </div>
+
+  <div class="module">
+    <div class="module-header">
+      <span class="module-num" aria-hidden="true">03</span>
+      <span class="module-title">Plan de autoprotección y cambio cultural</span>
+    </div>
+    <p>Diseñás tu sistema sostenido de cuidado. Definís los límites con el resto de la organización. Salís con un plan concreto para los próximos 90 días: cómo reposicionar tu rol y empezar a influir en la cultura de tu empresa desde una posición de equilibrio.</p>
+  </div>
+</section>
+
+<!-- ========== RESULTS ========== -->
+<section class="results dark-section wide">
+  <div class="divider"></div>
+  <h2>Lo que cambia al terminar las 3 clases</h2>
+  <div class="result-grid">
+    <div class="result-card">
+      <div class="before">Hoy: te llevás las quejas a tu casa</div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="after">Después: tenés un protocolo para cerrar el día</div>
+    </div>
+    <div class="result-card">
+      <div class="before">Hoy: cada conversación difícil te deja agotada</div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="after">Después: tenés scripts y micro-regulación listos</div>
+    </div>
+    <div class="result-card">
+      <div class="before">Hoy: sentís que sos "atención al cliente emocional"</div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="after">Después: volvés a ocupar tu rol estratégico</div>
+    </div>
+    <div class="result-card">
+      <div class="before">Hoy: pensás que esto es lo normal y no se puede</div>
+      <div class="arrow" aria-hidden="true">↓</div>
+      <div class="after">Después: tenés un plan y herramientas que sí pueden</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OBJECTIONS ========== -->
+<section class="objections dark-section">
+  <div class="divider"></div>
+  <h2>Preguntas que probablemente te estás haciendo</h2>
+
+  <div class="objection">
+    <p class="objection-q">"¿No debería pagarlo mi empresa?"</p>
+    <p class="objection-a">Idealmente sí. En la práctica, esperar a que la empresa identifique tu desgaste como problema lleva años. Mientras tanto te quemás vos. Esta inversión es en tu carrera, no en tu empresa: las herramientas que te llevás te sirven en este trabajo y en el próximo.</p>
+  </div>
+
+  <div class="objection">
+    <p class="objection-q">"Ya hice cursos de mindfulness y no me cambiaron nada."</p>
+    <p class="objection-a">Los cursos genéricos no están diseñados para tu rol. Vos no necesitás solo "aprender a respirar" — necesitás scripts para las conversaciones difíciles que tenés cada día, herramientas para no absorber el desgaste que te llega de toda la organización, y un protocolo para sostenerte. Esto es eso.</p>
+  </div>
+
+  <div class="objection">
+    <p class="objection-q">"No tengo tiempo."</p>
+    <p class="objection-a">3 encuentros de 1 hora y media, una vez por semana, durante 3 semanas. 4,5 horas totales. La pregunta inversa: ¿cuánto tiempo te cuesta hoy llevarte el laburo a tu casa, no dormir bien, o discutir cosas que no son tuyas?</p>
+  </div>
+
+  <div class="objection">
+    <p class="objection-q">"Soy nueva en el rol, no estoy quemada todavía."</p>
+    <p class="objection-a">Mejor. Llegás con las herramientas antes de que la situación se vuelva crítica. La mayoría de los profesionales de RRHH llegan a estos cursos cuando ya están agotados. Llegar antes es una ventaja real.</p>
+  </div>
+
+  <div class="objection">
+    <p class="objection-q">"En mi empresa RRHH soy yo sola."</p>
+    <p class="objection-a">Cuando RRHH es una persona, el desgaste se concentra. Las herramientas del programa están pensadas para ese contexto exacto: scripts, protocolo y un sistema que podés sostener sin que dependa de un equipo.</p>
+  </div>
+
+  <div class="objection">
+    <p class="objection-q">"¿Y si me pierdo una clase?"</p>
+    <p class="objection-a">La capacitación es presencial en Rosario, pero transmitimos en vivo por si una semana no podés ir. Si preferís hacerlo 100% online, también podés. La grabación queda disponible una semana después de cada clase.</p>
+  </div>
+</section>
+
+<!-- ========== CREDENTIALS ========== -->
+<section class="credentials dark-section">
+  <div class="divider"></div>
+  <div class="credentials-grid">
+    <div class="credentials-inner">
+      <img src="img/socios/1.png" alt="Foto de Lorena Campos" class="cred-photo" loading="lazy" width="110" height="110">
+      <div class="cred-text">
+        <h3>Lorena Campos</h3>
+        <p>Lic. en Psicología (Mat. 5217). Especialista en corriente Cognitiva. Master en Mindfulness por la Universidad de Zaragoza.</p>
+        <p>15 años trabajando en Recursos Humanos: arrancó como analista, fue recruiter senior y evaluadora de talento. Hoy lidera su propia firma de Estrategia y Cultura Organizacional.</p>
+        <span class="cred-tag">Psicóloga</span>
+        <span class="cred-tag">Master Mindfulness</span>
+        <span class="cred-tag">+15 años en RRHH</span>
+      </div>
+    </div>
+
+    <div class="credentials-inner">
+      <img src="img/socios/2.png" alt="Foto de Lucila Campos" class="cred-photo" loading="lazy" width="110" height="110">
+      <div class="cred-text">
+        <h3>Lucila Campos</h3>
+        <p>Lic. en Psicología (Mat. 6338). Especialista en corriente Cognitiva. Master en Mindfulness por la Universidad de Zaragoza.</p>
+        <p>10 años de práctica clínica con foco en adultos con trastornos de ansiedad. En paralelo trabajó en procesos soft de RRHH para empresas de distintos rubros.</p>
+        <span class="cred-tag">Psicóloga</span>
+        <span class="cred-tag">Master Mindfulness</span>
+        <span class="cred-tag">Esp. ansiedad adultos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== OUTCOME ========== -->
+<section class="outcome dark-section">
+  <div class="divider"></div>
+  <h2>Después de las 3 clases,<br><em>vas a operar distinto.</em></h2>
+  <p class="outcome-intro">No mágicamente. No de un día para el otro. Pero con un sistema que antes no tenías.</p>
+
+  <ul class="outcome-list">
+    <li>Vas a entrar a una conversación tensa con scripts y micro-regulación, no con improvisación.</li>
+    <li>Vas a poder cerrar el día sin llevarte las quejas de los demás a tu casa.</li>
+    <li>Vas a distinguir tu desgaste del que absorbés — y vas a saber qué hacer con cada uno.</li>
+    <li>Vas a transformar quejas en pedidos accionables, en lugar de procesarlas vos sola.</li>
+    <li>Cuando un líder te traiga un problema de su equipo, vas a poder ayudarlo sin terminar resolviéndolo vos.</li>
+    <li>Vas a salir con un plan claro para reposicionar tu rol en los próximos 90 días.</li>
+  </ul>
+
+  <div class="outcome-anchor">
+    "Tu empresa no va a cambiar en 3 semanas.<br>Vas a cambiar vos. Y eso es lo único que está bajo tu control."
+  </div>
+</section>
+
+<!-- ========== GUARANTEE / QUÉ INCLUYE ========== -->
+<section class="guarantee dark-section">
+  <div class="guarantee-box">
+    <h3>Qué incluye</h3>
+    <p>3 encuentros presenciales en Rosario (1 hora y media cada uno) · Toolbox: scripts, guías, rituales y checklists · Certificado de participación · Transmisión en vivo si no podés asistir · Grabación disponible una semana.</p>
+
+    <div class="practical-grid">
+      <div class="practical-item">
+        <div class="label">Cuándo</div>
+        <div class="value">11, 18 y 25 de junio</div>
+      </div>
+      <div class="practical-item">
+        <div class="label">Horario</div>
+        <div class="value">19:00 a 20:30 hs</div>
+      </div>
+      <div class="practical-item">
+        <div class="label">Dónde</div>
+        <div class="value">Santiago 1269, Rosario</div>
+      </div>
+      <div class="practical-item">
+        <div class="label">Cupo</div>
+        <div class="value">14 personas</div>
+      </div>
+    </div>
+
+    <div class="price-block">
+      <div class="price">$112.500</div>
+      <div class="price-note">Pago por transferencia · Reservás tu lugar al enviar el comprobante</div>
+    </div>
+  </div>
+</section>
+
+<!-- ========== CTA ========== -->
+<section class="cta-section">
+  <h2>Tu rol no es absorber el desgaste de toda la empresa.<br><em>Es sostenerlo.</em></h2>
+  <p class="sub">3 encuentros, herramientas concretas y un plan para los próximos 90 días.</p>
+  <a href="https://wa.me/5493412547244?text=Hola!%20Quiero%20inscribirme%20al%20HR%20Help%20Kit%20edici%C3%B3n%20de%20junio." class="cta-btn" target="_blank" rel="noopener noreferrer">Quiero inscribirme</a>
+  <p class="cta-note">Solo 14 lugares · Te respondemos en menos de 24 horas</p>
+</section>
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="footer--dark">
+  <p class="brand">Sentir Mindfulness</p>
+  <p>Capacitación profesional. No reemplaza diagnóstico médico ni psicoterapia individual.</p>
+  <p>© 2026 Sentir Mindfulness · Rosario, Argentina</p>
+</footer>
+
+<!-- WHATSAPP FLOAT -->
+<a href="https://wa.me/5493412547244?text=Hola!%20Quiero%20inscribirme%20al%20HR%20Help%20Kit%20edici%C3%B3n%20de%20junio." class="wa" target="_blank" rel="noopener noreferrer" aria-label="Contactar por WhatsApp">
+  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+</body>
+</html>
