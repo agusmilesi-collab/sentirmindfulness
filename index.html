@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3XTN3HX');</script>
+<!-- End Google Tag Manager -->
+
 <title>Sentir Mindfulness | Bienestar Corporativo</title>
 <meta name="description" content="Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas. Capacitación, consultoría y acompañamiento a áreas de RRHH.">
 <meta name="theme-color" content="#1b3a4b">
@@ -15,10 +24,16 @@
 <meta property="og:url" content="https://sentirmindfulness.com/">
 <meta property="og:locale" content="es_AR">
 
+<meta property="og:image" content="https://sentirmindfulness.com/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sentir Mindfulness — Bienestar corporativo, educación emocional y psicología preventiva">
+
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Sentir Mindfulness | Bienestar Corporativo">
 <meta name="twitter:description" content="Educación emocional y psicología preventiva para crear ambientes de trabajo que mejoren la vida de las personas.">
+<meta name="twitter:image" content="https://sentirmindfulness.com/img/og-cover.jpg">
 
 <!-- Canonical -->
 <link rel="canonical" href="https://sentirmindfulness.com/">
@@ -27,8 +42,61 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,500;1,700&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+
+<style>
+  .proof-bar {
+    background: var(--cream, #FAFAF5);
+    border-top: 1px solid var(--line, #E2E0D2);
+    border-bottom: 1px solid var(--line, #E2E0D2);
+    padding: 1.5rem 1.5rem;
+  }
+  .proof-bar-inner {
+    max-width: var(--container, 1200px);
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  .proof-item {
+    display: flex;
+    align-items: baseline;
+    gap: 0.5rem;
+    font-family: 'EB Garamond', Georgia, serif;
+    font-size: 1.05rem;
+    color: var(--navy, #1b3a4b);
+    line-height: 1.3;
+  }
+  .proof-item strong {
+    font-weight: 700;
+    font-size: 1.35rem;
+    letter-spacing: -0.01em;
+  }
+  .proof-item .stars {
+    color: #E8B800;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+  }
+  .proof-divider {
+    width: 1px;
+    height: 22px;
+    background: var(--line, #E2E0D2);
+  }
+  @media (max-width: 720px) {
+    .proof-bar-inner { gap: 1.25rem; }
+    .proof-divider { display: none; }
+    .proof-item { font-size: 0.95rem; }
+    .proof-item strong { font-size: 1.15rem; }
+  }
+</style>
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3XTN3HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <!-- Skip link -->
 <a href="#main" class="skip-link">Ir al contenido principal</a>
@@ -65,6 +133,27 @@
     <a href="#que-hacemos" class="hero-scroll">Conocé cómo trabajamos
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M7 13l5 5 5-5"/></svg>
     </a>
+  </div>
+</section>
+
+<!-- ========== PROOF BAR ========== -->
+<section class="proof-bar" aria-label="Prueba social">
+  <div class="proof-bar-inner">
+    <div class="proof-item">
+      <span class="stars" aria-hidden="true">★★★★★</span>
+      <strong>4.9/5</strong>
+      <span>en 332 reseñas reales</span>
+    </div>
+    <span class="proof-divider" aria-hidden="true"></span>
+    <div class="proof-item">
+      <strong>9 empresas</strong>
+      <span>confían en el equipo</span>
+    </div>
+    <span class="proof-divider" aria-hidden="true"></span>
+    <div class="proof-item">
+      <strong>15+ años</strong>
+      <span>formando líderes</span>
+    </div>
   </div>
 </section>
 
@@ -191,7 +280,10 @@
       <h2 class="s-title">Contanos qué necesita <em>tu equipo.</em></h2>
       <p class="contacto-full-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
     </div>
-    <form class="contacto-form reveal d1" action="https://formspree.io/lorecamposhr@gmail.com" method="POST">
+    <form class="contacto-form reveal d1" action="https://formspree.io/f/REEMPLAZAR_FORM_ID" method="POST" data-form="contacto-empresas">
+      <input type="hidden" name="_subject" value="Nueva consulta corporativa - Sentir Mindfulness">
+      <input type="hidden" name="_next" value="https://sentirmindfulness.com/gracias">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -253,6 +345,17 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('form[data-form]').forEach(form => {
+  form.addEventListener('submit', () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'lead_submit',
+      form_id: form.dataset.form,
+      page_path: window.location.pathname
+    });
+  });
+});
 </script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 User-agent: *
 Allow: /
+Disallow: /gracias
 
-Sitemap: https://sentirmindfulness.com.ar/sitemap.xml
+Sitemap: https://sentirmindfulness.com/sitemap.xml

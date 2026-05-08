@@ -3,6 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3XTN3HX');</script>
+<!-- End Google Tag Manager -->
+
 <title>Servicios | Sentir Mindfulness - Portfolio de Programas Corporativos</title>
 <meta name="description" content="Portfolio completo de servicios de bienestar corporativo: charlas, sesiones temáticas, programa de liderazgos, HR Help Kit, meditación y programas de cambio cultural. Organizados por las 4 etapas del camino.">
 <meta name="theme-color" content="#1b3a4b">
@@ -12,16 +21,22 @@
 <meta property="og:title" content="Servicios | Sentir Mindfulness">
 <meta property="og:description" content="Portfolio completo de programas de bienestar corporativo agrupados por las 4 etapas del camino.">
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://sentirmindfulness.com/servicios.html">
+<meta property="og:url" content="https://sentirmindfulness.com/servicios">
 <meta property="og:locale" content="es_AR">
 
+<meta property="og:image" content="https://sentirmindfulness.com/img/og-cover.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Sentir Mindfulness — Portfolio de programas corporativos">
+
 <!-- Twitter -->
-<meta name="twitter:card" content="summary">
+<meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Servicios | Sentir Mindfulness">
 <meta name="twitter:description" content="Portfolio completo de programas de bienestar corporativo.">
+<meta name="twitter:image" content="https://sentirmindfulness.com/img/og-cover.jpg">
 
 <!-- Canonical -->
-<link rel="canonical" href="https://sentirmindfulness.com/servicios.html">
+<link rel="canonical" href="https://sentirmindfulness.com/servicios">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -533,6 +548,11 @@
 </style>
 </head>
 <body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3XTN3HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 <a href="#main" class="skip-link">Ir al contenido principal</a>
 
 <!-- NAV -->
@@ -839,7 +859,10 @@
       <h2 class="s-title">Contanos qué necesita <em>tu equipo.</em></h2>
       <p class="contacto-full-sub">Respondemos en menos de 24 horas con una propuesta a medida.</p>
     </div>
-    <form class="contacto-form reveal d1" action="https://formspree.io/lorecamposhr@gmail.com" method="POST">
+    <form class="contacto-form reveal d1" action="https://formspree.io/f/REEMPLAZAR_FORM_ID" method="POST" data-form="contacto-servicios">
+      <input type="hidden" name="_subject" value="Nueva consulta - Servicios Sentir Mindfulness">
+      <input type="hidden" name="_next" value="https://sentirmindfulness.com/gracias">
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off">
       <div class="form-row">
         <div class="form-group">
           <label for="nombre">Nombre</label>
@@ -902,6 +925,17 @@ const obs = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+document.querySelectorAll('form[data-form]').forEach(form => {
+  form.addEventListener('submit', () => {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: 'lead_submit',
+      form_id: form.dataset.form,
+      page_path: window.location.pathname
+    });
+  });
+});
 </script>
 
 </body>
