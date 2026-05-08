@@ -1,0 +1,27 @@
+{
+  "name": "sentirmindfulness",
+  "version": "1.0.0",
+  "description": "Sentir Mindfulness - Bienestar Corporativo website",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild src/speed-insights.js --bundle --outfile=dist/speed-insights.js --format=iife --minify",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/agusmilesi-collab/sentirmindfulness.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agusmilesi-collab/sentirmindfulness/issues"
+  },
+  "homepage": "https://github.com/agusmilesi-collab/sentirmindfulness#readme",
+  "dependencies": {
+    "@vercel/speed-insights": "^2.0.0"
+  },
+  "devDependencies": {
+    "esbuild": "^0.28.0"
+  }
+}
