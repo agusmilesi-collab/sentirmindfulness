@@ -1481,6 +1481,31 @@ footer {
   color: rgba(255, 255, 255, 0.15);
 }
 
+.footer-social {
+  display: flex;
+  gap: 0.9rem;
+  align-items: center;
+}
+
+.footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: rgba(255, 255, 255, 0.45);
+  transition: color 0.2s;
+}
+
+.footer-social a:hover {
+  color: var(--gold);
+}
+
+.footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ===== WHATSAPP FAB ===== */
 .wa {
   position: fixed;

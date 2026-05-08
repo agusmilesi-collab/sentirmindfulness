@@ -466,6 +466,32 @@ body {
   margin-bottom: 0.5rem;
 }
 
+.footer--dark .footer-social {
+  display: flex;
+  gap: 0.9rem;
+  justify-content: center;
+  margin: 1rem 0;
+}
+
+.footer--dark .footer-social a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: var(--text-muted);
+  transition: color 0.2s;
+}
+
+.footer--dark .footer-social a:hover {
+  color: var(--accent);
+}
+
+.footer--dark .footer-social svg {
+  width: 18px;
+  height: 18px;
+}
+
 /* ===== RESPONSIVE ===== */
 @media (max-width: 640px) {
   .dark-section {
