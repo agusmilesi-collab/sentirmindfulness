@@ -252,7 +252,8 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   }
   .paper-meta-block p { margin-bottom: 0.5rem; text-indent: 0; }
   .paper-purchased {
-    margin-top: 2.5rem;
+    max-width: var(--max);
+    margin: 2.5rem auto 0;
     padding-top: 1rem;
     border-top: 1px solid var(--paper-rule-soft);
     text-align: center;
@@ -420,12 +421,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
       <p>Copyright &copy; 2026 Sentir Mindfulness. La metodología, materiales y herramientas del programa son propiedad intelectual del equipo facilitador. No se permite la reproducción ni el uso institucional sin autorización previa.</p>
     </div>
 
-    <div class="paper-purchased">
-      Programa SHR-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
-    </div>
   </footer>
 
 </article>
+
+<div class="paper-purchased">
+  Programa SHR-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
+</div>
 
 <!-- html2pdf desde CDN para descarga PDF client-side -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
