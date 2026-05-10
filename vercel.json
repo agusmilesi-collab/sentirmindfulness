@@ -1,4 +1,10 @@
 {
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    { "source": "/servicios", "destination": "/", "permanent": true },
+    { "source": "/servicios.html", "destination": "/", "permanent": true },
+    { "source": "/hr-help-kit-programa", "destination": "/hr-help-kit-paper", "permanent": true },
+    { "source": "/hr-help-kit-programa.html", "destination": "/hr-help-kit-paper", "permanent": true }
+  ]
 }

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-W3XTN3HX');</script>
+<!-- End Google Tag Manager -->
+
+<title>HR Help Kit · Programa SHR-001 · Sentir Mindfulness</title>
+<meta name="description" content="HR Help Kit: protocolo de autoprotección emocional para equipos de Recursos Humanos. Sentir Mindfulness — Lorena Campos & Lucila Campos.">
+<meta name="theme-color" content="#1c1c1a">
+<link rel="icon" type="image/svg+xml" href="img/logosentiramarillo.svg">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600&display=swap" rel="stylesheet">
+
+<style>
+  :root {
+    --paper-ink: #1c1c1a;
+    --paper-ink-soft: #3d3d38;
+    --paper-muted: #84847a;
+    --paper-bg: #ffffff;
+    --paper-rule: #1c1c1a;
+    --paper-rule-soft: #c9c7be;
+    --paper-accent: #b89a4e;
+    --max: 720px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    background: var(--paper-bg);
+    color: var(--paper-ink);
+    font-family: 'EB Garamond', Georgia, 'Times New Roman', serif;
+    font-size: 16px;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    padding: 4rem 1.5rem 3rem;
+  }
+  .paper { max-width: var(--max); margin: 0 auto; }
+
+  /* ========== HEADER ========== */
+  .paper-header {
+    display: grid;
+    grid-template-columns: 60px 1fr 130px;
+    align-items: center;
+    gap: 1.5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 4.5rem;
+  }
+  .paper-crest {
+    width: 52px;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .paper-crest img { width: 48px; height: 48px; object-fit: contain; }
+
+  /* ========== BACK BAR ========== */
+  .paper-back-bar {
+    max-width: var(--max);
+    margin: 0 auto 2rem;
+    padding: 0 0;
+  }
+  .paper-back-link {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 0.95rem;
+    color: var(--paper-ink-soft);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--paper-ink-soft);
+    padding-bottom: 0.15rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    transition: opacity 0.2s, gap 0.2s;
+  }
+  .paper-back-link:hover { opacity: 0.65; gap: 0.6rem; }
+  .paper-brand {
+    text-align: center;
+    font-family: 'EB Garamond', serif;
+    font-weight: 600;
+    font-size: 1.3rem;
+    letter-spacing: 0.42em;
+    color: var(--paper-ink);
+    text-transform: uppercase;
+  }
+  .paper-brand .pipe {
+    display: inline-block;
+    color: var(--paper-rule);
+    font-weight: 400;
+    margin: 0 0.4em;
+    transform: translateY(-1px);
+  }
+  .paper-id {
+    text-align: right;
+  }
+  .paper-id .num {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-size: 1rem;
+    letter-spacing: 0.05em;
+    color: var(--paper-ink);
+  }
+  .paper-id .date {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    color: var(--paper-ink-soft);
+    text-transform: uppercase;
+    margin-top: 0.2rem;
+  }
+
+  /* ========== AUTOR + TÍTULO ========== */
+  .paper-author {
+    font-family: 'EB Garamond', serif;
+    font-size: 0.78rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+    color: var(--paper-ink);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+  }
+  .paper-title {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-size: clamp(1.85rem, 4vw, 2.5rem);
+    line-height: 1.18;
+    letter-spacing: -0.005em;
+    color: var(--paper-ink);
+    margin-bottom: 3rem;
+    max-width: 640px;
+  }
+
+  /* ========== BODY ========== */
+  .paper-body {
+    font-family: 'EB Garamond', serif;
+    font-size: 1.05rem;
+    line-height: 1.65;
+    color: var(--paper-ink);
+    text-align: justify;
+    hyphens: auto;
+  }
+  .paper-body p {
+    margin-bottom: 0;
+    text-indent: 0;
+  }
+  .paper-body p + p {
+    margin-top: 0.95rem;
+  }
+  .paper-body sup {
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+  }
+  .paper-body em { font-style: italic; }
+  .paper-body strong { font-weight: 700; }
+
+  /* ========== LISTA CON SANGRÍA FRANCESA ========== */
+  .paper-list {
+    margin: 1.5rem 0 1.5rem;
+    padding-left: 0;
+  }
+  .paper-item {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0.85rem;
+    font-size: 1rem;
+    line-height: 1.6;
+    text-indent: 0;
+  }
+  .paper-item:last-child { margin-bottom: 0; }
+  .paper-item-marker {
+    flex-shrink: 0;
+    width: 1.6rem;
+    text-align: right;
+    font-style: italic;
+    color: var(--paper-muted);
+    font-weight: 400;
+  }
+  .paper-item-content {
+    flex: 1;
+    text-indent: 0;
+    color: var(--paper-ink);
+  }
+  .paper-item-content strong {
+    font-weight: 600;
+    color: var(--paper-ink);
+  }
+
+  /* ========== HEADINGS DE SECCIÓN ========== */
+  .paper-body h2 {
+    font-family: 'EB Garamond', serif;
+    font-weight: 700;
+    font-size: 1.25rem;
+    line-height: 1.3;
+    color: var(--paper-ink);
+    margin: 2.25rem 0 0.85rem;
+    letter-spacing: -0.005em;
+  }
+  .paper-body h2 em { font-style: italic; font-weight: 500; }
+
+  /* ========== PULL QUOTE ========== */
+  .paper-pullquote {
+    font-style: italic;
+    font-size: 1.1rem;
+    line-height: 1.55;
+    color: var(--paper-ink);
+    padding: 1.5rem 2.5rem;
+    border-top: 1px solid var(--paper-rule);
+    border-bottom: 1px solid var(--paper-rule);
+    margin: 2rem 0;
+    text-align: center;
+    text-indent: 0 !important;
+  }
+
+  /* ========== FOOTER ========== */
+  .paper-footnote {
+    margin-top: 4rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--paper-rule);
+    font-family: 'EB Garamond', serif;
+    font-size: 0.85rem;
+    line-height: 1.5;
+    color: var(--paper-ink-soft);
+  }
+  .paper-footnote .fn-item {
+    margin-bottom: 0.6rem;
+    text-indent: 0;
+  }
+  .paper-footnote sup {
+    font-size: 0.7em;
+    vertical-align: super;
+    line-height: 0;
+    margin-right: 0.15em;
+  }
+  .paper-meta-block {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--paper-rule-soft);
+    font-size: 0.78rem;
+    line-height: 1.55;
+    color: var(--paper-ink-soft);
+  }
+  .paper-meta-block p { margin-bottom: 0.5rem; text-indent: 0; }
+  .paper-purchased {
+    margin-top: 2.5rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--paper-rule-soft);
+    text-align: center;
+    font-size: 0.8rem;
+    color: var(--paper-ink);
+  }
+
+  /* ========== CTA DISCRETO AL FINAL ========== */
+  .paper-cta {
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid var(--paper-rule);
+    text-align: center;
+  }
+  .paper-cta-label {
+    font-family: 'EB Garamond', serif;
+    font-style: italic;
+    font-size: 1rem;
+    color: var(--paper-ink-soft);
+    margin-bottom: 1rem;
+  }
+  .paper-cta-row {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+  .paper-cta-row a {
+    font-family: 'EB Garamond', serif;
+    text-decoration: none;
+    transition: opacity 0.2s;
+  }
+  .paper-cta-row a:hover { opacity: 0.6; }
+  .paper-cta-primary {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--paper-ink);
+    border-bottom: 1px solid var(--paper-ink);
+    padding-bottom: 0.2rem;
+  }
+  .paper-cta-secondary {
+    font-size: 0.9rem;
+    color: var(--paper-muted);
+    border-bottom: 1px dotted var(--paper-muted);
+    padding-bottom: 0.15rem;
+  }
+
+  @media (max-width: 640px) {
+    body { padding: 2.5rem 1.25rem 2rem; font-size: 15px; }
+    .paper-header { grid-template-columns: 48px 1fr; gap: 1rem; }
+    .paper-id { grid-column: 1 / 3; text-align: left; padding-top: 0.5rem; border-top: 1px solid var(--paper-rule-soft); display: flex; justify-content: space-between; align-items: center; }
+    .paper-id .date { margin-top: 0; }
+    .paper-brand { font-size: 1rem; letter-spacing: 0.32em; }
+    .paper-list { padding-left: 0.5rem; }
+    .paper-pullquote { padding: 1.25rem 1rem; font-size: 1.05rem; }
+  }
+</style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W3XTN3HX" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="paper-back-bar">
+  <a href="index.html" class="paper-back-link">&larr; Volver al sitio principal</a>
+</div>
+
+<article class="paper">
+
+  <!-- HEADER -->
+  <header class="paper-header">
+    <div class="paper-crest">
+      <img src="img/logosentiramarillo.svg" alt="Sentir Mindfulness">
+    </div>
+    <div class="paper-brand">
+      SENTIR<span class="pipe">|</span>MINDFULNESS<span class="pipe">|</span>PROGRAMAS
+    </div>
+    <div class="paper-id">
+      <div class="num">SHR-001</div>
+      <div class="date">Ed. Junio 2026</div>
+    </div>
+  </header>
+
+  <!-- AUTOR + TÍTULO -->
+  <div class="paper-author">Lorena Campos &middot; Lucila Campos</div>
+
+  <h1 class="paper-title">HR Help Kit: protocolo de autoprotección emocional para equipos de Recursos Humanos.</h1>
+
+  <!-- BODY -->
+  <div class="paper-body">
+
+    <p class="lead">El área de Recursos Humanos vive una paradoja: es responsable de acompañar a toda la organización en momentos de tensión, desgaste y conflicto, pero pocas veces recibe las herramientas necesarias para protegerse de ese mismo impacto<sup>1</sup>. Esta asimetría tiene consecuencias predecibles. Cuando RRHH se desgasta, la organización pierde su única función con mandato explícito de cuidar a las personas, y el costo emocional acumulado de la empresa se distribuye sin contención formal hacia un solo equipo.</p>
+
+    <p>El presente programa &mdash;HR Help Kit&mdash; se diseñó para revertir esa asimetría en tres encuentros estructurados. La premisa de partida es que el desgaste de RRHH no es una falla individual ni un problema de carácter, sino un riesgo psicosocial sistémico que requiere protocolo, no buena voluntad. Cuatro vectores principales sostienen el problema en la práctica organizacional cotidiana:</p>
+
+    <div class="paper-list">
+      <div class="paper-item">
+        <div class="paper-item-marker">a.</div>
+        <div class="paper-item-content"><strong>Lo que reciben.</strong> Quejas, broncas, angustia y frustración de todas las áreas, sin filtros formales ni jerárquicos.</div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-item-marker">b.</div>
+        <div class="paper-item-content"><strong>Lo que les falta.</strong> Formación específica para procesar ese impacto emocional sin absorberlo.</div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-item-marker">c.</div>
+        <div class="paper-item-content"><strong>Lo que pierden.</strong> Claridad de rol; el tiempo estratégico se desplaza a tareas reactivas de contención.</div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-item-marker">d.</div>
+        <div class="paper-item-content"><strong>Lo que ocurre.</strong> Saturación emocional acumulada, eventual quemado profesional y rotación interna del propio equipo de RRHH.</div>
+      </div>
+    </div>
+
+    <p>El abordaje no se centra en el bienestar individual de los profesionales de RRHH, sino en el diseño de un sistema que permita sostener el rol con límites claros, herramientas reproducibles y un protocolo de cuidado validado. El programa se compone de tres encuentros sucesivos:</p>
+
+    <div class="paper-list">
+      <div class="paper-item">
+        <div class="paper-item-marker">i.</div>
+        <div class="paper-item-content"><strong>De esponja a profesional.</strong> Identificar el desgaste propio frente al desgaste absorbido de otros. Nombrar lo que ocurre &mdash;estrés, agotamiento, saturación emocional&mdash; y comprenderlo como un riesgo psicosocial real, no como un rasgo personal<sup>2</sup>.</div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-item-marker">ii.</div>
+        <div class="paper-item-content"><strong>Filtrar, contener y no absorber.</strong> Herramientas concretas para escuchar sin cargarse el problema, transformar quejas en pedidos, bajar la intensidad emocional en el momento y proteger el sistema nervioso mediante micro-regulación.</div>
+      </div>
+      <div class="paper-item">
+        <div class="paper-item-marker">iii.</div>
+        <div class="paper-item-content"><strong>Plan de autoprotección y cambio cultural.</strong> Diseño de un sistema sostenido de cuidado para RRHH. Definición de límites claros con el resto de la organización. Reconversión del área hacia su función estratégica original.</div>
+      </div>
+    </div>
+
+    <p>Cada encuentro se desarrolla en noventa minutos, en formato presencial u online, dirigido al equipo completo de Recursos Humanos. El programa incluye un <em>toolbox</em> de aplicación inmediata: guías de conversaciones difíciles, scripts validados, rituales diarios de descompresión y checklists de límites organizacionales.</p>
+
+    <h2>Resultado <em>al cierre del programa.</em></h2>
+
+    <div class="paper-pullquote">
+      &ldquo;El equipo de Recursos Humanos egresa con un sistema propio de autoprotección emocional, scripts listos para conversaciones difíciles y un protocolo concreto para acompañar sin absorber.&rdquo;
+    </div>
+
+    <p>El resultado esperado es un equipo más liviano y más profesional, con la energía operativa necesaria para volver a su rol estratégico dentro de la organización. La medición se realiza mediante una encuesta corta antes y después del programa &mdash;cinco preguntas auto-reportadas sobre saturación emocional, claridad de rol y herramientas disponibles&mdash; complementada con NPS al cierre.</p>
+
+    <h2>Indicaciones <em>de uso del programa.</em></h2>
+
+    <p>El HR Help Kit es relevante en organizaciones donde el rol de RRHH está cargando con todo, donde los conflictos de los equipos terminan resolviéndose en RRHH en lugar de en su origen, o cuando la dirección reconoce que la persona o equipo de RRHH constituye un activo crítico que requiere protección formal. Es aplicable tanto en estructuras de RRHH consolidadas como en empresas en las que la función está distribuida y absorbida por administración o por la propia dirección.</p>
+
+  </div>
+
+  <!-- CTA DISCRETO -->
+  <div class="paper-cta">
+    <div class="paper-cta-row">
+      <a href="#" data-action="download-program" class="paper-cta-primary">Descargar programa &darr;</a>
+      <a href="index.html" class="paper-cta-secondary">&larr; Volver al sitio principal</a>
+    </div>
+  </div>
+
+  <!-- FOOTNOTES -->
+  <footer class="paper-footnote">
+    <p class="fn-item"><sup>1</sup> Lou Downe, en <em>Good Services</em> (2020), describe a esta clase de roles como &laquo;contenedores invisibles&raquo;: estructuras humanas que la organización utiliza para metabolizar tensión sin reconocerlas formalmente como infraestructura crítica.</p>
+    <p class="fn-item"><sup>2</sup> El marco clínico que sostiene el programa se apoya en la corriente cognitiva-conductual y en el entrenamiento de mindfulness aplicado, formación obtenida por las facilitadoras en la Universidad de Zaragoza.</p>
+
+    <div class="paper-meta-block">
+      <p>El presente programa es desarrollado por Sentir Mindfulness, Rosario, Argentina. Sentir Mindfulness no constituye servicio asistencial ni reemplaza tratamiento clínico individual; opera en la capa preventiva y formativa de la salud emocional organizacional.</p>
+      <p>Copyright &copy; 2026 Sentir Mindfulness. La metodología, materiales y herramientas del programa son propiedad intelectual del equipo facilitador. No se permite la reproducción ni el uso institucional sin autorización previa.</p>
+    </div>
+
+    <div class="paper-purchased">
+      Programa SHR-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
+    </div>
+  </footer>
+
+</article>
+
+<!-- html2pdf desde CDN para descarga PDF client-side -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+<script>
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(el => {
+    if (el.isIntersecting) el.target.classList.add('visible');
+  });
+}, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Descarga del programa como archivo de texto generado client-side
+const programaTexto = `SENTIR MINDFULNESS · PROGRAMAS
+==========================================================
+
+Programa SHR-001 · Edición Junio 2026
+
+Lorena Campos · Lucila Campos
+
+----------------------------------------------------------
+
+HR HELP KIT
+Protocolo de autoprotección emocional para equipos de Recursos Humanos.
+
+----------------------------------------------------------
+
+El área de Recursos Humanos vive una paradoja: es responsable
+de acompañar a toda la organización en momentos de tensión,
+desgaste y conflicto, pero pocas veces recibe las herramientas
+necesarias para protegerse de ese mismo impacto [1]. Esta
+asimetría tiene consecuencias predecibles. Cuando RRHH se
+desgasta, la organización pierde su única función con mandato
+explícito de cuidar a las personas, y el costo emocional
+acumulado de la empresa se distribuye sin contención formal
+hacia un solo equipo.
+
+El presente programa —HR Help Kit— se diseñó para revertir
+esa asimetría en tres encuentros estructurados. La premisa de
+partida es que el desgaste de RRHH no es una falla individual
+ni un problema de carácter, sino un riesgo psicosocial sistémico
+que requiere protocolo, no buena voluntad. Cuatro vectores
+principales sostienen el problema en la práctica organizacional
+cotidiana:
+
+  a. Lo que reciben.
+     Quejas, broncas, angustia y frustración de todas las áreas,
+     sin filtros formales ni jerárquicos.
+
+  b. Lo que les falta.
+     Formación específica para procesar ese impacto emocional
+     sin absorberlo.
+
+  c. Lo que pierden.
+     Claridad de rol; el tiempo estratégico se desplaza a
+     tareas reactivas de contención.
+
+  d. Lo que ocurre.
+     Saturación emocional acumulada, eventual quemado profesional
+     y rotación interna del propio equipo de RRHH.
+
+El abordaje no se centra en el bienestar individual de los
+profesionales de RRHH, sino en el diseño de un sistema que
+permita sostener el rol con límites claros, herramientas
+reproducibles y un protocolo de cuidado validado. El programa
+se compone de tres encuentros sucesivos:
+
+  i.  De esponja a profesional.
+      Identificar el desgaste propio frente al desgaste absorbido
+      de otros. Nombrar lo que ocurre —estrés, agotamiento,
+      saturación emocional— y comprenderlo como un riesgo
+      psicosocial real, no como un rasgo personal [2].
+
+  ii. Filtrar, contener y no absorber.
+      Herramientas concretas para escuchar sin cargarse el
+      problema, transformar quejas en pedidos, bajar la intensidad
+      emocional en el momento y proteger el sistema nervioso
+      mediante micro-regulación.
+
+  iii. Plan de autoprotección y cambio cultural.
+       Diseño de un sistema sostenido de cuidado para RRHH.
+       Definición de límites claros con el resto de la organización.
+       Reconversión del área hacia su función estratégica original.
+
+Cada encuentro se desarrolla en noventa minutos, en formato
+presencial u online, dirigido al equipo completo de Recursos
+Humanos. El programa incluye un toolbox de aplicación inmediata:
+guías de conversaciones difíciles, scripts validados, rituales
+diarios de descompresión y checklists de límites organizacionales.
+
+
+RESULTADO AL CIERRE DEL PROGRAMA
+----------------------------------------------------------
+
+"El equipo de Recursos Humanos egresa con un sistema propio de
+autoprotección emocional, scripts listos para conversaciones
+difíciles y un protocolo concreto para acompañar sin absorber."
+
+El resultado esperado es un equipo más liviano y más profesional,
+con la energía operativa necesaria para volver a su rol estratégico
+dentro de la organización. La medición se realiza mediante una
+encuesta corta antes y después del programa —cinco preguntas
+auto-reportadas sobre saturación emocional, claridad de rol y
+herramientas disponibles— complementada con NPS al cierre.
+
+
+INDICACIONES DE USO DEL PROGRAMA
+----------------------------------------------------------
+
+El HR Help Kit es relevante en organizaciones donde el rol de
+RRHH está cargando con todo, donde los conflictos de los equipos
+terminan resolviéndose en RRHH en lugar de en su origen, o cuando
+la dirección reconoce que la persona o equipo de RRHH constituye
+un activo crítico que requiere protección formal. Es aplicable
+tanto en estructuras de RRHH consolidadas como en empresas en
+las que la función está distribuida y absorbida por administración
+o por la propia dirección.
+
+
+----------------------------------------------------------
+NOTAS
+
+[1] Lou Downe, en "Good Services" (2020), describe a esta clase
+    de roles como «contenedores invisibles»: estructuras humanas
+    que la organización utiliza para metabolizar tensión sin
+    reconocerlas formalmente como infraestructura crítica.
+
+[2] El marco clínico que sostiene el programa se apoya en la
+    corriente cognitiva-conductual y en el entrenamiento de
+    mindfulness aplicado, formación obtenida por las facilitadoras
+    en la Universidad de Zaragoza.
+
+
+----------------------------------------------------------
+
+El presente programa es desarrollado por Sentir Mindfulness,
+Rosario, Argentina. Sentir Mindfulness no constituye servicio
+asistencial ni reemplaza tratamiento clínico individual; opera
+en la capa preventiva y formativa de la salud emocional
+organizacional.
+
+Copyright © 2026 Sentir Mindfulness. La metodología, materiales
+y herramientas del programa son propiedad intelectual del equipo
+facilitador. No se permite la reproducción ni el uso institucional
+sin autorización previa.
+
+==========================================================
+Para solicitar propuesta para tu empresa, escribinos a:
+WhatsApp: +54 9 341 627 9854
+Web: https://sentirmindfulness.com
+==========================================================
+`;
+
+document.querySelectorAll('[data-action="download-program"]').forEach(btn => {
+  btn.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    // Estado de loading
+    const originalText = btn.innerHTML;
+    btn.innerHTML = 'Generando PDF…';
+    btn.style.pointerEvents = 'none';
+    btn.style.opacity = '0.6';
+
+    // Clonar el paper para no afectar el DOM original
+    const paperOriginal = document.querySelector('.paper');
+    const paperClone = paperOriginal.cloneNode(true);
+
+    // Remover el bloque CTA del clon (no debe estar en el PDF)
+    const ctaInClone = paperClone.querySelector('.paper-cta');
+    if (ctaInClone) ctaInClone.remove();
+
+    // Wrapper con padding y fondo blanco para el PDF
+    const wrapper = document.createElement('div');
+    wrapper.style.cssText = 'background:#ffffff;padding:20mm 18mm;width:210mm;box-sizing:border-box;';
+    wrapper.appendChild(paperClone);
+
+    // Asegurar que el clone tenga ancho fluido dentro del wrapper
+    paperClone.style.maxWidth = '100%';
+    paperClone.style.margin = '0';
+
+    const opt = {
+      margin: 0,
+      filename: 'HR-Help-Kit-Sentir-Mindfulness.pdf',
+      image: { type: 'jpeg', quality: 0.96 },
+      html2canvas: {
+        scale: 2,
+        useCORS: true,
+        logging: false,
+        backgroundColor: '#ffffff'
+      },
+      jsPDF: {
+        unit: 'mm',
+        format: 'a4',
+        orientation: 'portrait',
+        compress: true
+      },
+      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    };
+
+    html2pdf().set(opt).from(wrapper).save().then(() => {
+      btn.innerHTML = originalText;
+      btn.style.pointerEvents = '';
+      btn.style.opacity = '';
+
+      if (window.dataLayer) {
+        window.dataLayer.push({
+          event: 'program_download',
+          program: 'hr-help-kit',
+          format: 'pdf'
+        });
+      }
+    }).catch(err => {
+      console.error('Error generando PDF:', err);
+      btn.innerHTML = originalText;
+      btn.style.pointerEvents = '';
+      btn.style.opacity = '';
+    });
+  });
+});
+</script>
+
+</body>
+</html>
