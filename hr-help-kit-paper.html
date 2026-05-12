@@ -311,6 +311,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .paper-list { padding-left: 0.5rem; }
     .paper-pullquote { padding: 1.25rem 1rem; font-size: 1.05rem; }
   }
+
+  /* ========== PRINT / PDF ========== */
+  @media print {
+    @page { size: A4; margin: 18mm 16mm 20mm; }
+    html, body {
+      background: #ffffff;
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .paper-back-bar,
+    .paper-cta,
+    noscript { display: none !important; }
+    .paper { max-width: none; margin: 0; }
+    .paper-header { margin-bottom: 2.5rem; }
+    .paper-title { margin-bottom: 1.75rem; font-size: 24pt; }
+    .paper-body { font-size: 11pt; line-height: 1.55; }
+    .paper-body p + p { margin-top: 0.65rem; }
+    .paper-pullquote { font-size: 12pt; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+    .paper-footnote { margin-top: 2.5rem; font-size: 9pt; }
+    .paper-purchased { margin-top: 1.5rem; font-size: 9pt; border-top-color: #c9c7be; }
+    .paper-header,
+    .paper-pullquote,
+    .paper-item { break-inside: avoid; page-break-inside: avoid; }
+    .paper-body h2 { break-after: avoid; page-break-after: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -434,9 +463,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   Programa SHR-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
 </div>
 
-<!-- html2pdf desde CDN para descarga PDF client-side -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(el => {
@@ -445,211 +471,29 @@ const obs = new IntersectionObserver(entries => {
 }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
 
-// Descarga del programa como archivo de texto generado client-side
-const programaTexto = `SENTIR MINDFULNESS · PROGRAMAS
-==========================================================
-
-Programa SHR-001 · Edición Junio 2026
-
-Lorena Campos · Lucila Campos
-
-----------------------------------------------------------
-
-HR HELP KIT
-Protocolo de autoprotección emocional para equipos de Recursos Humanos.
-
-----------------------------------------------------------
-
-El área de Recursos Humanos vive una paradoja: es responsable
-de acompañar a toda la organización en momentos de tensión,
-desgaste y conflicto, pero pocas veces recibe las herramientas
-necesarias para protegerse de ese mismo impacto [1]. Esta
-asimetría tiene consecuencias predecibles. Cuando RRHH se
-desgasta, la organización pierde su única función con mandato
-explícito de cuidar a las personas, y el costo emocional
-acumulado de la empresa se distribuye sin contención formal
-hacia un solo equipo.
-
-El presente programa —HR Help Kit— se diseñó para revertir
-esa asimetría en tres encuentros estructurados. La premisa de
-partida es que el desgaste de RRHH no es una falla individual
-ni un problema de carácter, sino un riesgo psicosocial sistémico
-que requiere protocolo, no buena voluntad. Cuatro vectores
-principales sostienen el problema en la práctica organizacional
-cotidiana:
-
-  a. Lo que reciben.
-     Quejas, broncas, angustia y frustración de todas las áreas,
-     sin filtros formales ni jerárquicos.
-
-  b. Lo que les falta.
-     Formación específica para procesar ese impacto emocional
-     sin absorberlo.
-
-  c. Lo que pierden.
-     Claridad de rol; el tiempo estratégico se desplaza a
-     tareas reactivas de contención.
-
-  d. Lo que ocurre.
-     Saturación emocional acumulada, eventual quemado profesional
-     y rotación interna del propio equipo de RRHH.
-
-El abordaje no se centra en el bienestar individual de los
-profesionales de RRHH, sino en el diseño de un sistema que
-permita sostener el rol con límites claros, herramientas
-reproducibles y un protocolo de cuidado validado. El programa
-se compone de tres encuentros sucesivos:
-
-  i.  De esponja a profesional.
-      Identificar el desgaste propio frente al desgaste absorbido
-      de otros. Nombrar lo que ocurre —estrés, agotamiento,
-      saturación emocional— y comprenderlo como un riesgo
-      psicosocial real, no como un rasgo personal [2].
-
-  ii. Filtrar, contener y no absorber.
-      Herramientas concretas para escuchar sin cargarse el
-      problema, transformar quejas en pedidos, bajar la intensidad
-      emocional en el momento y proteger el sistema nervioso
-      mediante micro-regulación.
-
-  iii. Plan de autoprotección y cambio cultural.
-       Diseño de un sistema sostenido de cuidado para RRHH.
-       Definición de límites claros con el resto de la organización.
-       Reconversión del área hacia su función estratégica original.
-
-Cada encuentro se desarrolla en noventa minutos, en formato
-presencial u online, dirigido al equipo completo de Recursos
-Humanos. El programa incluye un toolbox de aplicación inmediata:
-guías de conversaciones difíciles, scripts validados, rituales
-diarios de descompresión y checklists de límites organizacionales.
-
-
-RESULTADO AL CIERRE DEL PROGRAMA
-----------------------------------------------------------
-
-"El equipo de Recursos Humanos egresa con un sistema propio de
-autoprotección emocional, scripts listos para conversaciones
-difíciles y un protocolo concreto para acompañar sin absorber."
-
-El resultado esperado es un equipo más liviano y más profesional,
-con la energía operativa necesaria para volver a su rol estratégico
-dentro de la organización. La medición se realiza mediante una
-encuesta corta antes y después del programa —cinco preguntas
-auto-reportadas sobre saturación emocional, claridad de rol y
-herramientas disponibles— complementada con NPS al cierre.
-
-
-INDICACIONES DE USO DEL PROGRAMA
-----------------------------------------------------------
-
-El HR Help Kit es relevante en organizaciones donde el rol de
-RRHH está cargando con todo, donde los conflictos de los equipos
-terminan resolviéndose en RRHH en lugar de en su origen, o cuando
-la dirección reconoce que la persona o equipo de RRHH constituye
-un activo crítico que requiere protección formal. Es aplicable
-tanto en estructuras de RRHH consolidadas como en empresas en
-las que la función está distribuida y absorbida por administración
-o por la propia dirección.
-
-
-----------------------------------------------------------
-NOTAS
-
-[1] Lou Downe, en "Good Services" (2020), describe a esta clase
-    de roles como «contenedores invisibles»: estructuras humanas
-    que la organización utiliza para metabolizar tensión sin
-    reconocerlas formalmente como infraestructura crítica.
-
-[2] El marco clínico que sostiene el programa se apoya en la
-    corriente cognitiva-conductual y en el entrenamiento de
-    mindfulness aplicado, formación obtenida por las facilitadoras
-    en la Universidad de Zaragoza.
-
-
-----------------------------------------------------------
-
-El presente programa es desarrollado por Sentir Mindfulness,
-Rosario, Argentina. Sentir Mindfulness no constituye servicio
-asistencial ni reemplaza tratamiento clínico individual; opera
-en la capa preventiva y formativa de la salud emocional
-organizacional.
-
-Copyright © 2026 Sentir Mindfulness. La metodología, materiales
-y herramientas del programa son propiedad intelectual del equipo
-facilitador. No se permite la reproducción ni el uso institucional
-sin autorización previa.
-
-==========================================================
-Para solicitar propuesta para tu empresa, escribinos a:
-WhatsApp: +54 9 341 627 9854
-Web: https://sentirmindfulness.com
-==========================================================
-`;
-
+// Descarga del programa: usa el motor de impresión nativo del navegador.
+// El usuario elige "Guardar como PDF" en el diálogo de impresión.
 document.querySelectorAll('[data-action="download-program"]').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
 
-    // Estado de loading
-    const originalText = btn.innerHTML;
-    btn.innerHTML = 'Generando PDF…';
-    btn.style.pointerEvents = 'none';
-    btn.style.opacity = '0.6';
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'program_download',
+        program: 'hr-help-kit',
+        format: 'pdf'
+      });
+    }
 
-    // Clonar el paper para no afectar el DOM original
-    const paperOriginal = document.querySelector('.paper');
-    const paperClone = paperOriginal.cloneNode(true);
-
-    // Remover el bloque CTA del clon (no debe estar en el PDF)
-    const ctaInClone = paperClone.querySelector('.paper-cta');
-    if (ctaInClone) ctaInClone.remove();
-
-    // Wrapper con padding y fondo blanco para el PDF
-    const wrapper = document.createElement('div');
-    wrapper.style.cssText = 'background:#ffffff;padding:20mm 18mm;width:210mm;box-sizing:border-box;';
-    wrapper.appendChild(paperClone);
-
-    // Asegurar que el clone tenga ancho fluido dentro del wrapper
-    paperClone.style.maxWidth = '100%';
-    paperClone.style.margin = '0';
-
-    const opt = {
-      margin: 0,
-      filename: 'HR-Help-Kit-Sentir-Mindfulness.pdf',
-      image: { type: 'jpeg', quality: 0.96 },
-      html2canvas: {
-        scale: 2,
-        useCORS: true,
-        logging: false,
-        backgroundColor: '#ffffff'
-      },
-      jsPDF: {
-        unit: 'mm',
-        format: 'a4',
-        orientation: 'portrait',
-        compress: true
-      },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    const originalTitle = document.title;
+    document.title = 'HR-Help-Kit-Sentir-Mindfulness';
+    const restore = () => {
+      document.title = originalTitle;
+      window.removeEventListener('afterprint', restore);
     };
+    window.addEventListener('afterprint', restore);
 
-    html2pdf().set(opt).from(wrapper).save().then(() => {
-      btn.innerHTML = originalText;
-      btn.style.pointerEvents = '';
-      btn.style.opacity = '';
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'program_download',
-          program: 'hr-help-kit',
-          format: 'pdf'
-        });
-      }
-    }).catch(err => {
-      console.error('Error generando PDF:', err);
-      btn.innerHTML = originalText;
-      btn.style.pointerEvents = '';
-      btn.style.opacity = '';
-    });
+    window.print();
   });
 });
 </script>

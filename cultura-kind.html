@@ -284,6 +284,35 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .paper-list { padding-left: 0.5rem; }
     .paper-pullquote { padding: 1.25rem 1rem; font-size: 1.05rem; }
   }
+
+  /* ========== PRINT / PDF ========== */
+  @media print {
+    @page { size: A4; margin: 18mm 16mm 20mm; }
+    html, body {
+      background: #ffffff;
+      padding: 0;
+      margin: 0;
+      font-size: 11pt;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .paper-back-bar,
+    .paper-cta,
+    noscript { display: none !important; }
+    .paper { max-width: none; margin: 0; }
+    .paper-header { margin-bottom: 2.5rem; }
+    .paper-title { margin-bottom: 1.75rem; font-size: 24pt; }
+    .paper-body { font-size: 11pt; line-height: 1.55; }
+    .paper-body p + p { margin-top: 0.65rem; }
+    .paper-pullquote { font-size: 12pt; padding: 1rem 1.5rem; margin: 1.5rem 0; }
+    .paper-footnote { margin-top: 2.5rem; font-size: 9pt; }
+    .paper-purchased { margin-top: 1.5rem; font-size: 9pt; border-top-color: #c9c7be; }
+    .paper-header,
+    .paper-pullquote,
+    .paper-item { break-inside: avoid; page-break-inside: avoid; }
+    .paper-body h2 { break-after: avoid; page-break-after: avoid; }
+    a { color: inherit; text-decoration: none; }
+  }
 </style>
 <!-- Vercel Web Analytics -->
 <script>
@@ -406,8 +435,6 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   Programa SCK-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
 </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
-
 <script>
 const obs = new IntersectionObserver(entries => {
   entries.forEach(el => {
@@ -420,49 +447,23 @@ document.querySelectorAll('[data-action="download-program"]').forEach(btn => {
   btn.addEventListener('click', function(e) {
     e.preventDefault();
 
-    const originalText = btn.innerHTML;
-    btn.innerHTML = 'Generando PDF…';
-    btn.style.pointerEvents = 'none';
-    btn.style.opacity = '0.6';
+    if (window.dataLayer) {
+      window.dataLayer.push({
+        event: 'program_download',
+        program: 'cultura-kind',
+        format: 'pdf'
+      });
+    }
 
-    const paperOriginal = document.querySelector('.paper');
-    const paperClone = paperOriginal.cloneNode(true);
-    const ctaInClone = paperClone.querySelector('.paper-cta');
-    if (ctaInClone) ctaInClone.remove();
-
-    const wrapper = document.createElement('div');
-    wrapper.style.cssText = 'background:#ffffff;padding:20mm 18mm;width:210mm;box-sizing:border-box;';
-    wrapper.appendChild(paperClone);
-    paperClone.style.maxWidth = '100%';
-    paperClone.style.margin = '0';
-
-    const opt = {
-      margin: 0,
-      filename: 'Cultura-Kind-Sentir-Mindfulness.pdf',
-      image: { type: 'jpeg', quality: 0.96 },
-      html2canvas: { scale: 2, useCORS: true, logging: false, backgroundColor: '#ffffff' },
-      jsPDF: { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
-      pagebreak: { mode: ['avoid-all', 'css', 'legacy'] }
+    const originalTitle = document.title;
+    document.title = 'Cultura-Kind-Sentir-Mindfulness';
+    const restore = () => {
+      document.title = originalTitle;
+      window.removeEventListener('afterprint', restore);
     };
+    window.addEventListener('afterprint', restore);
 
-    html2pdf().set(opt).from(wrapper).save().then(() => {
-      btn.innerHTML = originalText;
-      btn.style.pointerEvents = '';
-      btn.style.opacity = '';
-
-      if (window.dataLayer) {
-        window.dataLayer.push({
-          event: 'program_download',
-          program: 'cultura-kind',
-          format: 'pdf'
-        });
-      }
-    }).catch(err => {
-      console.error('Error generando PDF:', err);
-      btn.innerHTML = originalText;
-      btn.style.pointerEvents = '';
-      btn.style.opacity = '';
-    });
+    window.print();
   });
 });
 </script>
