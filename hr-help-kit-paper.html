@@ -369,7 +369,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     </div>
     <div class="paper-id">
       <div class="num">SHR-001</div>
-      <div class="date">Ed. Junio 2026</div>
+      <div class="date" data-current-date>Ed. Mayo 2026</div>
     </div>
   </header>
 
@@ -460,10 +460,20 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </article>
 
 <div class="paper-purchased">
-  Programa SHR-001 &middot; Edición Junio 2026 &middot; Solicitada por <em>tu empresa</em>.
+  Programa SHR-001 &middot; Edición <span data-current-year>2026</span>
 </div>
 
 <script>
+// Mes y año actuales en header + año en pie
+(function() {
+  const meses = ['Enero','Febrero','Marzo','Abril','Mayo','Junio','Julio','Agosto','Septiembre','Octubre','Noviembre','Diciembre'];
+  const now = new Date();
+  const mes = meses[now.getMonth()];
+  const año = now.getFullYear();
+  document.querySelectorAll('[data-current-date]').forEach(el => { el.textContent = 'Ed. ' + mes + ' ' + año; });
+  document.querySelectorAll('[data-current-year]').forEach(el => { el.textContent = año; });
+})();
+
 const obs = new IntersectionObserver(entries => {
   entries.forEach(el => {
     if (el.isIntersecting) el.target.classList.add('visible');
