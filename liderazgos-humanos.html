@@ -471,7 +471,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </article>
 
 <div class="paper-purchased">
-  Programa SLH-001 &middot; Edición <span data-current-year>2026</span>
+  Programa SLH-001 &middot; Edición <span data-current-month-year>Mayo 2026</span>
 </div>
 
 <script>
@@ -481,7 +481,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   const mes = meses[now.getMonth()];
   const año = now.getFullYear();
   document.querySelectorAll('[data-current-date]').forEach(el => { el.textContent = 'Ed. ' + mes + ' ' + año; });
-  document.querySelectorAll('[data-current-year]').forEach(el => { el.textContent = año; });
+  document.querySelectorAll('[data-current-month-year]').forEach(el => { el.textContent = mes + ' ' + año; });
 })();
 
 const obs = new IntersectionObserver(entries => {
